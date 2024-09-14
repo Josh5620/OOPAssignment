@@ -16,5 +16,20 @@ namespace WindowsFormsApp2.UserControls
         {
             InitializeComponent();
         }
+
+        private void ClrBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("TEST CLEARED!");
+        }
+
+        private void AsgnBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("TEST ASSIGNED!");
+        }
+
+        private void SA_Control_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

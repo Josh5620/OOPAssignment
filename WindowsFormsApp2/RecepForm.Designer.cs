@@ -39,8 +39,10 @@
             this.AddCust = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ControlPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.ControlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -176,11 +178,22 @@
             // 
             // ControlPanel
             // 
+            this.ControlPanel.Controls.Add(this.label1);
             this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ControlPanel.Location = new System.Drawing.Point(201, 0);
             this.ControlPanel.Name = "ControlPanel";
             this.ControlPanel.Size = new System.Drawing.Size(856, 629);
             this.ControlPanel.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(218, 265);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(437, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Brand Logo Image here";
             // 
             // RecepForm
             // 
@@ -195,6 +208,8 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.ControlPanel.ResumeLayout(false);
+            this.ControlPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -213,6 +228,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Panel ControlPanel;
+        private System.Windows.Forms.Label label1;
     }
 }
 
