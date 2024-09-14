@@ -1,2 +1,2 @@
 # OOPAssignment
- Assignment main project
+ Assignment for OOP
