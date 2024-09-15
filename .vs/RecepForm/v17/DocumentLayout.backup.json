@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\administrator\\desktop\\oopassignment\\windowsformsapp2\\receptionist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\receptionist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\administrator\\desktop\\oopassignment\\windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\administrator\\desktop\\oopassignment\\windowsformsapp2\\recepform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\recepform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\administrator\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\cio_control.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\cio_control.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Administrator\\Desktop\\OOPAssignment\\windowsformsapp2\\recepform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\recepform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\administrator\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\cio_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\cio_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\administrator\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\cio_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\cio_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "RecepForm.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\RecepForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\RecepForm.cs",
               "ToolTip": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\RecepForm.cs",
               "RelativeToolTip": "WindowsFormsApp2\\RecepForm.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAqwD8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-07T07:50:14.054Z",
               "IsPinned": true,
@@ -40,20 +52,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CIO_Control.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\CIO_Control.Designer.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\CIO_Control.Designer.cs",
-              "ViewState": "AgIAALwAAAAAAAAAAAAvwMwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "CIO_Control.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwC8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-14T16:58:01.414Z",
+              "WhenOpened": "2024-09-15T18:16:59.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CIO_Control.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\CIO_Control.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T18:16:55.968Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Receptionist.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Receptionist.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\Receptionist.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Receptionist.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\Receptionist.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T17:31:54.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\User.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\User.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\User.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T17:28:19.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "RecepForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\OOPAssignment\\WindowsFormsApp2\\RecepForm.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\RecepForm.cs",

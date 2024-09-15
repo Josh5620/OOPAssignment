@@ -58,10 +58,10 @@ namespace WindowsFormsApp2
 
         private void button1_MouseLeave(object sender, EventArgs e)
         {
-            button1.BackColor = Color.White;
             hover = false;
             TimerCheck();
         }
+        
 
         private void AddCust_Hover(object sender, EventArgs e)
         {

@@ -39,8 +39,8 @@
             this.CncBtn = new System.Windows.Forms.Button();
             this.InfoBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.listBox4 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.PayBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,28 +49,50 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
+            this.listBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            ""});
             this.listBox1.Location = new System.Drawing.Point(56, 90);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(209, 196);
             this.listBox1.TabIndex = 2;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
+            this.listBox2.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
             this.listBox2.Location = new System.Drawing.Point(342, 90);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(209, 196);
             this.listBox2.TabIndex = 3;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 16;
+            this.listBox3.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"});
             this.listBox3.Location = new System.Drawing.Point(613, 90);
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(209, 196);
             this.listBox3.TabIndex = 4;
+            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -155,15 +177,6 @@
             this.panel1.Size = new System.Drawing.Size(304, 296);
             this.panel1.TabIndex = 12;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bill:";
-            // 
             // listBox4
             // 
             this.listBox4.FormattingEnabled = true;
@@ -172,6 +185,15 @@
             this.listBox4.Name = "listBox4";
             this.listBox4.Size = new System.Drawing.Size(269, 244);
             this.listBox4.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bill:";
             // 
             // PayBtn
             // 
@@ -202,7 +224,6 @@
             this.Controls.Add(this.listBox1);
             this.Name = "CIO_Control";
             this.Size = new System.Drawing.Size(856, 629);
-
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
