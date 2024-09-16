@@ -9,11 +9,11 @@ namespace WindowsFormsApp2
 {
     internal class Receptionist : User
     {
-        public void GetUserID(string userID)
+        public void GetUserID(string userID) // also let accept another argument to know to cehck which database
         {
-            if (userID == null)
+            if (userID == null || userID == "")
             {
-                MessageBox.Show("Enter an ID");
+                MessageBox.Show("ID not found");
                 return;
             }
             FocusID = userID;
