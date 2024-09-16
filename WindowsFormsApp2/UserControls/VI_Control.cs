@@ -21,7 +21,7 @@ namespace WindowsFormsApp2.UserControls
         Receptionist Recep = new Receptionist();
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-
+             
             if (IDSearch.SelectedItem != null)
             {
                 Recep.GetUserID(IDSearch.SelectedItem.ToString());

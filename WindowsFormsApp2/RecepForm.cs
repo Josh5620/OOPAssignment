@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Timers;
 using System.Drawing.Drawing2D;
 using WindowsFormsApp2.UserControls;
+using System.Data.SQLite;
+
 
 
 
@@ -94,6 +96,7 @@ namespace WindowsFormsApp2
         {   
             SA_Control sac = new SA_Control();
             addUserControl(sac);
+           
         }
 
         private void CheckBtn_Click(object sender, EventArgs e)
@@ -128,6 +131,35 @@ namespace WindowsFormsApp2
         private void ExitButton_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Connect to the database
+            string connectionString = "Data Source=Test.db;Version=3;";
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                // Create a command to read from the table
+                using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM TestTable2", connection))
+                {
+                    // Execute the command and read the results
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Access the column values
+                            string column1Value = reader["testing"].ToString();
+                            string column2Value = reader["Testingagain"].ToString();
+                            // ...
+
+                            // Display the values in a ListBox, for example
+                            listBox1.Items.Add($"Column1: {column1Value}, Column2: {column2Value}");
+                        }
+                    }
+                }
+            }
         }
     }
 }
