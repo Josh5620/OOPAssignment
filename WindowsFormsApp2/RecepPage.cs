@@ -17,9 +17,9 @@ using System.Data.SQLite;
 
 namespace WindowsFormsApp2
 {
-    public partial class RecepForm : Form
+    public partial class RecepPage : Form
     {
-        public RecepForm()
+        public RecepPage()
         {
             InitializeComponent();
             AddCust.Hide(); 
@@ -136,13 +136,13 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             // Connect to the database
-            string connectionString = "Data Source=Test.db;Version=3;";
+            string connectionString = "Data Source=UserDatabase.db;Version=3.4;";
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
 
                 // Create a command to read from the table
-                using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM TestTable2", connection))
+                using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Customer_Table", connection))
                 {
                     // Execute the command and read the results
                     using (SQLiteDataReader reader = command.ExecuteReader())
@@ -150,8 +150,8 @@ namespace WindowsFormsApp2
                         while (reader.Read())
                         {
                             // Access the column values
-                            string column1Value = reader["testing"].ToString();
-                            string column2Value = reader["Testingagain"].ToString();
+                            string column1Value = reader["FullName"].ToString();
+                            string column2Value = reader["Username"].ToString();
                             // ...
 
                             // Display the values in a ListBox, for example
@@ -161,5 +161,7 @@ namespace WindowsFormsApp2
                 }
             }
         }
+
+
     }
 }

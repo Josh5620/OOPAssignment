@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp2
 {
-    partial class RecepForm
+    partial class RecepPage
     {
         /// <summary>
         /// Required designer variable.
@@ -54,9 +54,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(201, 595);
+            this.panel1.Size = new System.Drawing.Size(201, 629);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -72,16 +72,16 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(201, 595);
+            this.panel2.Size = new System.Drawing.Size(201, 629);
             this.panel2.TabIndex = 0;
             // 
             // ExitButton
             // 
             this.ExitButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ExitButton.Location = new System.Drawing.Point(0, 545);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ExitButton.Location = new System.Drawing.Point(0, 579);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(201, 50);
             this.ExitButton.TabIndex = 10;
@@ -93,7 +93,7 @@
             // 
             this.ProfBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.ProfBtn.Location = new System.Drawing.Point(0, 272);
-            this.ProfBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ProfBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ProfBtn.Name = "ProfBtn";
             this.ProfBtn.Size = new System.Drawing.Size(201, 50);
             this.ProfBtn.TabIndex = 8;
@@ -105,7 +105,7 @@
             // 
             this.InvButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.InvButton.Location = new System.Drawing.Point(0, 222);
-            this.InvButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.InvButton.Margin = new System.Windows.Forms.Padding(4);
             this.InvButton.Name = "InvButton";
             this.InvButton.Size = new System.Drawing.Size(201, 50);
             this.InvButton.TabIndex = 7;
@@ -117,7 +117,7 @@
             // 
             this.CheckBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.CheckBtn.Location = new System.Drawing.Point(0, 172);
-            this.CheckBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CheckBtn.Margin = new System.Windows.Forms.Padding(4);
             this.CheckBtn.Name = "CheckBtn";
             this.CheckBtn.Size = new System.Drawing.Size(201, 50);
             this.CheckBtn.TabIndex = 5;
@@ -129,7 +129,7 @@
             // 
             this.ServBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.ServBtn.Location = new System.Drawing.Point(0, 122);
-            this.ServBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ServBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ServBtn.Name = "ServBtn";
             this.ServBtn.Size = new System.Drawing.Size(201, 50);
             this.ServBtn.TabIndex = 4;
@@ -141,7 +141,7 @@
             // 
             this.DelCust.Dock = System.Windows.Forms.DockStyle.Top;
             this.DelCust.Location = new System.Drawing.Point(0, 86);
-            this.DelCust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DelCust.Margin = new System.Windows.Forms.Padding(4);
             this.DelCust.Name = "DelCust";
             this.DelCust.Size = new System.Drawing.Size(201, 36);
             this.DelCust.TabIndex = 3;
@@ -155,7 +155,7 @@
             // 
             this.AddCust.Dock = System.Windows.Forms.DockStyle.Top;
             this.AddCust.Location = new System.Drawing.Point(0, 50);
-            this.AddCust.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddCust.Margin = new System.Windows.Forms.Padding(4);
             this.AddCust.Name = "AddCust";
             this.AddCust.Size = new System.Drawing.Size(201, 36);
             this.AddCust.TabIndex = 2;
@@ -169,7 +169,7 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 50);
             this.button1.TabIndex = 1;
@@ -187,7 +187,7 @@
             this.ControlPanel.Location = new System.Drawing.Point(201, 0);
             this.ControlPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ControlPanel.Name = "ControlPanel";
-            this.ControlPanel.Size = new System.Drawing.Size(848, 595);
+            this.ControlPanel.Size = new System.Drawing.Size(856, 629);
             this.ControlPanel.TabIndex = 2;
             // 
             // listBox1
@@ -195,15 +195,15 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(189, 379);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(488, 116);
             this.listBox1.TabIndex = 2;
-            // 
+
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(432, 188);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 1;
@@ -221,7 +221,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Brand Logo Image here";
             // 
-            // RecepForm
+            // RecepPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -229,8 +229,8 @@
             this.ClientSize = new System.Drawing.Size(1057, 629);
             this.Controls.Add(this.ControlPanel);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "RecepForm";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "RecepPage";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
