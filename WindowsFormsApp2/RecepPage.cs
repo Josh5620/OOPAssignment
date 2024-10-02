@@ -136,7 +136,7 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             // Connect to the database
-            string connectionString = "Data Source=UserDatabase.db;Version=3.4;";
+            string connectionString = "data source=C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserDatabase.db";
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
