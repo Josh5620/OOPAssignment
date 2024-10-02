@@ -52,7 +52,6 @@ namespace WindowsFormsApp2
 
         private void button1_MouseHover(object sender, EventArgs e)
         {
-            button1.BackColor = Color.Gray;
             hover = true;
             DelCust.Show();
             AddCust.Show();
@@ -136,7 +135,7 @@ namespace WindowsFormsApp2
         private void button2_Click(object sender, EventArgs e)
         {
             // Connect to the database
-            string connectionString = "data source=C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserDatabase.db";
+            string connectionString = @"Data Source=|DataDirectory|\UserDatabase.db;Version=3;";
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();

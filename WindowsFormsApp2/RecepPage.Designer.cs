@@ -54,9 +54,8 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(201, 629);
+            this.panel1.Size = new System.Drawing.Size(151, 511);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -72,18 +71,16 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(201, 629);
+            this.panel2.Size = new System.Drawing.Size(151, 511);
             this.panel2.TabIndex = 0;
             // 
             // ExitButton
             // 
             this.ExitButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ExitButton.Location = new System.Drawing.Point(0, 579);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ExitButton.Location = new System.Drawing.Point(0, 470);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(201, 50);
+            this.ExitButton.Size = new System.Drawing.Size(151, 41);
             this.ExitButton.TabIndex = 10;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
@@ -92,10 +89,9 @@
             // ProfBtn
             // 
             this.ProfBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ProfBtn.Location = new System.Drawing.Point(0, 272);
-            this.ProfBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ProfBtn.Location = new System.Drawing.Point(0, 222);
             this.ProfBtn.Name = "ProfBtn";
-            this.ProfBtn.Size = new System.Drawing.Size(201, 50);
+            this.ProfBtn.Size = new System.Drawing.Size(151, 41);
             this.ProfBtn.TabIndex = 8;
             this.ProfBtn.Text = "Profile";
             this.ProfBtn.UseVisualStyleBackColor = true;
@@ -104,10 +100,9 @@
             // InvButton
             // 
             this.InvButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.InvButton.Location = new System.Drawing.Point(0, 222);
-            this.InvButton.Margin = new System.Windows.Forms.Padding(4);
+            this.InvButton.Location = new System.Drawing.Point(0, 181);
             this.InvButton.Name = "InvButton";
-            this.InvButton.Size = new System.Drawing.Size(201, 50);
+            this.InvButton.Size = new System.Drawing.Size(151, 41);
             this.InvButton.TabIndex = 7;
             this.InvButton.Text = "View Inventory";
             this.InvButton.UseVisualStyleBackColor = true;
@@ -116,10 +111,9 @@
             // CheckBtn
             // 
             this.CheckBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CheckBtn.Location = new System.Drawing.Point(0, 172);
-            this.CheckBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CheckBtn.Location = new System.Drawing.Point(0, 140);
             this.CheckBtn.Name = "CheckBtn";
-            this.CheckBtn.Size = new System.Drawing.Size(201, 50);
+            this.CheckBtn.Size = new System.Drawing.Size(151, 41);
             this.CheckBtn.TabIndex = 5;
             this.CheckBtn.Text = "Check In / Out";
             this.CheckBtn.UseVisualStyleBackColor = true;
@@ -128,10 +122,9 @@
             // ServBtn
             // 
             this.ServBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ServBtn.Location = new System.Drawing.Point(0, 122);
-            this.ServBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ServBtn.Location = new System.Drawing.Point(0, 99);
             this.ServBtn.Name = "ServBtn";
-            this.ServBtn.Size = new System.Drawing.Size(201, 50);
+            this.ServBtn.Size = new System.Drawing.Size(151, 41);
             this.ServBtn.TabIndex = 4;
             this.ServBtn.Text = "Service Appointment";
             this.ServBtn.UseVisualStyleBackColor = true;
@@ -140,10 +133,9 @@
             // DelCust
             // 
             this.DelCust.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DelCust.Location = new System.Drawing.Point(0, 86);
-            this.DelCust.Margin = new System.Windows.Forms.Padding(4);
+            this.DelCust.Location = new System.Drawing.Point(0, 70);
             this.DelCust.Name = "DelCust";
-            this.DelCust.Size = new System.Drawing.Size(201, 36);
+            this.DelCust.Size = new System.Drawing.Size(151, 29);
             this.DelCust.TabIndex = 3;
             this.DelCust.Text = "Delete";
             this.DelCust.UseVisualStyleBackColor = true;
@@ -154,10 +146,9 @@
             // AddCust
             // 
             this.AddCust.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddCust.Location = new System.Drawing.Point(0, 50);
-            this.AddCust.Margin = new System.Windows.Forms.Padding(4);
+            this.AddCust.Location = new System.Drawing.Point(0, 41);
             this.AddCust.Name = "AddCust";
-            this.AddCust.Size = new System.Drawing.Size(201, 36);
+            this.AddCust.Size = new System.Drawing.Size(151, 29);
             this.AddCust.TabIndex = 2;
             this.AddCust.Text = "Add";
             this.AddCust.UseVisualStyleBackColor = true;
@@ -169,9 +160,8 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 50);
+            this.button1.Size = new System.Drawing.Size(151, 41);
             this.button1.TabIndex = 1;
             this.button1.Text = "Customer Management";
             this.button1.UseVisualStyleBackColor = true;
@@ -184,28 +174,25 @@
             this.ControlPanel.Controls.Add(this.button2);
             this.ControlPanel.Controls.Add(this.label1);
             this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ControlPanel.Location = new System.Drawing.Point(201, 0);
-            this.ControlPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ControlPanel.Location = new System.Drawing.Point(151, 0);
+            this.ControlPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ControlPanel.Name = "ControlPanel";
-            this.ControlPanel.Size = new System.Drawing.Size(856, 629);
+            this.ControlPanel.Size = new System.Drawing.Size(642, 511);
             this.ControlPanel.TabIndex = 2;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(189, 379);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.listBox1.Location = new System.Drawing.Point(142, 308);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(488, 116);
+            this.listBox1.Size = new System.Drawing.Size(367, 95);
             this.listBox1.TabIndex = 2;
-
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(432, 188);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(142, 422);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -215,21 +202,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 268);
+            this.label1.Location = new System.Drawing.Point(135, 218);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 46);
+            this.label1.Size = new System.Drawing.Size(353, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Brand Logo Image here";
             // 
             // RecepPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1057, 629);
+            this.ClientSize = new System.Drawing.Size(793, 511);
             this.Controls.Add(this.ControlPanel);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RecepPage";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);

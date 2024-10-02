@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +28,29 @@ namespace WindowsFormsApp2
             private set { focusID = value; }
         }
     
-        
+        public DataTable LoadDatagrid()
+        {
+            string connectionString = @"Data Source=|DataDirectory|\UserDatabase.db;Version=3;";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM Customer_Table";
+
+                SQLiteCommand command = new SQLiteCommand(query, connection);
+                SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(command);
+
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                connection.Close();
+
+                return dataTable;   
+
+
+            }
+        }
 
 
 
