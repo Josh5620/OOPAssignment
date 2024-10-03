@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
@@ -21,40 +23,47 @@ namespace WindowsFormsApp2
             FocusID = userID;
             
         }
+
         private string focusID;
         public string FocusID
         {
             get { return focusID; }
             private set { focusID = value; }
         }
-    
-        public DataTable LoadDatagrid()
+
+        private SQLiteDataAdapter dataAdapter;      // Sets both connection and dataAdapter to class lvl variables
+        private SQLiteConnection connection;
+
+        public DataTable LoadDatagrid()     // Will both connect and set  the dataAdapter both has not close connection##
         {
             string connectionString = @"Data Source=|DataDirectory|\UserDatabase.db;Version=3;";
 
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
+            connection = new SQLiteConnection(connectionString);
+            connection.Open();
 
-                string query = "SELECT * FROM Customer_Table";
+            string query = "SELECT * FROM Customer_Table";
+            SQLiteCommand command = new SQLiteCommand(query, connection);
+            dataAdapter = new SQLiteDataAdapter(command);
 
-                SQLiteCommand command = new SQLiteCommand(query, connection);
-                SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
 
-                DataTable dataTable = new DataTable();
-                dataAdapter.Fill(dataTable);
+            return dataTable;   
 
-                connection.Close();
-
-                return dataTable;   
-
-
-            }
         }
 
 
+        public void RefreshDatabase(DataTable dt)
+        {
+            if (dataAdapter == null)
+            {
+                // Handle the case where dataAdapter is still null
+                MessageBox.Show("DataAdapter is not initialized. Please load data first.");
+                return;
+            }
 
-
-
+            SQLiteCommandBuilder commandBuilder = new SQLiteCommandBuilder(dataAdapter);
+            dataAdapter.Update(dt);
+        }
     }
 }

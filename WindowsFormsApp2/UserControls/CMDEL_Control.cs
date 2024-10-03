@@ -17,12 +17,15 @@ namespace WindowsFormsApp2.UserControls
         public CMDEL_Control()
         {
             InitializeComponent();
-
+            
         }
+
+
+        Receptionist Recep = new Receptionist();
 
         private void CMDEL_Control_Load(object sender, EventArgs e)
         {
-            Receptionist Recep = new Receptionist();
+                       // Loads datatable using the recep class function and 
             dataGridView1.DataSource = Recep.LoadDatagrid();
 
         }
@@ -94,5 +97,37 @@ namespace WindowsFormsApp2.UserControls
             NametextBox.Text = string.Empty;
             NumtextBox.Text = string.Empty;
         }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                string customerID = selectedRow.Cells["CustomerID"].Value.ToString();
+                string customerName = selectedRow.Cells["FullName"].Value.ToString();
+
+                var result = MessageBox.Show($"Are you sure you want to delete the selected Customer:{customerName} (ID: {customerID})?",
+                    "Confirm Delete",
+                    MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    int rowIndex = selectedRow.Index;
+                    dataGridView1.Rows.RemoveAt(rowIndex);
+
+                    DataTable dt = (DataTable)dataGridView1.DataSource;
+                    dt.Rows[rowIndex].Delete();
+                }
+                else
+                {
+                    MessageBox.Show("Please select a row to delete!");
+                }
+
+                Recep.RefreshDatabase(dataGridView1.DataSource as DataTable);
+
+            }
+        }
+
     }
 }
