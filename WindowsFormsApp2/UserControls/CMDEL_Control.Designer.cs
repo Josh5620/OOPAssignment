@@ -165,7 +165,6 @@
             this.label6.Size = new System.Drawing.Size(53, 20);
             this.label6.TabIndex = 16;
             this.label6.Text = "Menu";
-
             // 
             // label7
             // 

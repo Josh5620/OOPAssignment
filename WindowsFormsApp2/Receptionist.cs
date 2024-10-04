@@ -4,7 +4,9 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Data.SQLite;
+using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,12 +33,14 @@ namespace WindowsFormsApp2
             private set { focusID = value; }
         }
 
-        private SQLiteDataAdapter dataAdapter;      // Sets both connection and dataAdapter to class lvl variables
+        private SQLiteDataAdapter dataAdapter;      // Sets both connection and dataAdapter to class lvl variables and determines the main database file path
         private SQLiteConnection connection;
+        string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "UserDatabase.db");
+        
 
         public DataTable LoadDatagrid()     // Will both connect and set  the dataAdapter both has not close connection##
         {
-            string connectionString = @"Data Source=|DataDirectory|\UserDatabase.db;Version=3;";
+            string connectionString = $"Data Source={dbPath};Version=3;";
 
             connection = new SQLiteConnection(connectionString);
             connection.Open();
@@ -65,5 +69,30 @@ namespace WindowsFormsApp2
             SQLiteCommandBuilder commandBuilder = new SQLiteCommandBuilder(dataAdapter);
             dataAdapter.Update(dt);
         }
+
+        public void DeleteCustomerRecord(int userID)
+        {
+            MessageBox.Show($"{userID}");
+
+                string deleteQuery = $"DELETE FROM Customer_Table WHERE CustomerId = 4";
+                using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, connection))
+                {
+
+                    // Execute the DELETE command
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        Console.WriteLine("Record deleted successfully.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No record found with the specified ID.");
+                    }
+                }
+
+            
+
+        }
+
     }
 }

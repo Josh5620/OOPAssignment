@@ -114,10 +114,8 @@ namespace WindowsFormsApp2.UserControls
                 if (result == DialogResult.Yes)
                 {
                     int rowIndex = selectedRow.Index;
-                    dataGridView1.Rows.RemoveAt(rowIndex);
+                    Recep.DeleteCustomerRecord(Convert.ToInt32(customerID));
 
-                    DataTable dt = (DataTable)dataGridView1.DataSource;
-                    dt.Rows[rowIndex].Delete();
                 }
                 else
                 {
@@ -125,6 +123,7 @@ namespace WindowsFormsApp2.UserControls
                 }
 
                 Recep.RefreshDatabase(dataGridView1.DataSource as DataTable);
+                button1_Click(sender, e);
 
             }
         }
