@@ -13,8 +13,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
-    internal class Receptionist : User
+    public class Receptionist : User
     {
+
+        private string dbPath;
+        private SQLiteDataAdapter dataAdapter;      // Sets both connection and dataAdapter to class lvl variables and determines the main database file path
+        private SQLiteConnection connection;
+        private string focusID;
+
+        public Receptionist()
+        {
+            string solutionDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\");
+            dbPath = Path.Combine(solutionDir, "UserDatabase.db");
+        }
+
+
         public void GetUserID(string userID) // also let accept another argument to know to cehck which database
         {
             if (userID == null || userID == "")
@@ -26,17 +39,12 @@ namespace WindowsFormsApp2
             
         }
 
-        private string focusID;
         public string FocusID
         {
             get { return focusID; }
             private set { focusID = value; }
         }
 
-        private SQLiteDataAdapter dataAdapter;      // Sets both connection and dataAdapter to class lvl variables and determines the main database file path
-        private SQLiteConnection connection;
-        string dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "UserDatabase.db");
-        
 
         public DataTable LoadDatagrid()     // Will both connect and set  the dataAdapter both has not close connection##
         {
@@ -74,7 +82,7 @@ namespace WindowsFormsApp2
         {
             MessageBox.Show($"{userID}");
 
-                string deleteQuery = $"DELETE FROM Customer_Table WHERE CustomerId = 4";
+                string deleteQuery = $"DELETE FROM Customer_Table WHERE CustomerId = {userID}";
                 using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, connection))
                 {
 
@@ -82,11 +90,11 @@ namespace WindowsFormsApp2
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        Console.WriteLine("Record deleted successfully.");
+                        MessageBox.Show("Record Successfully deleted!");
                     }
                     else
                     {
-                        Console.WriteLine("No record found with the specified ID.");
+                        MessageBox.Show("An Error has occured!");
                     }
                 }
 
