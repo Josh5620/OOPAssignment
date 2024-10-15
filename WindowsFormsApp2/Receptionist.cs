@@ -25,33 +25,14 @@ namespace WindowsFormsApp2
         {
             string solutionDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\");
             dbPath = Path.Combine(solutionDir, "UserDatabase.db");
-        }
-
-
-        public void GetUserID(string userID) // also let accept another argument to know to cehck which database
-        {
-            if (userID == null || userID == "")
-            {
-                MessageBox.Show("ID not found");
-                return;
-            }
-            FocusID = userID;
-            
-        }
-
-        public string FocusID
-        {
-            get { return focusID; }
-            private set { focusID = value; }
-        }
-
-
-        public DataTable LoadDatagrid()     // Will both connect and set  the dataAdapter both has not close connection##
-        {
             string connectionString = $"Data Source={dbPath};Version=3;";
 
             connection = new SQLiteConnection(connectionString);
             connection.Open();
+        }
+
+        public DataTable LoadCustDataGrid()     // Will both connect and set  the dataAdapter both has not close connection##
+        {
 
             string query = "SELECT * FROM Customer_Table";
             SQLiteCommand command = new SQLiteCommand(query, connection);
@@ -102,5 +83,13 @@ namespace WindowsFormsApp2
 
         }
 
+        public SQLiteDataReader LoadOrderTable()
+        {
+            string query = "SELECT o.OrderID, s.FullName FROM Order_Table o JOIN Staff_Table s ON o.StaffID = s.StaffID";
+            SQLiteCommand cmd = new SQLiteCommand(query, connection);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+            return reader; // Return the reader (keep the connection open)
+        }
     }
 }

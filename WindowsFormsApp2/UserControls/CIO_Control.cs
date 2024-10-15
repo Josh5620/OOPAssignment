@@ -42,25 +42,5 @@ namespace WindowsFormsApp2.UserControls
         {
             // Changes the middle listbox to show the billing details then allow me to click the payment button.
         }
-
-        Receptionist Recep = new Receptionist();
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            listBox2.ClearSelected();
-            listBox3.ClearSelected();
-            Recep.GetUserID(listBox1.SelectedItem.ToString());
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            listBox1.ClearSelected();
-            listBox3.ClearSelected();
-        }
-
-        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            listBox1.ClearSelected();
-            listBox2.ClearSelected();
-        }
     }
 }

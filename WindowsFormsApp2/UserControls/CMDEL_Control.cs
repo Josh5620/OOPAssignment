@@ -26,14 +26,14 @@ namespace WindowsFormsApp2.UserControls
         private void CMDEL_Control_Load(object sender, EventArgs e)
         {
                        // Loads datatable using the recep class function and 
-            dataGridView1.DataSource = Recep.LoadDatagrid();
+            dataGridView1.DataSource = Recep.LoadCustDataGrid();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Receptionist Recep = new Receptionist();
-            dataGridView1.DataSource = Recep.LoadDatagrid();
+            dataGridView1.DataSource = Recep.LoadCustDataGrid();
         }
 
         private void FilterBtn_Click(object sender, EventArgs e)

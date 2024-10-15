@@ -8,6 +8,9 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data.SQLite;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp2.UserControls
 {
@@ -19,25 +22,23 @@ namespace WindowsFormsApp2.UserControls
         }
 
         Receptionist Recep = new Receptionist();
-        private void SearchBtn_Click(object sender, EventArgs e)
-        {
-             
-            if (IDSearch.SelectedItem != null)
-            {
-                Recep.GetUserID(IDSearch.SelectedItem.ToString());
-                MechSelfRequest.Text = ($"Here's the requested items for {Recep.FocusID}");
-                
-            }
-            else
-            {
-                MessageBox.Show("Please select a valid ID!");
-            }
-        }
 
         private void ClearBtn_Click(object sender, EventArgs e)
         {
             MechSelfRequest.Text = "";
             IDSearch.SelectedItem = null;
+        }
+
+        private void VI_Control_Load(object sender, EventArgs e)
+        {
+            SQLiteDataReader reader = Recep.LoadOrderTable();
+            while (reader.Read())
+            {
+                string orderID = reader["OrderID"].ToString();
+                string staffName = reader["FullName"].ToString();
+
+                IDSearch.Items.Add($"OrderID: {orderID}, Staff: {staffName}");
+            }
         }
     }
 }

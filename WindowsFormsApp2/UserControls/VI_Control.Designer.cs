@@ -45,7 +45,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(132, 527);
+            this.label1.Location = new System.Drawing.Point(99, 428);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(452, 55);
             this.label1.TabIndex = 2;
@@ -54,33 +55,25 @@
             // IDSearch
             // 
             this.IDSearch.FormattingEnabled = true;
-            this.IDSearch.Items.AddRange(new object[] {
-            "Test3",
-            "Alphabet",
-            "231"});
-            this.IDSearch.Location = new System.Drawing.Point(92, 116);
-            this.IDSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IDSearch.Location = new System.Drawing.Point(69, 94);
             this.IDSearch.Name = "IDSearch";
-            this.IDSearch.Size = new System.Drawing.Size(160, 24);
+            this.IDSearch.Size = new System.Drawing.Size(183, 21);
             this.IDSearch.TabIndex = 5;
             // 
             // SearchBtn
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(92, 180);
-            this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchBtn.Location = new System.Drawing.Point(69, 146);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(100, 28);
+            this.SearchBtn.Size = new System.Drawing.Size(75, 23);
             this.SearchBtn.TabIndex = 6;
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = true;
-            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // ClearBtn
             // 
-            this.ClearBtn.Location = new System.Drawing.Point(223, 180);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClearBtn.Location = new System.Drawing.Point(167, 146);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(100, 28);
+            this.ClearBtn.Size = new System.Drawing.Size(75, 23);
             this.ClearBtn.TabIndex = 7;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.UseVisualStyleBackColor = true;
@@ -89,40 +82,36 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(92, 92);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(69, 75);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "MechanicID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 239);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(69, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(192, 16);
+            this.label3.Size = new System.Drawing.Size(156, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Mechanic Inventory Requested";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(484, 26);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(363, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 16);
+            this.label4.Size = new System.Drawing.Size(133, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Total Inventory Requested";
             // 
             // MechSelfRequest
             // 
-            this.MechSelfRequest.Location = new System.Drawing.Point(92, 258);
-            this.MechSelfRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MechSelfRequest.Location = new System.Drawing.Point(69, 210);
             this.MechSelfRequest.Name = "MechSelfRequest";
             this.MechSelfRequest.ReadOnly = true;
-            this.MechSelfRequest.Size = new System.Drawing.Size(328, 239);
+            this.MechSelfRequest.Size = new System.Drawing.Size(247, 195);
             this.MechSelfRequest.TabIndex = 11;
             this.MechSelfRequest.Text = "";
             // 
@@ -133,17 +122,16 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(488, 46);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Location = new System.Drawing.Point(366, 37);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(324, 452);
+            this.richTextBox1.Size = new System.Drawing.Size(244, 368);
             this.richTextBox1.TabIndex = 13;
             this.richTextBox1.Text = "";
             // 
             // VI_Control
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.MechSelfRequest);
@@ -154,9 +142,10 @@
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.IDSearch);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "VI_Control";
-            this.Size = new System.Drawing.Size(856, 629);
+            this.Size = new System.Drawing.Size(642, 511);
+            this.Load += new System.EventHandler(this.VI_Control_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
