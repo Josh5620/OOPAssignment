@@ -63,33 +63,34 @@ namespace WindowsFormsApp2
         {
             MessageBox.Show($"{userID}");
 
-                string deleteQuery = $"DELETE FROM Customer_Table WHERE CustomerId = {userID}";
-                using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, connection))
+            string deleteQuery = $"DELETE FROM Customer_Table WHERE CustomerId = {userID}";
+            using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, connection))
+            {
+
+                // Execute the DELETE command
+                int rowsAffected = cmd.ExecuteNonQuery();
+                if (rowsAffected > 0)
                 {
-
-                    // Execute the DELETE command
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Record Successfully deleted!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("An Error has occured!");
-                    }
+                    MessageBox.Show("Record Successfully deleted!");
                 }
-
-            
-
+                else
+                {
+                    MessageBox.Show("An Error has occured!");
+                }
+            }
         }
 
         public SQLiteDataReader LoadOrderTable()
         {
-            string query = "SELECT o.OrderID, s.FullName FROM Order_Table o JOIN Staff_Table s ON o.StaffID = s.StaffID";
+            string query = @"SELECT o.OrderID, s.FullName AS StaffName, o.StaffID, o.EngineParts, 
+                     o.SpareWheels, o.Oil, o.Headlights, o.ExhaustPipe 
+                     FROM Order_Table o JOIN Staff_Table s ON o.StaffID = s.StaffID";
             SQLiteCommand cmd = new SQLiteCommand(query, connection);
             SQLiteDataReader reader = cmd.ExecuteReader();
 
             return reader; // Return the reader (keep the connection open)
+
+            // just match the order id with the staff id as only the mechanics should be able to make orders 
         }
     }
 }

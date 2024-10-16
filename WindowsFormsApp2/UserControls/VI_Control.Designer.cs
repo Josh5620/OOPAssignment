@@ -59,6 +59,7 @@
             this.IDSearch.Name = "IDSearch";
             this.IDSearch.Size = new System.Drawing.Size(183, 21);
             this.IDSearch.TabIndex = 5;
+
             // 
             // SearchBtn
             // 
@@ -68,6 +69,7 @@
             this.SearchBtn.TabIndex = 6;
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // ClearBtn
             // 
@@ -113,7 +115,8 @@
             this.MechSelfRequest.ReadOnly = true;
             this.MechSelfRequest.Size = new System.Drawing.Size(247, 195);
             this.MechSelfRequest.TabIndex = 11;
-            this.MechSelfRequest.Text = "";
+            this.MechSelfRequest.Text = "\n";
+
             // 
             // contextMenuStrip1
             // 
