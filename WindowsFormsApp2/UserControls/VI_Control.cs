@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 using System.Data.SQLite;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace WindowsFormsApp2.UserControls
+namespace Assignment.UserControls
 {
     public partial class VI_Control : UserControl
     {

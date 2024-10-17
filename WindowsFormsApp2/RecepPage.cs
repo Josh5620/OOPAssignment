@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Timers;
 using System.Drawing.Drawing2D;
-using WindowsFormsApp2.UserControls;
+using Assignment.UserControls;
 using System.Data.SQLite;
 
 
 
 
-namespace WindowsFormsApp2
+namespace Assignment
 {
     public partial class RecepPage : Form
     {

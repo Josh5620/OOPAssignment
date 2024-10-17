@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp2;
+using Assignment;
 
 namespace Assignment
 {
     public partial class LoginPage : Form
     {
+        public User user;
         public LoginPage()
         {
             InitializeComponent();
@@ -32,6 +33,57 @@ namespace Assignment
             var CForm = new AdminPage();
             CForm.Closed += (s, args) => this.Close();
             CForm.Show();
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            string username = UsernameBox.Text;
+            string password = PasswordBox.Text;
+
+            User authenticateduser = User.Authenticate(username, password);
+
+            if (authenticateduser != null)
+            {
+                switch (authenticateduser.JobType)
+                {
+                    case "Admin":
+                        AdminPage adminpage = new AdminPage();
+                        adminpage.Show();
+                        this.Hide();
+                        break;
+
+                    case "Receptionist":
+                        RecepPage recepPage = new RecepPage();
+                        recepPage.Show();
+                        this.Hide();
+                        break;
+
+                    /*case "Mechanic":
+                        MechanicPage mechanicPage = new MechanicPage();
+                        mechanicPage.Show();
+                        this.Hide();
+                        break;
+
+                    case "Customer":
+                        CustomerPage customerPage = new CustomerPage();
+                        customerPage.Show();
+                        this.Hide();
+                        break; */
+
+                    default:
+                        MessageBox.Show("JobType Not Found.");
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Username or Password. Please try again.");
+            }
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
