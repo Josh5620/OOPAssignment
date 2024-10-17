@@ -81,9 +81,9 @@ namespace Assignment
             }
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
+        private void Btn_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

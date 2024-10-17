@@ -19,46 +19,83 @@ namespace Assignment
 
         private void AdminPageLoad(object sender, EventArgs e)
         {
+            HideSubButtons();
+            PositionMainButtons();
+        }
+
+        // Hide all sub-buttons (you can call this when needed)
+        private void HideSubButtons()
+        {
             btn_addstaf.Visible = false;
             Btn_deletestaff.Visible = false;
+            Btn_AddService.Visible = false;
+            Btn_EditService.Visible = false;
+            Btn_DeleteService.Visible = false;
+        }
 
+        // Dynamically position the main buttons
+        private void PositionMainButtons()
+        {
             btn_ServiceInfo.Top = Btn_StaffA.Bottom + 10;
             btn_CustomerFeed.Top = btn_ServiceInfo.Bottom + 10;
             btn_ServiceReport.Top = btn_CustomerFeed.Bottom + 10;
             btn_Adminlogout.Top = btn_ServiceReport.Bottom + 10;
         }
 
-
-        // Add the MouseEnter event to the "Manage Staff" button
-        private void BtnManageStaff_MouseEnter(object sender, EventArgs e)
+        // Generic method to handle hover events and position sub-buttons
+        private void ShowSubButtons(Control mainButton, params Control[] subButtons)
         {
-            btn_addstaf.Visible = true;
-            Btn_deletestaff.Visible = true;
+            // Set visibility of sub-buttons to true
+            foreach (Control subButton in subButtons)
+            {
+                subButton.Visible = true;
+            }
 
-            btn_addstaf.Top = Btn_StaffA.Bottom + 1;
-            Btn_deletestaff.Top = btn_addstaf.Bottom + 1;
+            // Position the sub-buttons below the main button
+            for (int i = 0; i < subButtons.Length; i++)
+            {
+                if (i == 0)
+                    subButtons[i].Top = mainButton.Bottom + 1;
+                else
+                    subButtons[i].Top = subButtons[i - 1].Bottom + 1;
+            }
 
-            btn_ServiceInfo.Top = Btn_deletestaff.Bottom + 3;
-            btn_CustomerFeed.Top = btn_ServiceInfo.Bottom + 3;
-            btn_ServiceReport.Top = btn_CustomerFeed.Bottom + 3;
-            btn_Adminlogout.Top = btn_ServiceReport.Bottom + 2;
-
+            // Position the remaining main buttons after the last sub-button
+            PositionMainButtons();
         }
 
-        // Add the MouseLeave event to hide the buttons when not hovering
+        // Generic method to hide sub-buttons on mouse leave
+        private void HideSubButtonsOnLeave(params Control[] subButtons)
+        {
+            foreach (Control subButton in subButtons)
+            {
+                if (subButton.ClientRectangle.Contains(subButton.PointToClient(Cursor.Position)))
+                    return;
+            }
+            HideSubButtons();
+            PositionMainButtons();
+        }
+
+        // Manage Staff hover event
+        private void BtnManageStaff_MouseEnter(object sender, EventArgs e)
+        {
+            ShowSubButtons(Btn_StaffA, btn_addstaf, Btn_deletestaff);
+        }
+
         private void BtnManageStaff_MouseLeave(object sender, EventArgs e)
         {
-            if (!btn_addstaf.ClientRectangle.Contains(btn_addstaf.PointToClient(Cursor.Position)) &&
-                !Btn_deletestaff.ClientRectangle.Contains(Btn_deletestaff.PointToClient(Cursor.Position)))
-            {
-                btn_addstaf.Visible = false;
-                Btn_deletestaff.Visible = false;
+            HideSubButtonsOnLeave(btn_addstaf, Btn_deletestaff);
+        }
 
-                btn_ServiceInfo.Top = Btn_StaffA.Bottom + 10;
-                btn_CustomerFeed.Top = btn_ServiceInfo.Bottom + 10;
-                btn_ServiceReport.Top = btn_CustomerFeed.Bottom + 10;
-                btn_Adminlogout.Top = btn_ServiceReport.Bottom + 10;
-            }
+        // Manage Service Info hover event
+        private void BtnManageServiceInfo_MouseEnter(object sender, EventArgs e)
+        {
+            ShowSubButtons(btn_ServiceInfo, Btn_AddService, Btn_EditService, Btn_DeleteService);
+        }
+
+        private void BtnManageServiceInfo_MouseLeave(object sender, EventArgs e)
+        {
+            HideSubButtonsOnLeave(Btn_AddService, Btn_EditService, Btn_DeleteService);
         }
 
 
@@ -85,7 +122,7 @@ namespace Assignment
         private void Btn_deletestaff_Click(object sender, EventArgs e)
         {
             DeleteStaff uc = new DeleteStaff();
-            AddUserControl(uc); 
+            AddUserControl(uc);
         }
 
         private void btn_CustomerFeed_Click(object sender, EventArgs e)

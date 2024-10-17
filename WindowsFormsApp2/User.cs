@@ -11,7 +11,18 @@ namespace Assignment
 {
     public class User
     {
-        public string connectionString;
+        protected string connectionString
+        { get 
+            { 
+                // Constructs the path to the database
+                string solutionDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\");
+
+                // Database path
+                string dbpath = Path.Combine(solutionDir, "UserDatabase.db");
+                return $"Data Source={dbpath};Version=3;";
+            }
+        }
+
         public string Username { get; set; }
         public string Password { get; set; }
         public string JobType { get; set; }
@@ -27,25 +38,18 @@ namespace Assignment
 
         public static User Authenticate(string username, string password)
         {
-            // Constructs the path to the database
-            string solutionDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\");
-
-
-            string dbpath = Path.Combine(solutionDir, "UserDatabase.db");
-            string connectionString = $"Data Source={dbpath};Version=3;";
             User authenticatedUser = null;
 
-
-
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            User tempUser = new User();
+            using (SQLiteConnection connection = new SQLiteConnection(tempUser.connectionString))
             {
                 // Uses a UNION query to look for the data as a simultaneous search.
                 string query = @"
-                SELECT Username, Password, JobType, ContactInfo 
+                SELECT Username, Password, JobType
                 FROM Staff_Table 
                 WHERE Username = @Username AND Password = @Password
                 UNION
-                SELECT Username, Password, 'Customer' AS JobType, ContactInfo 
+                SELECT Username, Password, 'Customer' AS JobType
                 FROM Customer_Table 
                 WHERE Username = @Username AND Password = @Password";
 
@@ -67,6 +71,8 @@ namespace Assignment
 
             return authenticatedUser;
         }
+
+
 
             
     }

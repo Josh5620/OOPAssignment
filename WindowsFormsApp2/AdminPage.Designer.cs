@@ -30,36 +30,36 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Btn_editServices = new System.Windows.Forms.Button();
-            this.Btn_deleteServices = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Btn_EditService = new System.Windows.Forms.Button();
+            this.Btn_DeleteService = new System.Windows.Forms.Button();
             this.Btn_AddService = new System.Windows.Forms.Button();
             this.Btn_StaffA = new System.Windows.Forms.Button();
             this.btn_Adminlogout = new System.Windows.Forms.Button();
             this.btn_ServiceReport = new System.Windows.Forms.Button();
             this.btn_CustomerFeed = new System.Windows.Forms.Button();
             this.btn_ServiceInfo = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_addstaf = new System.Windows.Forms.Button();
             this.Btn_deletestaff = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.AdminPContainer = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.AdminPContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel1.Controls.Add(this.Btn_editServices);
-            this.panel1.Controls.Add(this.Btn_deleteServices);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.Btn_EditService);
+            this.panel1.Controls.Add(this.Btn_DeleteService);
             this.panel1.Controls.Add(this.Btn_AddService);
             this.panel1.Controls.Add(this.Btn_StaffA);
             this.panel1.Controls.Add(this.btn_Adminlogout);
             this.panel1.Controls.Add(this.btn_ServiceReport);
             this.panel1.Controls.Add(this.btn_CustomerFeed);
             this.panel1.Controls.Add(this.btn_ServiceInfo);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btn_addstaf);
             this.panel1.Controls.Add(this.Btn_deletestaff);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -69,40 +69,52 @@
             this.panel1.Size = new System.Drawing.Size(252, 1036);
             this.panel1.TabIndex = 0;
             // 
-            // Btn_editServices
+            // pictureBox1
             // 
-            this.Btn_editServices.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Btn_editServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_editServices.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_editServices.Location = new System.Drawing.Point(6, 644);
-            this.Btn_editServices.Margin = new System.Windows.Forms.Padding(6);
-            this.Btn_editServices.Name = "Btn_editServices";
-            this.Btn_editServices.Size = new System.Drawing.Size(240, 53);
-            this.Btn_editServices.TabIndex = 12;
-            this.Btn_editServices.Text = "Edit";
-            this.Btn_editServices.UseVisualStyleBackColor = true;
-            this.Btn_editServices.Visible = false;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(-9, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(265, 262);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // Btn_deleteServices
+            // Btn_EditService
             // 
-            this.Btn_deleteServices.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Btn_deleteServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_deleteServices.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_deleteServices.Location = new System.Drawing.Point(8, 699);
-            this.Btn_deleteServices.Margin = new System.Windows.Forms.Padding(6);
-            this.Btn_deleteServices.Name = "Btn_deleteServices";
-            this.Btn_deleteServices.Size = new System.Drawing.Size(240, 53);
-            this.Btn_deleteServices.TabIndex = 11;
-            this.Btn_deleteServices.Text = "Delete";
-            this.Btn_deleteServices.UseVisualStyleBackColor = true;
-            this.Btn_deleteServices.Visible = false;
+            this.Btn_EditService.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Btn_EditService.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_EditService.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Btn_EditService.Location = new System.Drawing.Point(8, 647);
+            this.Btn_EditService.Margin = new System.Windows.Forms.Padding(6);
+            this.Btn_EditService.Name = "Btn_EditService";
+            this.Btn_EditService.Size = new System.Drawing.Size(240, 53);
+            this.Btn_EditService.TabIndex = 12;
+            this.Btn_EditService.Text = "Edit";
+            this.Btn_EditService.UseVisualStyleBackColor = true;
+            this.Btn_EditService.Visible = false;
+            // 
+            // Btn_DeleteService
+            // 
+            this.Btn_DeleteService.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Btn_DeleteService.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_DeleteService.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Btn_DeleteService.Location = new System.Drawing.Point(6, 699);
+            this.Btn_DeleteService.Margin = new System.Windows.Forms.Padding(6);
+            this.Btn_DeleteService.Name = "Btn_DeleteService";
+            this.Btn_DeleteService.Size = new System.Drawing.Size(240, 53);
+            this.Btn_DeleteService.TabIndex = 11;
+            this.Btn_DeleteService.Text = "Delete";
+            this.Btn_DeleteService.UseVisualStyleBackColor = true;
+            this.Btn_DeleteService.Visible = false;
             // 
             // Btn_AddService
             // 
             this.Btn_AddService.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Btn_AddService.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_AddService.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_AddService.Location = new System.Drawing.Point(8, 599);
+            this.Btn_AddService.Location = new System.Drawing.Point(6, 592);
             this.Btn_AddService.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_AddService.Name = "Btn_AddService";
             this.Btn_AddService.Size = new System.Drawing.Size(238, 53);
@@ -116,7 +128,7 @@
             this.Btn_StaffA.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Btn_StaffA.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_StaffA.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_StaffA.Location = new System.Drawing.Point(2, 291);
+            this.Btn_StaffA.Location = new System.Drawing.Point(2, 274);
             this.Btn_StaffA.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_StaffA.Name = "Btn_StaffA";
             this.Btn_StaffA.Size = new System.Drawing.Size(238, 85);
@@ -174,7 +186,7 @@
             this.btn_ServiceInfo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_ServiceInfo.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ServiceInfo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_ServiceInfo.Location = new System.Drawing.Point(6, 499);
+            this.btn_ServiceInfo.Location = new System.Drawing.Point(2, 480);
             this.btn_ServiceInfo.Margin = new System.Windows.Forms.Padding(6);
             this.btn_ServiceInfo.Name = "btn_ServiceInfo";
             this.btn_ServiceInfo.Size = new System.Drawing.Size(246, 100);
@@ -182,37 +194,12 @@
             this.btn_ServiceInfo.Text = "Manage Service Info";
             this.btn_ServiceInfo.UseVisualStyleBackColor = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 240);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 46);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Admin";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 240);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btn_addstaf
             // 
             this.btn_addstaf.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btn_addstaf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_addstaf.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_addstaf.Location = new System.Drawing.Point(2, 378);
+            this.btn_addstaf.Location = new System.Drawing.Point(2, 360);
             this.btn_addstaf.Margin = new System.Windows.Forms.Padding(6);
             this.btn_addstaf.Name = "btn_addstaf";
             this.btn_addstaf.Size = new System.Drawing.Size(238, 53);
@@ -227,7 +214,7 @@
             this.Btn_deletestaff.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Btn_deletestaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_deletestaff.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Btn_deletestaff.Location = new System.Drawing.Point(0, 434);
+            this.Btn_deletestaff.Location = new System.Drawing.Point(0, 415);
             this.Btn_deletestaff.Margin = new System.Windows.Forms.Padding(6);
             this.Btn_deletestaff.Name = "Btn_deletestaff";
             this.Btn_deletestaff.Size = new System.Drawing.Size(240, 53);
@@ -237,8 +224,22 @@
             this.Btn_deletestaff.Visible = false;
             this.Btn_deletestaff.Click += new System.EventHandler(this.Btn_deletestaff_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(325, 378);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 46);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Admin";
+            // 
             // AdminPContainer
             // 
+            this.AdminPContainer.Controls.Add(this.label1);
             this.AdminPContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AdminPContainer.Location = new System.Drawing.Point(252, 0);
             this.AdminPContainer.Margin = new System.Windows.Forms.Padding(6);
@@ -259,8 +260,9 @@
             this.Text = "AdminPage";
             this.Load += new System.EventHandler(this.AdminPageLoad);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.AdminPContainer.ResumeLayout(false);
+            this.AdminPContainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -278,8 +280,8 @@
         private System.Windows.Forms.Button Btn_StaffA;
         private System.Windows.Forms.Button Btn_deletestaff;
         private System.Windows.Forms.Button btn_addstaf;
-        private System.Windows.Forms.Button Btn_deleteServices;
+        private System.Windows.Forms.Button Btn_DeleteService;
         private System.Windows.Forms.Button Btn_AddService;
-        private System.Windows.Forms.Button Btn_editServices;
+        private System.Windows.Forms.Button Btn_EditService;
     }
 }
