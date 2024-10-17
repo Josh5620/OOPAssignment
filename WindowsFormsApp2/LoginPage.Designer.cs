@@ -65,7 +65,7 @@
             // 
             this.UsernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameBox.Location = new System.Drawing.Point(630, 302);
-            this.UsernameBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(6);
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(392, 40);
             this.UsernameBox.TabIndex = 2;
@@ -74,7 +74,7 @@
             // 
             this.PasswordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordBox.Location = new System.Drawing.Point(630, 472);
-            this.PasswordBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(6);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(392, 40);
             this.PasswordBox.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.Location = new System.Drawing.Point(470, 706);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(6);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(238, 109);
             this.btn_login.TabIndex = 4;
@@ -95,7 +95,7 @@
             // 
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.Location = new System.Drawing.Point(832, 706);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(6);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(238, 109);
             this.btn_exit.TabIndex = 5;
@@ -149,7 +149,7 @@
             this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "LoginPage";
             this.Text = "LoginPage";
             this.ResumeLayout(false);

@@ -11,6 +11,7 @@ namespace Assignment
 {
     public class User
     {
+        public string connectionString;
         public string Username { get; set; }
         public string PasswordHash { get; set; }
         public string JobType { get; set; }
@@ -37,7 +38,16 @@ namespace Assignment
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                string query = "SELECT Username, Password, JobType FROM Staff_Table WHERE Username = @Username AND Password = @Password";
+                // Uses a UNION query to look for the data as a simultaneous search.
+                string query = @"
+                SELECT Username, Password, JobType, ContactInfo 
+                FROM Staff_Table 
+                WHERE Username = @Username AND Password = @Password
+                UNION
+                SELECT Username, Password, 'Customer' AS JobType, ContactInfo 
+                FROM Customer_Table 
+                WHERE Username = @Username AND Password = @Password";
+
                 SQLiteCommand command = new SQLiteCommand(query, connection);
                 command.Parameters.AddWithValue("@Username", username);
                 command.Parameters.AddWithValue("@Password", password);
