@@ -13,16 +13,17 @@ namespace Assignment
     {
         public string connectionString;
         public string Username { get; set; }
-        public string PasswordHash { get; set; }
+        public string Password { get; set; }
         public string JobType { get; set; }
 
-        public User(string username, string passwordHash, string jobType)
+        public User(string username, string password, string jobType)
         {
             Username = username;
-            PasswordHash = passwordHash;
+            Password = password;
             JobType = jobType;
         }
-        public User() { }
+        public User() 
+        { }
 
         public static User Authenticate(string username, string password)
         {
@@ -66,6 +67,8 @@ namespace Assignment
 
             return authenticatedUser;
         }
+
+            
     }
 
 }
