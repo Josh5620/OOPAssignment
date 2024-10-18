@@ -12,6 +12,8 @@ namespace Assignment
 {
     public partial class AdminPage : Form
     {
+        private bool hover;
+
         public AdminPage()
         {
             InitializeComponent();
@@ -20,10 +22,8 @@ namespace Assignment
         private void AdminPageLoad(object sender, EventArgs e)
         {
             HideSubButtons();
-            PositionMainButtons();
         }
 
-        // Hide all sub-buttons (you can call this when needed)
         private void HideSubButtons()
         {
             btn_addstaf.Visible = false;
@@ -33,72 +33,125 @@ namespace Assignment
             Btn_DeleteService.Visible = false;
         }
 
-        // Dynamically position the main buttons
-        private void PositionMainButtons()
+        private void TimerCheck(params Control[] subButtons)
         {
-            btn_ServiceInfo.Top = Btn_StaffA.Bottom + 10;
-            btn_CustomerFeed.Top = btn_ServiceInfo.Bottom + 10;
-            btn_ServiceReport.Top = btn_CustomerFeed.Bottom + 10;
-            btn_Adminlogout.Top = btn_ServiceReport.Bottom + 10;
+            System.Timers.Timer timer = new System.Timers.Timer(500);
+            timer.AutoReset = false;
+            timer.Start();
+            timer.Elapsed += (sender1, e1) =>
+            {
+                Invoke((MethodInvoker)delegate
+                {
+                    if (!hover && !AnyFocused(subButtons))
+                    {
+                        foreach (var button in subButtons)
+                        {
+                            button.Hide();
+                        }
+                    }
+                });
+            };
         }
 
-        // Generic method to handle hover events and position sub-buttons
-        private void ShowSubButtons(Control mainButton, params Control[] subButtons)
+        private bool AnyFocused(params Control[] controls)
         {
-            // Set visibility of sub-buttons to true
-            foreach (Control subButton in subButtons)
+            foreach (var control in controls)
             {
-                subButton.Visible = true;
+                if (control.Focused)
+                {
+                    return true;
+                }
             }
-
-            // Position the sub-buttons below the main button
-            for (int i = 0; i < subButtons.Length; i++)
-            {
-                if (i == 0)
-                    subButtons[i].Top = mainButton.Bottom + 1;
-                else
-                    subButtons[i].Top = subButtons[i - 1].Bottom + 1;
-            }
-
-            // Position the remaining main buttons after the last sub-button
-            PositionMainButtons();
+            return false;
         }
 
-        // Generic method to hide sub-buttons on mouse leave
-        private void HideSubButtonsOnLeave(params Control[] subButtons)
+        private void BtnHighlight(object sender, EventArgs e)
         {
-            foreach (Control subButton in subButtons)
-            {
-                if (subButton.ClientRectangle.Contains(subButton.PointToClient(Cursor.Position)))
-                    return;
-            }
-            HideSubButtons();
-            PositionMainButtons();
+            Button button = (Button)sender;
+            button.BackColor = Color.Red; 
         }
 
-        // Manage Staff hover event
-        private void BtnManageStaff_MouseEnter(object sender, EventArgs e)
+        private void BtnManageStaff_MouseHover(object sender, EventArgs e)
         {
-            ShowSubButtons(Btn_StaffA, btn_addstaf, Btn_deletestaff);
+            hover = true;
+            btn_addstaf.Show();
+            Btn_deletestaff.Show();
         }
 
         private void BtnManageStaff_MouseLeave(object sender, EventArgs e)
         {
-            HideSubButtonsOnLeave(btn_addstaf, Btn_deletestaff);
+            hover = false;
+            TimerCheck(btn_addstaf, Btn_deletestaff);
         }
 
-        // Manage Service Info hover event
-        private void BtnManageServiceInfo_MouseEnter(object sender, EventArgs e)
+        private void Btn_addstaf_MouseHover(object sender, EventArgs e)
         {
-            ShowSubButtons(btn_ServiceInfo, Btn_AddService, Btn_EditService, Btn_DeleteService);
+            hover = true;
+        }
+
+        private void Btn_addstaf_MouseLeave(object sender, EventArgs e)
+        {
+            hover = false;
+            TimerCheck(btn_addstaf);
+        }
+
+        private void Btn_deletestaff_MouseHover(object sender, EventArgs e)
+        {
+            hover = true;
+        }
+
+        private void Btn_deletestaff_MouseLeave(object sender, EventArgs e)
+        {
+            hover = false;
+            TimerCheck(Btn_deletestaff);
+        }
+
+        private void BtnManageServiceInfo_MouseHover(object sender, EventArgs e)
+        {
+            hover = true;
+            Btn_AddService.Show();
+            Btn_EditService.Show();
+            Btn_DeleteService.Show();
         }
 
         private void BtnManageServiceInfo_MouseLeave(object sender, EventArgs e)
         {
-            HideSubButtonsOnLeave(Btn_AddService, Btn_EditService, Btn_DeleteService);
+            hover = false;
+            TimerCheck(Btn_AddService, Btn_EditService, Btn_DeleteService);
         }
 
+        private void Btn_AddService_MouseHover(object sender, EventArgs e)
+        {
+            hover = true;
+        }
 
+        private void Btn_AddService_MouseLeave(object sender, EventArgs e)
+        {
+            hover = false;
+            TimerCheck(Btn_AddService);
+        }
+
+        private void Btn_EditService_MouseHover(object sender, EventArgs e)
+        {
+            hover = true;
+        }
+
+        private void Btn_EditService_MouseLeave(object sender, EventArgs e)
+        {
+            hover = false;
+            TimerCheck(Btn_EditService);
+        }
+
+        private void Btn_DeleteService_MouseHover(object sender, EventArgs e)
+        {
+            hover = true;
+        }
+
+        private void Btn_DeleteService_MouseLeave(object sender, EventArgs e)
+        {
+            hover = false;
+            TimerCheck(Btn_DeleteService);
+        }
 
         private void AddUserControl(UserControl userControl)
         {
@@ -108,11 +161,7 @@ namespace Assignment
             userControl.BringToFront();
         }
 
-        private void Btn_StaffA_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Button click events to load user controls
         private void Btn_addstaf_Click(object sender, EventArgs e)
         {
             Add_Staff uc = new Add_Staff();
@@ -125,19 +174,20 @@ namespace Assignment
             AddUserControl(uc);
         }
 
-        private void btn_CustomerFeed_Click(object sender, EventArgs e)
+        private void Btn_AddService_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_ServiceReport_Click(object sender, EventArgs e)
+        private void Btn_EditService_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_Adminlogout_Click(object sender, EventArgs e)
+        private void Btn_DeleteService_Click(object sender, EventArgs e)
         {
 
         }
     }
 }
+
