@@ -88,7 +88,7 @@ namespace Assignment.UserControls
 
 
             }
-            catch (Exception ex) { MessageBox.Show("Error?"); };
+            catch (Exception) { MessageBox.Show("Error?"); };
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)

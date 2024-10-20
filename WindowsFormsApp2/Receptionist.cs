@@ -19,7 +19,7 @@ namespace Assignment
         private string dbPath;
         private SQLiteDataAdapter dataAdapter;      // Sets both connection and dataAdapter to class lvl variables and determines the main database file path
         private SQLiteConnection connection;
-        private string focusID;
+
 
         public Receptionist()
         {
@@ -78,6 +78,43 @@ namespace Assignment
                     MessageBox.Show("An Error has occured!");
                 }
             }
+        }
+
+        public void AddCustomerRecord(string fullName, string contactInfo,
+                                      string username, string vehicleNumber,
+                                      string address, string ServiceChoice)
+        {
+            Dictionary<string, string> serviceOptions = new Dictionary<string, string>
+             {
+                { "1", "Placeholder1" },
+                { "2", "Placeholder2" },
+                { "3", "Placeholder3" }         // Change the placeholders and the ones below when we decided what servicesto add 
+             };
+
+            try
+            {
+                string query = $"INSERT INTO Customer_Table (FullName, Password, ContactInfo, Username, VehicleNumber, Address, {serviceOptions[ServiceChoice]}) " +
+                               $"VALUES (@FullName, @Password, @ContactInfo, @Username, @VehicleNumber, @Address, @{serviceOptions[ServiceChoice]})";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@FullName", fullName);
+                    cmd.Parameters.AddWithValue("@Password", "N/A");
+                    cmd.Parameters.AddWithValue("@ContactInfo", contactInfo);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@VehicleNumber", vehicleNumber);
+                    cmd.Parameters.AddWithValue("@Address", address);
+                    cmd.Parameters.AddWithValue($"@{serviceOptions[ServiceChoice]}", true);
+
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Record added successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error adding the record: {ex.Message}");
+            }
+
         }
 
         public SQLiteDataReader LoadOrderTable()

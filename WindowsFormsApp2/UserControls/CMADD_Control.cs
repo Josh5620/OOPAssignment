@@ -6,6 +6,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,41 +17,39 @@ namespace Assignment.UserControls
         public CMADD_Control()
         {
             InitializeComponent();
+            dataGridView1.DataSource = Recep.LoadCustDataGrid();
         }
+        Receptionist Recep = new Receptionist();
 
-        private void LoadData()
+        private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            // Define the connection string for your SQLite database
-            string connectionString = @"Data Source=your_database.db;Version=3;";
-
-            // Create the SQLite connection
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                // Open the connection
-                connection.Open();
-
-                // Define the query to fetch data (e.g., from the "Customers" table)
-                string query = "SELECT * FROM Customers";
-
-                // Create the command and data adapter
-                SQLiteCommand command = new SQLiteCommand(query, connection);
-                SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(command);
-
-                // Create a DataTable to hold the query results
-                DataTable dataTable = new DataTable();
-
-                // Fill the DataTable with the results of the query
-                dataAdapter.Fill(dataTable);
-
-                // Bind the DataTable to the DataGridView
-                dataGridView1.DataSource = dataTable;
-
-                // Close the connection
-                connection.Close();
-            }
+            Receptionist Recep = new Receptionist();
+            dataGridView1.DataSource = Recep.LoadCustDataGrid();
         }
 
+        private void AddBtn_Click(object sender, EventArgs e)       // Add error handling if stuff is blank or types dont matchup
+        {                   
+            string fullName = FullNameTextBox.Text;
+            string contactInfo = ContactInfoTextBox.Text;
+            string username = UsernameTextBox.Text;
+            string vehicleNumber = VehicleNumberTextBox.Text;
+            string address = AddressTextBox.Text;
+            string selectedService = ServiceComboBox.SelectedItem?.ToString();
+            try
+            {
+                Recep.AddCustomerRecord(fullName, contactInfo, username, vehicleNumber, address, selectedService);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); };
+        }
 
-
+        private void ClrBtn_Click(object sender, EventArgs e)
+        {
+            FullNameTextBox.Text = "";
+            ContactInfoTextBox.Text = "";
+            UsernameTextBox.Text = "";
+            VehicleNumberTextBox.Text = "";
+            AddressTextBox.Text = "";
+            ServiceComboBox.Text = "";
+        }
     }
 }
