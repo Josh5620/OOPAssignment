@@ -101,16 +101,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Receptionist.cs" />
-    <Compile Include="Resources\Add_Staff.cs">
+    <Compile Include="UserControls\Add_Staff.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\Add_Staff.Designer.cs">
+    <Compile Include="UserControls\Add_Staff.Designer.cs">
       <DependentUpon>Add_Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\DeleteStaff.cs">
+    <Compile Include="UserControls\DeleteStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Resources\DeleteStaff.Designer.cs">
+    <Compile Include="UserControls\DeleteStaff.Designer.cs">
       <DependentUpon>DeleteStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
@@ -169,10 +169,10 @@
     <EmbeddedResource Include="RecepPage.resx">
       <DependentUpon>RecepPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Add_Staff.resx">
+    <EmbeddedResource Include="UserControls\Add_Staff.resx">
       <DependentUpon>Add_Staff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\DeleteStaff.resx">
+    <EmbeddedResource Include="UserControls\DeleteStaff.resx">
       <DependentUpon>DeleteStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CIO_Control.resx">
@@ -224,6 +224,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\CarCare Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
