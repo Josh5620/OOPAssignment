@@ -107,6 +107,7 @@
     <Compile Include="UserControls\Add_Staff.Designer.cs">
       <DependentUpon>Add_Staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin.cs" />
     <Compile Include="UserControls\DeleteStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>

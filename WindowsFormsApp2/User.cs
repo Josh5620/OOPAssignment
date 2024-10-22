@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Data;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
@@ -11,6 +13,7 @@ namespace Assignment
 {
     public class User
     {
+        
         protected string connectionString
         { get 
             { 
@@ -23,9 +26,20 @@ namespace Assignment
             }
         }
 
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string JobType { get; set; }
+        private SQLiteDataAdapter dataAdapter;
+        private SQLiteConnection connection;
+        
+        //Optional use for class connection to database.
+        protected SQLiteConnection GetDatabaseConnection()
+        {
+            var connection = new SQLiteConnection(connectionString);
+            connection.Open();
+            return connection;
+        }
+
+        public string Username;
+        public string Password;
+        public string JobType;
 
         public User(string username, string password, string jobType)
         {
@@ -72,9 +86,34 @@ namespace Assignment
             return authenticatedUser;
         }
 
+        public DataTable LoadDataGrid(string tableName)
+        {
+            // Ensure the table name is safe from SQL injection by checking against a dictionary or predefined list
+            var validTables = new Dictionary<string, string>()
+    {
+        { "staff", "Staff_Table" },
+        { "customer", "Customer_Table" },
+        { "service", "Service_Table" }
+        // Add more valid tables as needed
+    };
+
+            if (!validTables.ContainsKey(tableName.ToLower()))
+            {
+                throw new ArgumentException("Invalid table name.");
+            }
+
+            string query = $"SELECT * FROM {validTables[tableName.ToLower()]}";
+            SQLiteCommand command = new SQLiteCommand(query, connection);
+            dataAdapter = new SQLiteDataAdapter(command);
+
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+
+            return dataTable;
+        }
 
 
-            
+
     }
 
 }
