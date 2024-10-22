@@ -156,6 +156,7 @@ namespace Assignment
         private void AddUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
+            userControl.AutoSize = true;
             AdminPContainer.Controls.Clear();
             AdminPContainer.Controls.Add(userControl);
             userControl.BringToFront();
