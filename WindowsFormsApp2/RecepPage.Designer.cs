@@ -195,6 +195,7 @@
             this.ControlPanel.Name = "ControlPanel";
             this.ControlPanel.Size = new System.Drawing.Size(642, 511);
             this.ControlPanel.TabIndex = 2;
+            this.ControlPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ControlPanel_Paint);
             // 
             // listBox1
             // 

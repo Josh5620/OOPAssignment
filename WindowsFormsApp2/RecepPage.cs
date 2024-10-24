@@ -161,6 +161,9 @@ namespace Assignment
             }
         }
 
+        private void ControlPanel_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

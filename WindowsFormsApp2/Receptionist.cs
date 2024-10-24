@@ -117,13 +117,29 @@ namespace Assignment
 
         public DataTable LoadAppTable()
         {
-            string query = "SELECT AppointmentID, FullName, CustomerId, ServiceId, MechanicId, VehicleNumber, AppointmentDate " +
-               "FROM Appointments " +
-               "WHERE Status != 'Completed';";
+            string query = "SELECT AppointmentId, FullName, CustomerId, ServiceId, MechanicId, VehicleNumber, AppointmentDate, Status FROM Appointments WHERE Status IS NOT 'Completed' OR Status IS NULL";
+            SQLiteCommand cmd = new SQLiteCommand(query, connection);
 
+
+            dataAdapter = new SQLiteDataAdapter(cmd); 
+            DataTable dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            MessageBox.Show("Number of rows returned: " + dataTable.Rows.Count);
+
+
+            return dataTable;
             // make the query and make 1 to track the mechanic IDs and assisnge to those witheout the status done.
         }
 
+        public SQLiteDataReader LoadStaffIds()
+        {
+            string query = @"SELECT s.StaffId, s.FullName AS StaffName 
+                 FROM Staff_Table s
+                 WHERE s.JobType = 'Mechanic'";
+            SQLiteCommand cmd = new SQLiteCommand(query, connection);
+            SQLiteDataReader reader = cmd.ExecuteReader();
 
+            return reader; 
+        }
     }
 }
