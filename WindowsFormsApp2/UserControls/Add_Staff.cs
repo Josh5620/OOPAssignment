@@ -15,11 +15,24 @@ namespace Assignment
         public Add_Staff()
         {
             InitializeComponent();
+            LoadJobTypes();
         }
+        Admin admin = new Admin();
 
-        private void button2_Click(object sender, EventArgs e)
+        private void LoadJobTypes()
         {
-
+            // Check if the ComboBox is empty before adding items
+            if (ComboJobType.Items.Count == 0)
+            {
+                // Add job types to the ComboBox
+                ComboJobType.Items.Add("Admin");
+                ComboJobType.Items.Add("Receptionist");
+                ComboJobType.Items.Add("Mechanic");
+            }
+        }
+        private void Btn_addnewstaff_Click(object sender, EventArgs e)
+        {
+            admin.AddStaff(FullNBox.Text, UsernBox.Text, PassBox.Text, ComboJobType.Text);
         }
     }
 }

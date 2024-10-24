@@ -18,7 +18,9 @@ namespace Assignment
     {
         private SQLiteConnection connection;  // Initializes the connection and the datatables. 
         private DataTable staffData;
-        private DataTable customerData;
+        private DataTable serviceTData;
+        private DataTable feedbackdata;
+        private DataTable ReportData;
 
         public Admin()
         {
@@ -27,7 +29,9 @@ namespace Assignment
 
             // Initialize the DataTables by loading the respective tables
             staffData = LoadDataGrid("staff");
-            customerData = LoadDataGrid("customer");
+            serviceTData = LoadDataGrid("service");
+            feedbackdata = LoadDataGrid("feedback");
+
         }
 
         public DataTable StaffData
@@ -36,10 +40,16 @@ namespace Assignment
             set => staffData = value;
         }
 
-        public DataTable CustomerData
+        public DataTable ServiceData
         {
-            get => customerData;
-            set => customerData = value;
+            get => serviceTData;
+            set => serviceTData = value;
+        }
+
+        public DataTable FeedData
+        {
+            get => feedbackdata;
+            set => feedbackdata = value;
         }
 
         public void InsertRecord(string tableName, Dictionary<string, object> columns)
@@ -72,16 +82,34 @@ namespace Assignment
             // Form the SQL query
             string deleteQuery = $"DELETE FROM {tableName} WHERE {columnName} = @{columnName}";
 
-            try 
+            try
             {
                 using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, connection))
-                {
-                    // Add the parameters for the condition
+                {// Add the parameters for the condition
+                    cmd.Parameters.AddWithValue($"@{columnName}", value);
+
+                    // Execute the delete command
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    // Check if any rows were affected
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show($"{rowsAffected} record(s) deleted from {tableName}.");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"No records found with the provided {columnName} value.");
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that might occur
+                MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
 
-        public void AddStaff(int StaffId, string fullName, string username, string password, string jobType)
+        public void AddStaff(string fullName, string username, string password, string jobType)
         {
             var staffData = new Dictionary<string, object>
             {
@@ -91,33 +119,16 @@ namespace Assignment
                 { JobType, jobType }
             };
             InsertRecord("Staff_Table", staffData);
+            RefreshDatabase(StaffData);
         }
 
         public void DeleteStaff(int StaffId)
         {
-            // StaffId shown for debugging services
-            MessageBox.Show($"{StaffId}");
-
-            string deletestaffquery = $"DELETE FROM Staff_Table WHERE StaffId = {StaffId}";
-            using (SQLiteCommand cmd = new SQLiteCommand(deletestaffquery, connection))
-            {
-
-                // Run the delete command
-                int rowsAffected = cmd.ExecuteNonQuery();
-
-                // Provide feedback on the number of rows affected
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show($"Successfully deleted {rowsAffected} staff member(s).");
-                }
-                else
-                {
-                    MessageBox.Show("No staff member found with the provided Staff ID.");
-                }
-            }
+            DeleteRecord("Staff_Table", "StaffId", StaffId);
+            RefreshDatabase(staffData);
         }
 
-        public void AddService(int ServiceId, string ServiceName, string Description, int price, string EstimatedTime)
+        public void AddService(string ServiceName, string Description, int price, string EstimatedTime)
         {
             var serviceData = new Dictionary<string, object>
             {
@@ -127,6 +138,42 @@ namespace Assignment
                 { "ET", EstimatedTime }
             };
             InsertRecord("Service_Table", serviceData);
+            RefreshDatabase(serviceTData);
+        }
+
+        public void DeleteService(int ServiceId)
+        {
+            DeleteRecord("Service_Table", "ServiceId", ServiceId);
+            RefreshDatabase(serviceTData);
+        }
+
+        public void EditService(int ServiceId, int price, int EstimatedTime)
+        {
+            //Form the SQL query
+            string Editquery = $"UPDATE Service_Table SET Price = @price AND EstimatedTime = @ET WHERE ServiceId = @ServiceId";
+            try
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand(Editquery, connection))
+                {
+                    cmd.Parameters.AddWithValue("@price", price);
+                    cmd.Parameters.AddWithValue("@ET", EstimatedTime);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show($"Service {ServiceId} ID successfully updated!");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Service with {ServiceId} ID does not exist! Please enter a valid service ID!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error in updating service! {ex.Message}");
+            }
+            RefreshDatabase(serviceTData);
         }
     }
 }
