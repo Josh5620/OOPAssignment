@@ -26,14 +26,14 @@ namespace Assignment.UserControls
         private void CMDEL_Control_Load(object sender, EventArgs e)
         {
                        // Loads datatable using the recep class function and 
-            dataGridView1.DataSource = Recep.LoadCustDataGrid();
+            dataGridView1.DataSource = Recep.LoadDataGrid("customer");
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Receptionist Recep = new Receptionist();
-            dataGridView1.DataSource = Recep.LoadCustDataGrid();
+            dataGridView1.DataSource = Recep.LoadDataGrid("customer");
         }
 
         private void FilterBtn_Click(object sender, EventArgs e)

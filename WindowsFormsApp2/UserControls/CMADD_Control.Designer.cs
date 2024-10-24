@@ -44,8 +44,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,6 +198,15 @@
             this.label6.TabIndex = 22;
             this.label6.Text = "Address:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 192);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(327, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Password is set to N/A change, only 1 serice can be place at a time";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -207,15 +216,6 @@
             this.label7.Size = new System.Drawing.Size(61, 18);
             this.label7.TabIndex = 23;
             this.label7.Text = "Service:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 192);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(327, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Password is set to N/A change, only 1 serice can be place at a time";
             // 
             // CMADD_Control
             // 
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -134,8 +134,8 @@
             this.DelCust.Text = "Delete";
             this.DelCust.UseVisualStyleBackColor = true;
             this.DelCust.Click += new System.EventHandler(this.DelCust_Click);
-            this.DelCust.MouseEnter += new System.EventHandler(this.DelCust_Hover);
-            this.DelCust.MouseHover += new System.EventHandler(this.DelBtnLeave);
+            this.DelCust.MouseLeave += new System.EventHandler(this.DelBtnLeave);
+            this.DelCust.MouseHover += new System.EventHandler(this.DelCust_Hover);
             // 
             // AddCust
             // 
@@ -147,8 +147,8 @@
             this.AddCust.Text = "Add";
             this.AddCust.UseVisualStyleBackColor = true;
             this.AddCust.Click += new System.EventHandler(this.AddCust_Click);
-            this.AddCust.MouseEnter += new System.EventHandler(this.AddCust_Hover);
-            this.AddCust.MouseHover += new System.EventHandler(this.AddBtnLeave);
+            this.AddCust.MouseLeave += new System.EventHandler(this.AddBtnLeave);
+            this.AddCust.MouseHover += new System.EventHandler(this.AddCust_Hover);
             // 
             // button1
             // 

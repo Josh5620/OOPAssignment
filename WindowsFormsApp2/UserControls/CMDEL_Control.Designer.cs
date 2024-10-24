@@ -49,18 +49,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(68, 63);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(51, 51);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(708, 293);
+            this.dataGridView1.Size = new System.Drawing.Size(531, 238);
             this.dataGridView1.TabIndex = 5;
             // 
             // RefreshBtn
             // 
-            this.RefreshBtn.Location = new System.Drawing.Point(676, 506);
-            this.RefreshBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RefreshBtn.Location = new System.Drawing.Point(507, 411);
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(100, 28);
+            this.RefreshBtn.Size = new System.Drawing.Size(75, 23);
             this.RefreshBtn.TabIndex = 6;
             this.RefreshBtn.Text = "Refresh";
             this.RefreshBtn.UseVisualStyleBackColor = true;
@@ -68,18 +66,16 @@
             // 
             // IDtextBox
             // 
-            this.IDtextBox.Location = new System.Drawing.Point(217, 414);
-            this.IDtextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.IDtextBox.Location = new System.Drawing.Point(163, 336);
             this.IDtextBox.Name = "IDtextBox";
-            this.IDtextBox.Size = new System.Drawing.Size(132, 22);
+            this.IDtextBox.Size = new System.Drawing.Size(100, 20);
             this.IDtextBox.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 373);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(48, 303);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 8;
@@ -89,8 +85,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 417);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(48, 339);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 9;
@@ -100,8 +95,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(64, 462);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(48, 375);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 16);
             this.label4.TabIndex = 11;
@@ -109,18 +103,16 @@
             // 
             // NametextBox
             // 
-            this.NametextBox.Location = new System.Drawing.Point(217, 458);
-            this.NametextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NametextBox.Location = new System.Drawing.Point(163, 372);
             this.NametextBox.Name = "NametextBox";
-            this.NametextBox.Size = new System.Drawing.Size(132, 22);
+            this.NametextBox.Size = new System.Drawing.Size(100, 20);
             this.NametextBox.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(64, 506);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(48, 411);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 16);
             this.label5.TabIndex = 13;
@@ -128,18 +120,16 @@
             // 
             // NumtextBox
             // 
-            this.NumtextBox.Location = new System.Drawing.Point(217, 502);
-            this.NumtextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NumtextBox.Location = new System.Drawing.Point(163, 408);
             this.NumtextBox.Name = "NumtextBox";
-            this.NumtextBox.Size = new System.Drawing.Size(132, 22);
+            this.NumtextBox.Size = new System.Drawing.Size(100, 20);
             this.NumtextBox.TabIndex = 12;
             // 
             // FilterBtn
             // 
-            this.FilterBtn.Location = new System.Drawing.Point(108, 556);
-            this.FilterBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FilterBtn.Location = new System.Drawing.Point(81, 452);
             this.FilterBtn.Name = "FilterBtn";
-            this.FilterBtn.Size = new System.Drawing.Size(100, 28);
+            this.FilterBtn.Size = new System.Drawing.Size(75, 23);
             this.FilterBtn.TabIndex = 14;
             this.FilterBtn.Text = "Filter";
             this.FilterBtn.UseVisualStyleBackColor = true;
@@ -147,10 +137,9 @@
             // 
             // ClearBtn
             // 
-            this.ClearBtn.Location = new System.Drawing.Point(251, 556);
-            this.ClearBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClearBtn.Location = new System.Drawing.Point(188, 452);
             this.ClearBtn.Name = "ClearBtn";
-            this.ClearBtn.Size = new System.Drawing.Size(100, 28);
+            this.ClearBtn.Size = new System.Drawing.Size(75, 23);
             this.ClearBtn.TabIndex = 15;
             this.ClearBtn.Text = "Clear";
             this.ClearBtn.UseVisualStyleBackColor = true;
@@ -160,8 +149,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(425, 411);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(319, 334);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 20);
             this.label6.TabIndex = 16;
@@ -171,8 +159,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(427, 458);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(320, 372);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(191, 18);
             this.label7.TabIndex = 17;
@@ -180,10 +167,9 @@
             // 
             // DeleteBtn
             // 
-            this.DeleteBtn.Location = new System.Drawing.Point(676, 454);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeleteBtn.Location = new System.Drawing.Point(507, 369);
             this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(100, 28);
+            this.DeleteBtn.Size = new System.Drawing.Size(75, 23);
             this.DeleteBtn.TabIndex = 18;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.UseVisualStyleBackColor = true;
@@ -193,8 +179,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(427, 504);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(273, 412);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(228, 18);
             this.label8.TabIndex = 19;
@@ -202,7 +187,7 @@
             // 
             // CMDEL_Control
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label8);
             this.Controls.Add(this.DeleteBtn);
@@ -219,9 +204,9 @@
             this.Controls.Add(this.IDtextBox);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CMDEL_Control";
-            this.Size = new System.Drawing.Size(856, 629);
+            this.Size = new System.Drawing.Size(642, 511);
             this.Load += new System.EventHandler(this.CMDEL_Control_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -17,14 +17,14 @@ namespace Assignment.UserControls
         public CMADD_Control()
         {
             InitializeComponent();
-            dataGridView1.DataSource = Recep.LoadCustDataGrid();
+            dataGridView1.DataSource = Recep.LoadDataGrid("customer");
         }
         Receptionist Recep = new Receptionist();
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
             Receptionist Recep = new Receptionist();
-            dataGridView1.DataSource = Recep.LoadCustDataGrid();
+            dataGridView1.DataSource = Recep.LoadDataGrid("customer");
         }
 
         private void AddBtn_Click(object sender, EventArgs e)       // Add error handling if stuff is blank or types dont matchup

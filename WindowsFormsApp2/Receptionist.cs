@@ -31,21 +31,6 @@ namespace Assignment
             connection.Open();
         }
 
-        public DataTable LoadCustDataGrid()     // Will both connect and set  the dataAdapter both has not close connection##
-        {
-
-            string query = "SELECT * FROM Customer_Table";
-            SQLiteCommand command = new SQLiteCommand(query, connection);
-            dataAdapter = new SQLiteDataAdapter(command);
-
-            DataTable dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-
-            return dataTable;   
-
-        }
-
-
         public void RefreshDatabase(DataTable dt)
         {
             if (dataAdapter == null)
@@ -129,5 +114,16 @@ namespace Assignment
 
             // just match the order id with the staff id as only the mechanics should be able to make orders 
         }
+
+        public DataTable LoadAppTable()
+        {
+            string query = "SELECT AppointmentID, FullName, CustomerId, ServiceId, MechanicId, VehicleNumber, AppointmentDate " +
+               "FROM Appointments " +
+               "WHERE Status != 'Completed';";
+
+            // make the query and make 1 to track the mechanic IDs and assisnge to those witheout the status done.
+        }
+
+
     }
 }
