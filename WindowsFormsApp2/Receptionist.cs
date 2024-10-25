@@ -18,7 +18,7 @@ namespace Assignment
 
         private string dbPath;
         private SQLiteDataAdapter dataAdapter;      // Sets both connection and dataAdapter to class lvl variables and determines the main database file path
-        private SQLiteConnection connection;
+        public SQLiteConnection connection;
 
 
         public Receptionist()

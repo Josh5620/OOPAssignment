@@ -30,7 +30,7 @@ namespace Assignment.UserControls
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void RefreshBtn_Click(object sender, EventArgs e)
         {
             Receptionist Recep = new Receptionist();
             dataGridView1.DataSource = Recep.LoadDataGrid("customer");
@@ -123,7 +123,7 @@ namespace Assignment.UserControls
                 }
 
                 Recep.RefreshDatabase(dataGridView1.DataSource as DataTable);
-                button1_Click(sender, e);
+
 
             }
         }

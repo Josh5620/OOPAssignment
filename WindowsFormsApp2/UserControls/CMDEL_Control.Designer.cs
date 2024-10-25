@@ -62,7 +62,7 @@
             this.RefreshBtn.TabIndex = 6;
             this.RefreshBtn.Text = "Refresh";
             this.RefreshBtn.UseVisualStyleBackColor = true;
-            this.RefreshBtn.Click += new System.EventHandler(this.button1_Click);
+            this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
             // IDtextBox
             // 
@@ -204,7 +204,7 @@
             this.Controls.Add(this.IDtextBox);
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CMDEL_Control";
             this.Size = new System.Drawing.Size(642, 511);
             this.Load += new System.EventHandler(this.CMDEL_Control_Load);
