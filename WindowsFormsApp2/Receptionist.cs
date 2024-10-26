@@ -7,6 +7,7 @@ using System.Data.SQLite;
 using System.IO;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -141,5 +142,37 @@ namespace Assignment
 
             return reader; 
         }
+
+        public SQLiteDataReader LoadAppLists()
+        {
+            string query = @"SELECT a.AppointmentId, a.FullName, a.MechanicId, a.Status, a.BillAmount 
+                 FROM Appointments a
+                 WHERE a.MechanicId IS NOT NULL;";
+            SQLiteCommand cmd = new SQLiteCommand(query, connection);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+            return reader;
+        }
+
+
+        public void UpdateStatus(int appointmentId)
+        {
+            string updateQuery = @"UPDATE Appointments 
+                           SET Status = 
+                               CASE 
+                                   WHEN Status = 'Arriving' THEN 'Servicing' 
+                                   WHEN Status = 'Servicing' THEN 'Completed' 
+                                   ELSE Status 
+                               END
+                           WHERE AppointmentId = @AppointmentId";
+
+
+            SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection);
+
+            cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show($"ID:{appointmentId} has been updated!");
+        }
     }
+
 }

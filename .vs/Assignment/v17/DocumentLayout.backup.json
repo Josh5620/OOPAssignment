@@ -3,44 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\sa_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\sa_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\cio_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\cio_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\sa_control.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\sa_control.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\cio_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\cio_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\joshu\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\sa_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\sa_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\cio_control.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\cio_control.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\receppage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\receppage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\joshu\\Desktop\\OOPAssignment\\windowsformsapp2\\receptionist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\receptionist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\joshu\\Desktop\\OOPAssignment\\windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\joshu\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\cmdel_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\cmdel_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,110 +38,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SA_Control.cs",
-              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\SA_Control.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\SA_Control.cs",
-              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\SA_Control.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\SA_Control.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Receptionist.cs",
+              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Receptionist.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\Receptionist.cs",
+              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Receptionist.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\Receptionist.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAmwI8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T06:44:12.706Z",
+              "WhenOpened": "2024-10-24T02:43:18.999Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SA_Control.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\SA_Control.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\SA_Control.cs",
-              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\SA_Control.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\SA_Control.cs [Design]",
+              "Title": "CIO_Control.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.Designer.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\CIO_Control.Designer.cs",
+              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.Designer.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\CIO_Control.Designer.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAgwH8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T06:13:54.812Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SA_Control.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\SA_Control.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\SA_Control.Designer.cs",
-              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\SA_Control.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\SA_Control.Designer.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAEwDwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:50:19.586Z",
+              "WhenOpened": "2024-10-26T14:31:38.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "VI_Control.cs",
               "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\VI_Control.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\VI_Control.cs",
               "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\VI_Control.cs",
               "RelativeToolTip": "WindowsFormsApp2\\UserControls\\VI_Control.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAIwEcAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:48:09.262Z",
+              "WhenOpened": "2024-10-26T14:25:29.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "VI_Control.cs [Design]",
               "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\VI_Control.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\VI_Control.cs",
               "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\VI_Control.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp2\\UserControls\\VI_Control.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:48:06.42Z",
+              "WhenOpened": "2024-10-26T14:25:27.52Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RecepPage.cs",
-              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\RecepPage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\RecepPage.cs",
-              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\RecepPage.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\RecepPage.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAAAIwAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\User.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\User.cs",
+              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\User.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\User.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:42:02.276Z",
+              "WhenOpened": "2024-10-26T14:16:36.23Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginPage.cs",
-              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\LoginPage.cs",
-              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\LoginPage.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAwwCEAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:41:57.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CMDEL_Control.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CMDEL_Control.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\CMDEL_Control.cs",
-              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CMDEL_Control.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\CMDEL_Control.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T13:32:52.462Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -169,29 +119,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\User.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\User.cs",
-              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\User.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\User.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwCMAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CIO_Control.cs",
+              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T17:14:37.377Z",
+              "WhenOpened": "2024-10-26T13:43:39.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Receptionist.cs",
-              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Receptionist.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\Receptionist.cs",
-              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Receptionist.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\Receptionist.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAewB4AAAAbAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CIO_Control.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\CIO_Control.cs",
+              "ToolTip": "C:\\Users\\joshu\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CIO_Control.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\CIO_Control.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T02:43:18.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T13:42:41.577Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
