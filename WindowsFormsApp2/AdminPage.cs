@@ -128,7 +128,7 @@ namespace Assignment
         private void Btn_AddService_MouseLeave(object sender, EventArgs e)
         {
             hover = false;
-            TimerCheck(Btn_AddService);
+            TimerCheck(Btn_AddService, Btn_EditService, Btn_DeleteService);
         }
 
         private void Btn_EditService_MouseHover(object sender, EventArgs e)
@@ -139,7 +139,7 @@ namespace Assignment
         private void Btn_EditService_MouseLeave(object sender, EventArgs e)
         {
             hover = false;
-            TimerCheck(Btn_EditService);
+            TimerCheck(Btn_AddService, Btn_EditService, Btn_DeleteService);
         }
 
         private void Btn_DeleteService_MouseHover(object sender, EventArgs e)
@@ -150,7 +150,7 @@ namespace Assignment
         private void Btn_DeleteService_MouseLeave(object sender, EventArgs e)
         {
             hover = false;
-            TimerCheck(Btn_DeleteService);
+            TimerCheck(Btn_AddService, Btn_EditService, Btn_DeleteService);
         }
 
         private void AddUserControl(UserControl userControl)
