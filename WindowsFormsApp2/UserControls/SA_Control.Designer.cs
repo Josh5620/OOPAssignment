@@ -43,7 +43,6 @@
             this.CustNameTxtBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.AssignBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.RefreshBtn = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(260, 95);
             this.listBox1.TabIndex = 1;
-
             // 
             // ClrBtn
             // 
@@ -180,13 +178,6 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "VehicleNumber";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(629, 472);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 28;
-            // 
             // AssignBtn
             // 
             this.AssignBtn.Location = new System.Drawing.Point(509, 421);
@@ -224,7 +215,6 @@
             this.Controls.Add(this.RefreshBtn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.AssignBtn);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ClearBtn);
@@ -265,7 +255,6 @@
         private System.Windows.Forms.TextBox CustNameTxtBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button AssignBtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button RefreshBtn;
