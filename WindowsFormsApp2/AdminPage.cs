@@ -156,7 +156,6 @@ namespace Assignment
         private void AddUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
-            userControl.AutoSize = true;
             AdminPContainer.Controls.Clear();
             AdminPContainer.Controls.Add(userControl);
             userControl.BringToFront();
@@ -186,6 +185,11 @@ namespace Assignment
         }
 
         private void Btn_DeleteService_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminPContainer_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -111,12 +111,12 @@ namespace Assignment
 
         public void AddStaff(string fullName, string username, string password, string jobType)
         {
-            var staffData = new Dictionary<string, object>
+            Dictionary<string, object> staffData = new Dictionary<string, object>
             {
                 { "FN", fullName },
                 { "username", username },
                 { "password", password },
-                { JobType, jobType }
+                { "JobType", jobType }
             };
             InsertRecord("Staff_Table", staffData);
             RefreshDatabase(StaffData);
