@@ -16,6 +16,7 @@ namespace Assignment
         {
             InitializeComponent();
             LoadJobTypes();
+            StaffDataGrid.DataSource = admin.staffData;
         }
         Admin admin = new Admin();
 
@@ -33,6 +34,7 @@ namespace Assignment
         private void Btn_addnewstaff_Click(object sender, EventArgs e)
         {
             admin.AddStaff(FullNBox.Text, UsernBox.Text, PassBox.Text, ComboJobType.Text);
+            admin.RefreshDatabase(StaffDataGrid.DataSource as DataTable);
         }
     }
 }

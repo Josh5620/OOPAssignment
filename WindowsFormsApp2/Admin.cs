@@ -16,11 +16,11 @@ namespace Assignment
 {
     public class Admin : User
     {
-        private SQLiteConnection connection;  // Initializes the connection and the datatables. 
-        private DataTable staffData;
-        private DataTable serviceTData;
-        private DataTable feedbackdata;
-        private DataTable ReportData;
+        public SQLiteConnection connection;  // Initializes the connection and the datatables. 
+        public DataTable staffData;
+        public DataTable serviceTData;
+        public DataTable feedbackdata;
+        public DataTable ReportData;
 
         public Admin()
         {
@@ -52,11 +52,11 @@ namespace Assignment
             set => feedbackdata = value;
         }
 
-        public void InsertRecord(string tableName, Dictionary<string, object> columns)
+        public void InsertRecord(string tableName, Dictionary<string, object> columns) // Use as one of three methods to for explanation. 
         {
             // Constructs the column names and parameters for the SQL query
             string columnNames = string.Join(",", columns.Keys);
-            string parameters = string.Join(", ", columns.Keys.Select(k => $"@{k}"));
+            string parameters = string.Join(", ", columns.Keys.Select(key => $"@{key}"));
 
             // Form the SQL query
             string insertQuery = $"INSERT INTO {tableName} ({columnNames}) VALUES ({parameters})";
@@ -69,6 +69,7 @@ namespace Assignment
                     {
                         cmd.Parameters.AddWithValue($"@{column.Key}", column.Value);
                     }
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -111,40 +112,37 @@ namespace Assignment
 
         public void AddStaff(string fullName, string username, string password, string jobType)
         {
-            Dictionary<string, object> staffData = new Dictionary<string, object>
+            var staffData = new Dictionary<string, object>
             {
-                { "FN", fullName },
-                { "username", username },
-                { "password", password },
+                { "FullName", fullName },
+                { "Username", username },
+                { "Password", password },
                 { "JobType", jobType }
             };
             InsertRecord("Staff_Table", staffData);
-            RefreshDatabase(StaffData);
+            MessageBox.Show("Record Successfully Added.");
         }
 
         public void DeleteStaff(int StaffId)
         {
             DeleteRecord("Staff_Table", "StaffId", StaffId);
-            RefreshDatabase(staffData);
         }
 
         public void AddService(string ServiceName, string Description, int price, string EstimatedTime)
         {
             var serviceData = new Dictionary<string, object>
             {
-                { "Sn", ServiceName },
-                { "description", Description },
+                { "ServiceName", ServiceName },
+                { "Description", Description },
                 { "Price", price },
-                { "ET", EstimatedTime }
+                { "EstimatedTime", EstimatedTime }
             };
             InsertRecord("Service_Table", serviceData);
-            RefreshDatabase(serviceTData);
         }
 
         public void DeleteService(int ServiceId)
         {
             DeleteRecord("Service_Table", "ServiceId", ServiceId);
-            RefreshDatabase(serviceTData);
         }
 
         public void EditService(int ServiceId, int price, int EstimatedTime)
@@ -173,7 +171,6 @@ namespace Assignment
             {
                 MessageBox.Show($"Error in updating service! {ex.Message}");
             }
-            RefreshDatabase(serviceTData);
         }
     }
 }

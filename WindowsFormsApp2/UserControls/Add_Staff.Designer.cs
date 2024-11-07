@@ -42,9 +42,9 @@
             this.ComboJobType = new System.Windows.Forms.ComboBox();
             this.PassBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StaffDataGrid = new System.Windows.Forms.DataGridView();
             this.NewStaffDetail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -205,30 +205,30 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Password:";
             // 
-            // dataGridView1
+            // StaffDataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(566, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(600, 689);
-            this.dataGridView1.TabIndex = 9;
+            this.StaffDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StaffDataGrid.Location = new System.Drawing.Point(566, 21);
+            this.StaffDataGrid.Name = "StaffDataGrid";
+            this.StaffDataGrid.RowHeadersWidth = 82;
+            this.StaffDataGrid.RowTemplate.Height = 33;
+            this.StaffDataGrid.Size = new System.Drawing.Size(600, 384);
+            this.StaffDataGrid.TabIndex = 9;
             // 
             // Add_Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.StaffDataGrid);
             this.Controls.Add(this.NewStaffDetail);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "Add_Staff";
-            this.Size = new System.Drawing.Size(1203, 742);
+            this.Size = new System.Drawing.Size(1203, 456);
             this.NewStaffDetail.ResumeLayout(false);
             this.NewStaffDetail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,6 +250,6 @@
         private System.Windows.Forms.ComboBox ComboJobType;
         private System.Windows.Forms.TextBox PassBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView StaffDataGrid;
     }
 }
