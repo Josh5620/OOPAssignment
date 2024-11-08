@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Assignment
 {
-    public partial class DeleteStaff : UserControl
+    public partial class Delete_Service : UserControl
     {
-        public DeleteStaff()
+        public Delete_Service()
         {
             InitializeComponent();
-            StaffDataGrid.DataSource = admin.staffData;
+            ServiceDataGrid.DataSource = admin.ServiceData;
         }
         Admin admin = new Admin();
 
-        private void Btn_delete_Click(object sender, EventArgs e)
+        private void Btn_deleteservice_Click(object sender, EventArgs e)
         {
-            admin.DeleteStaff(int.Parse(StaffIDBox.Text));
-            StaffDataGrid.DataSource = admin.LoadDataGrid("staff");
+            admin.DeleteService(int.Parse(ServiceIdBox.Text));
+            ServiceDataGrid.DataSource = admin.LoadDataGrid("service");
         }
     }
 }

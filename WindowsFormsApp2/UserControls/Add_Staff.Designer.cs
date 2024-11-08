@@ -146,7 +146,7 @@
             this.NewStaffDetail.Controls.Add(this.label2);
             this.NewStaffDetail.Controls.Add(this.label1);
             this.NewStaffDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewStaffDetail.Location = new System.Drawing.Point(3, 3);
+            this.NewStaffDetail.Location = new System.Drawing.Point(24, 95);
             this.NewStaffDetail.Name = "NewStaffDetail";
             this.NewStaffDetail.Size = new System.Drawing.Size(508, 402);
             this.NewStaffDetail.TabIndex = 8;
@@ -208,24 +208,24 @@
             // StaffDataGrid
             // 
             this.StaffDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StaffDataGrid.Location = new System.Drawing.Point(566, 21);
+            this.StaffDataGrid.Location = new System.Drawing.Point(570, 57);
             this.StaffDataGrid.Name = "StaffDataGrid";
             this.StaffDataGrid.RowHeadersWidth = 82;
             this.StaffDataGrid.RowTemplate.Height = 33;
-            this.StaffDataGrid.Size = new System.Drawing.Size(600, 384);
+            this.StaffDataGrid.Size = new System.Drawing.Size(747, 440);
             this.StaffDataGrid.TabIndex = 9;
+            this.StaffDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StaffDataGrid_CellContentClick);
             // 
             // Add_Staff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.Controls.Add(this.StaffDataGrid);
             this.Controls.Add(this.NewStaffDetail);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "Add_Staff";
-            this.Size = new System.Drawing.Size(1203, 456);
+            this.Size = new System.Drawing.Size(1391, 768);
             this.NewStaffDetail.ResumeLayout(false);
             this.NewStaffDetail.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StaffDataGrid)).EndInit();

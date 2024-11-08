@@ -145,7 +145,7 @@ namespace Assignment
             DeleteRecord("Service_Table", "ServiceId", ServiceId);
         }
 
-        public void EditService(int ServiceId, int price, int EstimatedTime)
+        public void EditService(int ServiceId, int price, string EstimatedTime)
         {
             //Form the SQL query
             string Editquery = $"UPDATE Service_Table SET Price = @price AND EstimatedTime = @ET WHERE ServiceId = @ServiceId";

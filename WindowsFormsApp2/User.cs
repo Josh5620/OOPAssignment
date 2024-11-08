@@ -111,6 +111,7 @@ namespace Assignment
 
         public DataTable LoadDataGrid(string tableName)  // General Function to load tables for data grid view
         {
+            // Keys used to load specific tables from the database
             var validTables = new Dictionary<string, string>()
             {
                 { "staff", "Staff_Table" },
@@ -149,6 +150,38 @@ namespace Assignment
                 return dataTable;
             }
         }
+
+        // Method to fetch user profile details
+        public Dictionary<string, string> GetProfileInfo()
+        {
+            Dictionary<string, string> profileInfo = new Dictionary<string, string>();
+
+            using (SQLiteConnection connection = GetDatabaseConnection())
+            {
+                string query = @"SELECT FullName, Username, Email, JobType 
+                         FROM Profile_Table 
+                         WHERE Username = @Username";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", Username);
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            profileInfo["FullName"] = reader["FullName"].ToString();
+                            profileInfo["Username"] = reader["Username"].ToString();
+                            profileInfo["Email"] = reader["Email"].ToString();
+                            profileInfo["JobType"] = reader["JobType"].ToString();
+                        }
+                    }
+                }
+            }
+
+            return profileInfo;
+        }
+
     }
 
 }

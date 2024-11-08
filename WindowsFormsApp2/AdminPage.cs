@@ -176,17 +176,20 @@ namespace Assignment
 
         private void Btn_AddService_Click(object sender, EventArgs e)
         {
-
+            Add_Service uc = new Add_Service();
+            AddUserControl(uc);
         }
 
         private void Btn_EditService_Click(object sender, EventArgs e)
         {
-
+            Edit_Service uc = new Edit_Service();
+            AddUserControl (uc);
         }
 
         private void Btn_DeleteService_Click(object sender, EventArgs e)
         {
-
+            Delete_Service uc = new Delete_Service();
+            AddUserControl(uc);
         }
 
         private void AdminPContainer_Paint(object sender, PaintEventArgs e)
