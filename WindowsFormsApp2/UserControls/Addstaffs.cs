@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Assignment
 {
-    public partial class Add_Staff : UserControl
+    public partial class Addstaffs : UserControl
     {
-        public Add_Staff()
+        public Addstaffs()
         {
             InitializeComponent();
             LoadJobTypes();
@@ -35,11 +36,6 @@ namespace Assignment
         {
             admin.AddStaff(FullNBox.Text, UsernBox.Text, PassBox.Text, ComboJobType.Text);
             StaffDataGrid.DataSource = admin.LoadDataGrid("staff");
-        }
-
-        private void StaffDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -164,7 +164,7 @@ namespace Assignment
         // Button click events to load user controls
         private void Btn_addstaf_Click(object sender, EventArgs e)
         {
-            Add_Staff uc = new Add_Staff();
+            Addstaffs uc = new Addstaffs();
             AddUserControl(uc);
         }
 

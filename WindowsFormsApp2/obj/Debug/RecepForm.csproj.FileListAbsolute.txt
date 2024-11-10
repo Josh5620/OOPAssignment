@@ -87,7 +87,6 @@ C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsF
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.LoginPage.resources
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.RecepPage.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Add_Staff.resources
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.DeleteStaff.resources
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CIO_Control.resources
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMADD_Control.resources
@@ -117,3 +116,4 @@ C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserC
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Add_Service.resources
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Delete_Service.resources
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Edit_Service.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Addstaffs.resources

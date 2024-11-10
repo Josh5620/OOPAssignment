@@ -3,40 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\addstaffs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\addstaffs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\edit_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\edit_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\deletestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\deletestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\addstaffs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\addstaffs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\edit_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\edit_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\deletestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\deletestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\add_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\add_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\add_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\add_staff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,7 +102,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\LoginPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T07:21:40.551Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Addstaffs.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Addstaffs.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Addstaffs.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Addstaffs.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Addstaffs.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T05:58:28.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Addstaffs.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Addstaffs.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Addstaffs.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Addstaffs.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Addstaffs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T05:52:52.433Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Edit_Service.cs",
               "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Edit_Service.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Edit_Service.cs",
@@ -111,20 +152,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "AdminPage.cs",
               "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\AdminPage.cs",
               "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs",
               "RelativeToolTip": "WindowsFormsApp2\\AdminPage.cs",
-              "ViewState": "AgIAALgAAAAAAAAAAADwv78AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAkwCYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T02:50:55.817Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "DeleteStaff.cs",
               "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\DeleteStaff.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\DeleteStaff.cs",
@@ -149,58 +190,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Add_Staff.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Add_Staff.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Add_Staff.cs",
-              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Add_Staff.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Add_Staff.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T01:03:44.235Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Admin.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\Admin.cs",
               "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Admin.cs",
               "RelativeToolTip": "WindowsFormsApp2\\Admin.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAUwIYAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwB0AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T00:59:53.169Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Add_Staff.cs",
-              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Add_Staff.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Add_Staff.cs",
-              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Add_Staff.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Add_Staff.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwBAAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T02:07:15.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\User.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\User.cs",
               "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\User.cs",
               "RelativeToolTip": "WindowsFormsApp2\\User.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAcwLcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAALMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-07T01:28:13.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AdminPage.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\AdminPage.cs",

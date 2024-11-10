@@ -40,7 +40,7 @@
             // StaffDataGrid
             // 
             this.StaffDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StaffDataGrid.Location = new System.Drawing.Point(104, 14);
+            this.StaffDataGrid.Location = new System.Drawing.Point(19, 15);
             this.StaffDataGrid.Name = "StaffDataGrid";
             this.StaffDataGrid.RowHeadersWidth = 82;
             this.StaffDataGrid.Size = new System.Drawing.Size(1223, 568);
@@ -49,7 +49,7 @@
             // Btn_delete
             // 
             this.Btn_delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_delete.Location = new System.Drawing.Point(1171, 665);
+            this.Btn_delete.Location = new System.Drawing.Point(1049, 674);
             this.Btn_delete.Name = "Btn_delete";
             this.Btn_delete.Size = new System.Drawing.Size(156, 61);
             this.Btn_delete.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(121, 682);
+            this.label1.Location = new System.Drawing.Point(36, 683);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 37);
             this.label1.TabIndex = 3;
@@ -70,7 +70,7 @@
             // StaffIDBox
             // 
             this.StaffIDBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StaffIDBox.Location = new System.Drawing.Point(293, 682);
+            this.StaffIDBox.Location = new System.Drawing.Point(208, 683);
             this.StaffIDBox.Name = "StaffIDBox";
             this.StaffIDBox.Size = new System.Drawing.Size(232, 44);
             this.StaffIDBox.TabIndex = 5;
@@ -79,7 +79,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(684, 682);
+            this.label2.Location = new System.Drawing.Point(546, 683);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(437, 37);
             this.label2.TabIndex = 6;
@@ -89,7 +89,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(121, 612);
+            this.label3.Location = new System.Drawing.Point(36, 613);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(286, 37);
             this.label3.TabIndex = 7;
