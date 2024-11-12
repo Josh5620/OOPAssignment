@@ -131,39 +131,5 @@ namespace Assignment
         {
             Close();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // Connect to the database
-            string connectionString = @"Data Source=|DataDirectory|\UserDatabase.db;Version=3;";
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-
-                // Create a command to read from the table
-                using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Customer_Table", connection))
-                {
-                    // Execute the command and read the results
-                    using (SQLiteDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            // Access the column values
-                            string column1Value = reader["FullName"].ToString();
-                            string column2Value = reader["Username"].ToString();
-                            // ...
-
-                            // Display the values in a ListBox, for example
-                            listBox1.Items.Add($"Column1: {column1Value}, Column2: {column2Value}");
-                        }
-                    }
-                }
-            }
-        }
-
-        private void ControlPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

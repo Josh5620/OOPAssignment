@@ -41,14 +41,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ExitButton = new System.Windows.Forms.Button();
             this.ControlPanel = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.ControlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -186,45 +182,12 @@
             // 
             // ControlPanel
             // 
-            this.ControlPanel.Controls.Add(this.listBox1);
-            this.ControlPanel.Controls.Add(this.button2);
-            this.ControlPanel.Controls.Add(this.label1);
             this.ControlPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.ControlPanel.Location = new System.Drawing.Point(151, 0);
             this.ControlPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ControlPanel.Name = "ControlPanel";
             this.ControlPanel.Size = new System.Drawing.Size(642, 511);
-            this.ControlPanel.TabIndex = 2;
-            this.ControlPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ControlPanel_Paint);
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(142, 308);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(367, 95);
-            this.listBox1.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(142, 422);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(248, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "PROFILE HERE";
+            this.ControlPanel.TabIndex = 0;
             // 
             // imageList1
             // 
@@ -240,13 +203,14 @@
             this.ClientSize = new System.Drawing.Size(793, 511);
             this.Controls.Add(this.ControlPanel);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RecepPage";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ControlPanel.ResumeLayout(false);
-            this.ControlPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -257,9 +221,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.Panel ControlPanel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button ProfBtn;
