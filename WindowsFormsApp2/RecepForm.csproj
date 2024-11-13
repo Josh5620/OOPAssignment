@@ -86,6 +86,12 @@
     <Compile Include="AdminPage.Designer.cs">
       <DependentUpon>AdminPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,24 @@
     <Compile Include="UserControls\Edit_Service.Designer.cs">
       <DependentUpon>Edit_Service.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Feedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Feedback.Designer.cs">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HomePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ManageAppointments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ManageAppointments.Designer.cs">
+      <DependentUpon>ManageAppointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PROF_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,6 +187,18 @@
     <Compile Include="UserControls\SA_Control.Designer.cs">
       <DependentUpon>SA_Control.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UpdateProfile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UpdateProfile.Designer.cs">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Viewservices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Viewservices.Designer.cs">
+      <DependentUpon>Viewservices.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\VI_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +207,9 @@
     </Compile>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -212,11 +251,26 @@
     <EmbeddedResource Include="UserControls\Edit_Service.resx">
       <DependentUpon>Edit_Service.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Feedback.resx">
+      <DependentUpon>Feedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ManageAppointments.resx">
+      <DependentUpon>ManageAppointments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PROF_Control.resx">
       <DependentUpon>PROF_Control.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\SA_Control.resx">
       <DependentUpon>SA_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UpdateProfile.resx">
+      <DependentUpon>UpdateProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Viewservices.resx">
+      <DependentUpon>Viewservices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\VI_Control.resx">
       <DependentUpon>VI_Control.cs</DependentUpon>

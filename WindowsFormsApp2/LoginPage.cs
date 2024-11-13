@@ -85,5 +85,13 @@ namespace Assignment
         {
             Application.Exit();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var CForm = new Form1();
+            CForm.Closed += (s, args) => this.Close();
+            CForm.Show();
+        }
     }
 }
