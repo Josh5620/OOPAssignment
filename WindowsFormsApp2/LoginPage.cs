@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Assignment;
+using WindowsFormsApp2;
 
 namespace Assignment
 {
@@ -92,6 +93,15 @@ namespace Assignment
             var CForm = new Form1();
             CForm.Closed += (s, args) => this.Close();
             CForm.Show();
+        }
+
+        private void Mechanic_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var CForm = new MechanicPage();
+            CForm.Closed += (s, args) => this.Close();
+            CForm.Show();
+
         }
     }
 }
