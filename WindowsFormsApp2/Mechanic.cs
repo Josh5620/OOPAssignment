@@ -13,13 +13,21 @@ namespace Assignment
 {
     public class Mechanic : User
     {
+
         public SQLiteConnection connection;
 
         public Mechanic()
         {
             connection = GetDatabaseConnection();
 
+
         }
+
        
+        
+
+
     }
 }
+       
+    

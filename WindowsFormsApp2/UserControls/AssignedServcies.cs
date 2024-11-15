@@ -16,13 +16,14 @@ namespace Assignment.UserControls
         {
             InitializeComponent();
         }
-     Mechanic mech = new Mechanic();
+
+        Mechanic mech = new Mechanic();
 
         private void AssignedServcies_Load(object sender, EventArgs e)
         {
             // Load data for the first DataGridView
             DataTable fullDataTable1 = mech.LoadDataGrid("appointment");
-            List<string> fieldsToDisplay1 = new List<string> { "Field1", "Field2", "Field3", "AppointmentDate" };
+            List<string> fieldsToDisplay1 = new List<string> { "AppointmentId", "FullName", "CustomerId", "AppointmentDate", "ServiceId", "VehichleNumber", "AdditionalNotes", "Status" };
             dgvToday.DataSource = fullDataTable1;
             foreach (DataGridViewColumn column in dgvToday.Columns)
             {
@@ -32,16 +33,14 @@ namespace Assignment.UserControls
                 }
             }
 
-            // Filter the first DataGridView to show only today's appointments
+            // Filter the first DataGridView to show only "Assigned" status
             DataView dataView1 = new DataView(fullDataTable1);
-            string today = DateTime.Now.ToString("yyyy-MM-dd");
-            dataView1.RowFilter = $"AppointmentDate = '{today}'";
+            dataView1.RowFilter = "Status = 'Assigned'";
             dgvToday.DataSource = dataView1;
-
 
             // Load data for the second DataGridView
             DataTable fullDataTable2 = mech.LoadDataGrid("appointment");
-            List<string> fieldsToDisplay2 = new List<string> { "AppointmentId", "AppointmentDate", "FieldC" };
+            List<string> fieldsToDisplay2 = new List<string> { "AppointmentId", "FullName", "CustomerId", "AppointmentDate", "ServiceId", "VehichleNumber", "AdditionalNotes", "Status" };
             dgvAll.DataSource = fullDataTable2;
             foreach (DataGridViewColumn column in dgvAll.Columns)
             {
@@ -49,13 +48,12 @@ namespace Assignment.UserControls
                 {
                     column.Visible = false;
                 }
-
-
-
-
-
             }
 
+            // Filter the second DataGridView to exclude "Completed" status
+            DataView dataView2 = new DataView(fullDataTable2);
+            dataView2.RowFilter = "Status <> 'Completed'";
+            dgvAll.DataSource = dataView2;
         }
     }
 }

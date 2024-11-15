@@ -85,6 +85,7 @@
             this.DataGridView123.RowTemplate.Height = 33;
             this.DataGridView123.Size = new System.Drawing.Size(638, 206);
             this.DataGridView123.TabIndex = 0;
+
             // 
             // label2
             // 

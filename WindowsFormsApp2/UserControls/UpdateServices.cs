@@ -17,19 +17,31 @@ namespace Assignment.UserControls
             InitializeComponent();
         }
         Mechanic mech = new Mechanic(); 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DataGridView321_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void UpdateServices_Load(object sender, EventArgs e)
+        private void UpdateServices_Load_1(object sender, EventArgs e)
         {
-            DataGridView321.DataSource = mech.LoadDataGrid("appointment");
+            DataTable fullDataTable1 = mech.LoadDataGrid("appointment");
+            List<string> fieldsToDisplay1 = new List<string> { "FullName", "CustomerId", "ServiceId", "VehicleNumber", "AppointmentDate", "AdditionalNotes", "Status" };
+            DataGridView321.DataSource = fullDataTable1;
+            foreach (DataGridViewColumn column in DataGridView321.Columns)
+            {
+                if (!fieldsToDisplay1.Contains(column.Name))
+                {
+                    column.Visible = false;
+                }
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }
