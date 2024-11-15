@@ -16,9 +16,10 @@ namespace Assignment.UserControls
         {
             InitializeComponent();
         }
-
+     Mechanic mech = new Mechanic();
         private void ManageInventory_Load(object sender, EventArgs e)
         {
+            DataGridView123.DataSource = mech.LoadDataGrid("order");
 
         }
     }

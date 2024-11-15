@@ -16,10 +16,20 @@ namespace Assignment.UserControls
         {
             InitializeComponent();
         }
-
+        Mechanic mech = new Mechanic(); 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
+            
+        }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UpdateServices_Load(object sender, EventArgs e)
+        {
+            DataGridView321.DataSource = mech.LoadDataGrid("appointment");
         }
     }
 }
