@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Assignment
 {
 
-    public partial class Form1 : Form
+    public partial class CustomerPage : Form
     {
 
         private Viewservices userControl1;
@@ -20,7 +20,7 @@ namespace Assignment
         private Feedback userControl4;
         private HomePage userControl5;
 
-        public Form1()
+        public CustomerPage()
         {
             InitializeComponent();
             InitializeUserControls();
