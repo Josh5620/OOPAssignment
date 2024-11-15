@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp2.UserControls
+﻿namespace Assignment.UserControls
 {
     partial class AssignedServcies
     {

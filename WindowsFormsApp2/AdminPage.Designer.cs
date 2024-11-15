@@ -209,7 +209,7 @@
             // Logobox
             // 
             this.Logobox.BackColor = System.Drawing.SystemColors.Menu;
-            this.Logobox.Image = global::WindowsFormsApp2.Properties.Resources.CarCare_Logo;
+            this.Logobox.Image = global::Assignment.Properties.Resources.CarCare_Logo;
             this.Logobox.Location = new System.Drawing.Point(0, -8);
             this.Logobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Logobox.Name = "Logobox";

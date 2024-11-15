@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Assignment;
-using WindowsFormsApp2;
+using Assignment;
 
 namespace Assignment
 {
