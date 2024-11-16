@@ -1,120 +1,151 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WindowsFormsApp2;
 
 namespace Assignment
 {
     public partial class ManageAppointments : UserControl
     {
+        private Customer _customer; // Declare but don’t initialize here
 
         public ManageAppointments()
         {
             InitializeComponent();
+            _customer = new Customer(); // Initialize the Customer instance
         }
-        Customer _customer = new Customer();
+
+        private void ManageAppointments_Load(object sender, EventArgs e)
+        {
+            // Load the appointments data when the form loads
+            LoadAppointments();
+        }
+
+        private void LoadAppointments()
+        {
+            try
+            {
+                _customer.appointmentsData = new DataTable();
+                string query = "SELECT * FROM Appointments_Table";
+
+                using (var connection = _customer.GetDatabaseConnection())
+                using (var adapter = new SQLiteDataAdapter(query, connection))
+                {
+                    adapter.Fill(_customer.appointmentsData);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading appointments: {ex.Message}");
+            }
+        }
 
         private void textBoxAppointmentId_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
+            try
             {
-                // Find the appointment in the customer's appointmentsData
-                DataRow[] rows = _customer.appointmentsData.Select($"AppointmentId = {appointmentId}");
-                if (rows.Length > 0)
+                if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
-                    DataRow row = rows[0];
-                    textBoxName.Text = row["CustomerName"].ToString();
-                    textBoxService.Text = row["ServiceId"].ToString();
-                    dateTimePicker1.Value = Convert.ToDateTime(row["PreferredDate"]);
+                    DataRow[] rows = _customer.appointmentsData.Select($"AppointmentId = {appointmentId}");
+                    if (rows.Length > 0)
+                    {
+                        DataRow row = rows[0];
+                        textBoxName.Text = row["CustomerName"].ToString();
+                        comboBoxAppointments.Text = row["ServiceId"].ToString();
+                        dateTimePicker1.Value = Convert.ToDateTime(row["PreferredDate"]);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No appointment found with that ID.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("No appointment found with that ID.");
+                    MessageBox.Show("Please enter a valid appointment ID.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter a valid appointment ID.");
+                MessageBox.Show($"Error retrieving appointment: {ex.Message}");
             }
         }
 
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
+            try
             {
-                string newName = textBoxName.Text;
-                string updateQuery = "UPDATE Appointments_Table SET CustomerName = @CustomerName WHERE AppointmentId = @AppointmentId";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, _customer.connection))
+                if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
-                    cmd.Parameters.AddWithValue("@CustomerName", newName);
-                    cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
+                    string newName = textBoxName.Text;
+                    string updateQuery = "UPDATE Appointments_Table SET CustomerName = @CustomerName WHERE AppointmentId = @AppointmentId";
 
-                    try
+                    using (var connection = _customer.GetDatabaseConnection())
+                    using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
+                        cmd.Parameters.AddWithValue("@CustomerName", newName);
+                        cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
                         cmd.ExecuteNonQuery();
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error updating customer name: {ex.Message}");
-                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating customer name: {ex.Message}");
             }
         }
 
         private void textBoxService_TextChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId) &&
-                int.TryParse(textBoxService.Text, out int serviceId))
+            try
             {
-                string updateQuery = "UPDATE Appointments_Table SET ServiceId = @ServiceId WHERE AppointmentId = @AppointmentId";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, _customer.connection))
+                if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId) &&
+                    int.TryParse(comboBoxAppointments.Text, out int serviceId))
                 {
-                    cmd.Parameters.AddWithValue("@ServiceId", serviceId);
-                    cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
+                    string updateQuery = "UPDATE Appointments_Table SET ServiceId = @ServiceId WHERE AppointmentId = @AppointmentId";
 
-                    try
+                    using (var connection = _customer.GetDatabaseConnection())
+                    using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
+                        cmd.Parameters.AddWithValue("@ServiceId", serviceId);
+                        cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
                         cmd.ExecuteNonQuery();
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error updating service ID: {ex.Message}");
-                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating service ID: {ex.Message}");
             }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
+            try
             {
-                DateTime newDate = dateTimePicker1.Value;
-                string updateQuery = "UPDATE Appointments_Table SET PreferredDate = @PreferredDate WHERE AppointmentId = @AppointmentId";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, _customer.connection))
+                if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
-                    cmd.Parameters.AddWithValue("@PreferredDate", newDate);
-                    cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
+                    DateTime newDate = dateTimePicker1.Value;
+                    string updateQuery = "UPDATE Appointments_Table SET PreferredDate = @PreferredDate WHERE AppointmentId = @AppointmentId";
 
-                    try
+                    using (var connection = _customer.GetDatabaseConnection())
+                    using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
+                        cmd.Parameters.AddWithValue("@PreferredDate", newDate);
+                        cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
                         cmd.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error updating appointment date: {ex.Message}");
                     }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating appointment date: {ex.Message}");
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Currently not used, but you can implement functionality here
         }
     }
 }

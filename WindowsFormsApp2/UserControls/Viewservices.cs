@@ -1,87 +1,115 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp2;
 
 namespace Assignment
 {
-    
-        public partial class Viewservices : UserControl
+    public partial class Viewservices : UserControl
+    {
+        private List<Customer.Service> services;
+        private Customer customer;
+
+
+        public Viewservices()
         {
-            private List<Customer.Service> services;
+            InitializeComponent();
+            customer = new Customer(); // Instantiate the Customer object
+            LoadServicesIntoComboBox();
+        }
 
-            public Viewservices()
+        // Load available services into the ComboBox
+        private void LoadServicesIntoComboBox()
+        {
+            try
             {
-                InitializeComponent();
-                
-                LoadServicesIntoComboBox();
-            }
-            Customer customer = new Customer();
-            // Load available services into the ComboBox
-            private void LoadServicesIntoComboBox()
-            {
-                services = customer.ViewAvailableServices();  // Get list of services
-                comboBoxServices.DataSource = services;              // Bind to ComboBox
-                comboBoxServices.DisplayMember = "ServiceName";      // Display service name
-                comboBoxServices.ValueMember = "ServiceId";          // Use service ID as value
-            }
+                services = customer.ViewAvailableServices(); // Retrieve services from the database
 
-            // Event handler for the "View" button click
-            private void btnViewServices_Click(object sender, EventArgs e)
-            {
-                if (comboBoxServices.SelectedItem != null)
+                if (services != null && services.Any())
                 {
-                    int selectedServiceId = (int)comboBoxServices.SelectedValue;
-                    DisplayServiceDetails(selectedServiceId);
+                    comboBoxServices.DataSource = services;
+                    comboBoxServices.DisplayMember = "ServiceName";  // Display ServiceName
+                    comboBoxServices.ValueMember = "ServiceId";      // Use ServiceId as the value
                 }
                 else
                 {
-                    MessageBox.Show("Please select a service to view.");
+                    MessageBox.Show("No services available to display.");
                 }
             }
-
-            // Display selected service details in the DataGridView
-            private void DisplayServiceDetails(int serviceId)
+            catch (Exception ex)
             {
-                // Filter the selected service
-                var selectedService = services.FirstOrDefault(s => s.ServiceId == serviceId);
-
-                if (selectedService != null)
-                {
-                    DataTable serviceTable = new DataTable();
-                    serviceTable.Columns.Add("Service ID");
-                    serviceTable.Columns.Add("Service Name");
-                    serviceTable.Columns.Add("Description");
-                    serviceTable.Columns.Add("Price");
-                    serviceTable.Columns.Add("Estimated Time");
-
-                    // Add the selected service’s details to the DataTable
-                    serviceTable.Rows.Add(
-                        selectedService.ServiceId,
-                        selectedService.ServiceName,
-                        selectedService.Description,
-                        selectedService.Price,
-                        selectedService.EstimatedTime
-                    );
-
-                    // Bind the DataTable to the DataGridView
-                    dataGridViewServices.DataSource = serviceTable;
-                }
-                else
-                {
-                    MessageBox.Show("Error: Selected service not found.");
-                }
-            }
-
-            // Optional: Handle DataGridView cell click if needed
-            private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-            {
-                // Code for handling DataGridView cell click, if needed
+                MessageBox.Show($"Error loading services: {ex.Message}");
             }
         }
+
+        // Event handler for the "View" button click
+        private void btnViewServices_Click(object sender, EventArgs e)
+        {
+            if (comboBoxServices.SelectedItem != null)
+            {
+                int selectedServiceId = (int)comboBoxServices.SelectedValue;
+                DisplayServiceDetails(selectedServiceId);
+            }
+            else
+            {
+                MessageBox.Show("Please select a service to view.");
+            }
+        }
+
+        // Display selected service details in the DataGridView
+        private void DisplayServiceDetails(int serviceId)
+        {
+            // Clear the DataGridView before adding new details
+            dataGridViewServices.DataSource = null;
+
+            // Retrieve the selected service from the list
+            var selectedService = services.FirstOrDefault(s => s.ServiceId == serviceId);
+
+            if (selectedService != null)
+            {
+                DataTable serviceTable = new DataTable();
+                serviceTable.Columns.Add("Service ID");
+                serviceTable.Columns.Add("Service Name");
+                serviceTable.Columns.Add("Description");
+                serviceTable.Columns.Add("Price");
+                serviceTable.Columns.Add("Estimated Time");
+
+                // Add the selected service’s details to the DataTable
+                serviceTable.Rows.Add(
+                    selectedService.ServiceId,
+                    selectedService.ServiceName,
+                    selectedService.Description,
+                    selectedService.Price,
+                    selectedService.EstimatedTime
+                );
+
+                // Bind the DataTable to the DataGridView
+                dataGridViewServices.DataSource = serviceTable;
+            }
+            else
+            {
+                MessageBox.Show("Error: Selected service not found.");
+            }
+        }
+
+        // Remove unused event handlers for cleaner code
+        private void comboBoxServices_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Optional: Add logic to handle ComboBox selection changes, if needed
+        }
+
+        private void btnViewServices_Click_1(object sender, EventArgs e)
+        {
+            // Redundant handler; can be removed if not used
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Handle the cell click event here, if needed
+            MessageBox.Show($"Cell clicked at Row {e.RowIndex}, Column {e.ColumnIndex}");
+        }
+
     }
+}

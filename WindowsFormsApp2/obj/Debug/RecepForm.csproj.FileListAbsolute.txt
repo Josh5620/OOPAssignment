@@ -104,7 +104,6 @@ C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\bin\Debug\Ent
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.xml
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.AssemblyReference.cache
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.AdminPage.resources
-C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Form1.resources
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.LoginPage.resources
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.RecepPage.resources
@@ -343,3 +342,8 @@ C:\Mac\Home\Documents\New folder\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepF
 C:\Mac\Home\Documents\New folder\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.Up2Date
 C:\Mac\Home\Documents\New folder\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Mac\Home\Documents\New folder\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.CustomerPage.resources
+C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.MechanicPage.resources
+C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.AssignedServcies.resources
+C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ManageInventory.resources
+C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.UpdateServices.resources

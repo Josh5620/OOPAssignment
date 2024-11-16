@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnSchedule = new System.Windows.Forms.Button();
             this.btnViewAppointment = new System.Windows.Forms.Button();
             this.btnUpdateAppointment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,11 +37,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxService = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxAppointmentId = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnSchedule = new System.Windows.Forms.Button();
+            this.comboBoxAppointments = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,22 +56,11 @@
             this.dataGridView1.Size = new System.Drawing.Size(722, 214);
             this.dataGridView1.TabIndex = 0;
             // 
-            // btnSchedule
-            // 
-            this.btnSchedule.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSchedule.Location = new System.Drawing.Point(16, 402);
-            this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(118, 42);
-            this.btnSchedule.TabIndex = 1;
-            this.btnSchedule.Text = "Schedule";
-            this.btnSchedule.UseVisualStyleBackColor = false;
-            // 
             // btnViewAppointment
             // 
             this.btnViewAppointment.BackColor = System.Drawing.Color.DarkOrange;
             this.btnViewAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAppointment.Location = new System.Drawing.Point(316, 402);
+            this.btnViewAppointment.Location = new System.Drawing.Point(274, 402);
             this.btnViewAppointment.Name = "btnViewAppointment";
             this.btnViewAppointment.Size = new System.Drawing.Size(111, 42);
             this.btnViewAppointment.TabIndex = 2;
@@ -82,7 +71,7 @@
             // 
             this.btnUpdateAppointment.BackColor = System.Drawing.Color.DarkOrange;
             this.btnUpdateAppointment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateAppointment.Location = new System.Drawing.Point(558, 402);
+            this.btnUpdateAppointment.Location = new System.Drawing.Point(469, 402);
             this.btnUpdateAppointment.Name = "btnUpdateAppointment";
             this.btnUpdateAppointment.Size = new System.Drawing.Size(98, 42);
             this.btnUpdateAppointment.TabIndex = 3;
@@ -136,13 +125,6 @@
             this.textBoxName.Size = new System.Drawing.Size(100, 22);
             this.textBoxName.TabIndex = 10;
             // 
-            // textBoxService
-            // 
-            this.textBoxService.Location = new System.Drawing.Point(212, 299);
-            this.textBoxService.Name = "textBoxService";
-            this.textBoxService.Size = new System.Drawing.Size(100, 22);
-            this.textBoxService.TabIndex = 11;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(212, 367);
@@ -173,14 +155,34 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // btnSchedule
+            // 
+            this.btnSchedule.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSchedule.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSchedule.Location = new System.Drawing.Point(55, 402);
+            this.btnSchedule.Name = "btnSchedule";
+            this.btnSchedule.Size = new System.Drawing.Size(118, 42);
+            this.btnSchedule.TabIndex = 1;
+            this.btnSchedule.Text = "Schedule";
+            this.btnSchedule.UseVisualStyleBackColor = false;
+            // 
+            // comboBoxAppointments
+            // 
+            this.comboBoxAppointments.FormattingEnabled = true;
+            this.comboBoxAppointments.Location = new System.Drawing.Point(212, 301);
+            this.comboBoxAppointments.Name = "comboBoxAppointments";
+            this.comboBoxAppointments.Size = new System.Drawing.Size(100, 24);
+            this.comboBoxAppointments.TabIndex = 15;
+            this.comboBoxAppointments.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // ManageAppointments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBoxAppointments);
             this.Controls.Add(this.textBoxAppointmentId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBoxService);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -201,7 +203,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnSchedule;
         private System.Windows.Forms.Button btnViewAppointment;
         private System.Windows.Forms.Button btnUpdateAppointment;
         private System.Windows.Forms.Label label1;
@@ -209,10 +210,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxService;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxAppointmentId;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.Button btnSchedule;
+        private System.Windows.Forms.ComboBox comboBoxAppointments;
     }
 }

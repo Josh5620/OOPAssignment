@@ -49,12 +49,13 @@
             // btnViewServices
             // 
             this.btnViewServices.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnViewServices.Location = new System.Drawing.Point(303, 419);
+            this.btnViewServices.Location = new System.Drawing.Point(287, 434);
             this.btnViewServices.Name = "btnViewServices";
             this.btnViewServices.Size = new System.Drawing.Size(120, 36);
             this.btnViewServices.TabIndex = 1;
             this.btnViewServices.Text = "View ";
             this.btnViewServices.UseVisualStyleBackColor = false;
+            this.btnViewServices.Click += new System.EventHandler(this.btnViewServices_Click_1);
             // 
             // label1
             // 
@@ -72,6 +73,7 @@
             this.comboBoxServices.Name = "comboBoxServices";
             this.comboBoxServices.Size = new System.Drawing.Size(121, 24);
             this.comboBoxServices.TabIndex = 4;
+            this.comboBoxServices.SelectedIndexChanged += new System.EventHandler(this.comboBoxServices_SelectedIndexChanged);
             // 
             // Viewservices
             // 
@@ -82,7 +84,7 @@
             this.Controls.Add(this.btnViewServices);
             this.Controls.Add(this.dataGridViewServices);
             this.Name = "Viewservices";
-            this.Size = new System.Drawing.Size(750, 488);
+            this.Size = new System.Drawing.Size(750, 499);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
