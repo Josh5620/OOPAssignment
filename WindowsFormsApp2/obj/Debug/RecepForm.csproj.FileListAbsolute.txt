@@ -347,3 +347,13 @@ C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Ass
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.AssignedServcies.resources
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ManageInventory.resources
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.UpdateServices.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.CustomerPage.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.MechanicPage.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.AssignedServcies.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Feedback.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.HomePage.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.ManageAppointments.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ManageInventory.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UpdateProfile.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.UpdateServices.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Viewservices.resources

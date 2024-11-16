@@ -45,9 +45,10 @@ namespace Assignment
             }
         }
 
-        public string Username;
+        public  string Username;
         public string Password;
         public string JobType;
+
 
         public void RefreshDatabase(DataTable dt)
         {
@@ -113,7 +114,7 @@ namespace Assignment
                     var userId = reader["UserID"].ToString();
                 }
             }
-
+            
             return authenticatedUser;
         }
 
@@ -160,19 +161,31 @@ namespace Assignment
         }
 
         // Method to fetch user profile details
-        public Dictionary<string, string> GetProfileInfo()
+        public Dictionary<string, string> GetProfileInfo(string Username)
         {
             Dictionary<string, string> profileInfo = new Dictionary<string, string>();
 
             using (SQLiteConnection connection = GetDatabaseConnection())
             {
-                string query = @"SELECT FullName, Username, Email, JobType 
-                         FROM Profile_Table 
+                string query = @"
+                        SELECT 
+                            p.ProfileID, 
+                            p.Email, 
+                            p.PhoneNumber, 
+                            p.Address, 
+                            s.FullName, 
+                            s.Password,
+                            s.Username
+                        FROM 
+                            Profile_Table p, 
+                            Staff_Table s
                          WHERE Username = @Username";
 
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username", Username);
+                    MessageBox.Show(Username);
+
 
                     using (SQLiteDataReader reader = command.ExecuteReader())
                     {
@@ -181,7 +194,10 @@ namespace Assignment
                             profileInfo["FullName"] = reader["FullName"].ToString();
                             profileInfo["Username"] = reader["Username"].ToString();
                             profileInfo["Email"] = reader["Email"].ToString();
-                            profileInfo["JobType"] = reader["JobType"].ToString();
+                            profileInfo["PhoneNumber"] = reader["PhoneNumber"].ToString();
+                            profileInfo["Address"] = reader["Address"].ToString();
+                            profileInfo["Password"] = reader["Password"].ToString();
+                            MessageBox.Show(profileInfo["FullName"]);
                         }
                     }
                 }

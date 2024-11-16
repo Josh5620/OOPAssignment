@@ -14,7 +14,7 @@ namespace Assignment
 {
     public partial class LoginPage : Form
     {
-        public User user;
+
         public LoginPage()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace Assignment
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var CForm = new RecepPage();
+            var CForm = new RecepPage("Test");
             CForm.Closed += (s, args) => this.Close();
             CForm.Show();
         }
@@ -68,8 +68,10 @@ namespace Assignment
                         break;
 
                     case "Receptionist":
-                        RecepPage recepPage = new RecepPage();
+                        RecepPage recepPage = new RecepPage(username);
+                        MessageBox.Show(username);
                         recepPage.Show();
+
                         this.Hide();
                         break;
 

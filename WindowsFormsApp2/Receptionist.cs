@@ -154,7 +154,6 @@ namespace Assignment
             return reader;
         }
 
-
         public void UpdateStatus(int appointmentId)
         {
             string updateQuery = @"UPDATE Appointments 
@@ -172,6 +171,29 @@ namespace Assignment
             cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
             cmd.ExecuteNonQuery();
             MessageBox.Show($"ID:{appointmentId} has been updated!");
+        }
+
+        public SQLiteDataReader LoadProfDetails()
+        {
+
+            string query = @"
+                        SELECT 
+                            p.ProfileID, 
+                            p.Email, 
+                            p.PhoneNumber, 
+                            p.Address, 
+                            s.FullName, 
+                            s.Password
+                        FROM 
+                            Profile_Table p, 
+                            Staff_Table s";
+
+
+            SQLiteCommand cmd = new SQLiteCommand(query, connection);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+
+            return reader;
         }
     }
 
