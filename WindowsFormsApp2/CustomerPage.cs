@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Assignment
 {
-
     public partial class CustomerPage : Form
     {
-
+        // Declare user controls
         private Viewservices userControl1;
         private ManageAppointments userControl2;
         private UpdateProfile userControl3;
@@ -26,87 +18,68 @@ namespace Assignment
             InitializeUserControls();
         }
 
-   
-
+        // Initialize user controls
         private void InitializeUserControls()
         {
-            userControl1 = new Viewservices();
-            userControl2 = new ManageAppointments();
-            userControl3 = new UpdateProfile();
-            userControl4 = new Feedback();
-            userControl5 = new HomePage();
+            // Initialize each user control and set its Dock style
+            userControl1 = new Viewservices { Dock = DockStyle.Fill };
+            userControl2 = new ManageAppointments { Dock = DockStyle.Fill };
+            userControl3 = new UpdateProfile { Dock = DockStyle.Fill };
+            userControl4 = new Feedback { Dock = DockStyle.Fill };
+            userControl5 = new HomePage { Dock = DockStyle.Fill };
 
-
-            userControl1.Dock = DockStyle.Fill;
-            userControl2.Dock = DockStyle.Fill;
-            userControl3.Dock = DockStyle.Fill;
-            userControl4.Dock = DockStyle.Fill;
-            userControl5.Dock = DockStyle.Fill;
-
+            // Add user controls to the panel
             panel2.Controls.Add(userControl1);
             panel2.Controls.Add(userControl2);
             panel2.Controls.Add(userControl3);
             panel2.Controls.Add(userControl4);
             panel2.Controls.Add(userControl5);
 
-            userControl1.Visible = false;
-            userControl2.Visible = false;
-            userControl3.Visible = false;
-            userControl4.Visible = false;
-            userControl5.Visible = false;
-
-            // Debugging output
-            Console.WriteLine(userControl1 != null); // Should print "True"
-            Console.WriteLine(userControl2 != null); // Should print "True"
-            Console.WriteLine(userControl3 != null); // Should print "True"
-            Console.WriteLine(userControl4 != null); // Should print "True"
+            // Initially hide all user controls
+            HideAllUserControls();
         }
 
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        
+        // Button click to show Viewservices user control
         private void button1_Click(object sender, EventArgs e)
         {
-            HideAllUserControls();
-            userControl1.Visible = true;
+            ShowUserControl(userControl1);
         }
 
-        private void feedback2_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        // Button click to show ManageAppointments user control
         private void button4_Click(object sender, EventArgs e)
         {
-            HideAllUserControls();
-            userControl2.Visible = true;
+            ShowUserControl(userControl2);
         }
 
+        // Button click to show UpdateProfile user control
         private void button3_Click(object sender, EventArgs e)
         {
-            HideAllUserControls();
-            userControl3.Visible = true;
+            ShowUserControl(userControl3);
         }
 
+        // Button click to show Feedback user control
         private void button2_Click(object sender, EventArgs e)
         {
-            HideAllUserControls();
-            userControl4.Visible = true;
-
+            ShowUserControl(userControl4);
         }
 
+        // Helper method to hide all user controls
         private void HideAllUserControls()
         {
             foreach (Control ctrl in panel2.Controls)
             {
-                if (ctrl is UserControl)
+                if (ctrl is UserControl userControl)
                 {
-                    ctrl.Visible = false;
+                    userControl.Visible = false;
                 }
             }
+        }
+
+        // Helper method to show a specific user control
+        private void ShowUserControl(UserControl userControl)
+        {
+            HideAllUserControls();
+            userControl.Visible = true;
         }
     }
 }

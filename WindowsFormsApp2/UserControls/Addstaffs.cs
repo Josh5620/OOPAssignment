@@ -34,8 +34,19 @@ namespace Assignment
         }
         private void Btn_addnewstaff_Click(object sender, EventArgs e)
         {
-            admin.AddStaff(FullNBox.Text, UsernBox.Text, PassBox.Text, ComboJobType.Text);
-            StaffDataGrid.DataSource = admin.LoadDataGrid("staff");
+            if (string.IsNullOrEmpty(FullNBox.Text) ||
+                string.IsNullOrEmpty(UsernBox.Text) ||
+                string.IsNullOrEmpty(PassBox.Text) ||
+                string.IsNullOrEmpty(ComboJobType.Text))
+            {
+                MessageBox.Show("Please fill in the information required.");
+            }
+            else
+            {
+                admin.AddStaff(FullNBox.Text, UsernBox.Text, PassBox.Text, ComboJobType.Text);
+                StaffDataGrid.DataSource = admin.LoadDataGrid("staff");
+            }
+
         }
     }
 }

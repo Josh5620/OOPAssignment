@@ -69,35 +69,9 @@ C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Login
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.DeleteStaff.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\UserDatabase.db
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\UserDatabase.db
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\UserDatabase.db
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.dll
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.dll
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.xml
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.xml
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.AssemblyReference.cache
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.AdminPage.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.LoginPage.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.RecepPage.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.DeleteStaff.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CIO_Control.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMADD_Control.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMDEL_Control.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.PROF_Control.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.SA_Control.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.VI_Control.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.GenerateResource.cache
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.CoreCompileInputs.cache
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.Up2Date
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.RecepPage.resources
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CIO_Control.resources
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMADD_Control.resources
@@ -112,10 +86,6 @@ C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserC
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.PROF_Control.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.SA_Control.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.VI_Control.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Add_Service.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Delete_Service.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Edit_Service.resources
-C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Addstaffs.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Addstaffs.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Add_Service.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Delete_Service.resources
@@ -290,3 +260,43 @@ C:\Users\TP081015\OneDrive - Asia Pacific University of Technology And Innovatio
 C:\Users\TP081015\OneDrive - Asia Pacific University of Technology And Innovation (APU)\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.CopyComplete
 C:\Users\TP081015\OneDrive - Asia Pacific University of Technology And Innovation (APU)\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
 C:\Users\TP081015\OneDrive - Asia Pacific University of Technology And Innovation (APU)\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\UserDatabase.db
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.dll
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.xml
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.xml
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.AssemblyReference.cache
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.AdminPage.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.CustomerPage.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.LoginPage.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.MechanicPage.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.RecepPage.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Addstaffs.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Add_Service.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.AssignedServcies.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.DeleteStaff.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CIO_Control.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMADD_Control.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMDEL_Control.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Delete_Service.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Edit_Service.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Feedback.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.HomePage.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.ManageAppointments.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ManageInventory.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.PROF_Control.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.SA_Control.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UpdateProfile.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.UpdateServices.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Viewservices.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.VI_Control.resources
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.GenerateResource.cache
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.CoreCompileInputs.cache
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.Up2Date
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb

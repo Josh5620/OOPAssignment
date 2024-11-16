@@ -21,8 +21,16 @@ namespace Assignment
 
         private void Btn_deleteservice_Click(object sender, EventArgs e)
         {
-            admin.DeleteService(int.Parse(ServiceIdBox.Text));
-            ServiceDataGrid.DataSource = admin.LoadDataGrid("service");
+            if (string.IsNullOrEmpty(ServiceIdBox.Text))
+            {
+                MessageBox.Show("Please enter the Id of the service you want to delete.");
+            }
+            else
+            {
+                admin.DeleteService(int.Parse(ServiceIdBox.Text));
+                ServiceDataGrid.DataSource = admin.LoadDataGrid("service");
+            }
+            
         }
     }
 }

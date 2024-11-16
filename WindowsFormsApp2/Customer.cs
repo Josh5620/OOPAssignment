@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2
+namespace Assignment
 {
     public class Customer : User
     {
@@ -27,21 +27,20 @@ namespace WindowsFormsApp2
             public string EstimatedTime { get; set; }
         }
 
-        public Customer()
+        public Customer(string username) // Accept a username and initialize the connection
         {
-            connection = GetDatabaseConnection();  // Initialize SQLite connection
+            this.Username = username;
+            connection = GetDatabaseConnection();  // Initialize the SQLite connection
             servicesData = LoadDataGrid("service");  // Load available services
             appointmentsData = LoadDataGrid("appointment");  // Load customer appointments
             feedbackData = LoadDataGrid("feedback");  // Load feedback table
-
-
         }
+
         // New constructor that accepts a username
-        public Customer(string username) : this() // Calls the parameterless constructor
+   public Customer() : this(string.Empty) // Default constructor calls the constructor with the username parameter
         {
-            this.Username = username; // Assuming Username is a property in User class
-
         }
+
 
         // Method to view services
         public List<Service> ViewAvailableServices()

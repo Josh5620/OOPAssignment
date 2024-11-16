@@ -8,19 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApp2;
+
 
 namespace Assignment
 {
-    public partial class ManageAppointments : Form
+    public partial class ManageAppointments : UserControl
     {
-        private Customer _customer;
 
-        public ManageAppointments(Customer customer)
+        public ManageAppointments()
         {
             InitializeComponent();
-            _customer = customer;
         }
+        Customer _customer = new Customer();
 
         private void textBoxAppointmentId_TextChanged(object sender, EventArgs e)
         {

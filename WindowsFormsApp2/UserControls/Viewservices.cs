@@ -13,16 +13,15 @@ namespace Assignment
     
         public partial class Viewservices : UserControl
         {
-            private Customer customer;
             private List<Customer.Service> services;
 
             public Viewservices()
             {
                 InitializeComponent();
-                customer = new Customer();
+                
                 LoadServicesIntoComboBox();
             }
-
+            Customer customer = new Customer();
             // Load available services into the ComboBox
             private void LoadServicesIntoComboBox()
             {
@@ -86,5 +85,3 @@ namespace Assignment
             }
         }
     }
-
-}

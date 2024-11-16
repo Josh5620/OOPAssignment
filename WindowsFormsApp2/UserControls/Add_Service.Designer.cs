@@ -52,11 +52,11 @@
             // ServiceDataGrid
             // 
             this.ServiceDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ServiceDataGrid.Location = new System.Drawing.Point(65, 28);
+            this.ServiceDataGrid.Location = new System.Drawing.Point(20, 22);
             this.ServiceDataGrid.Name = "ServiceDataGrid";
             this.ServiceDataGrid.RowHeadersWidth = 82;
             this.ServiceDataGrid.RowTemplate.Height = 33;
-            this.ServiceDataGrid.Size = new System.Drawing.Size(1141, 518);
+            this.ServiceDataGrid.Size = new System.Drawing.Size(1130, 563);
             this.ServiceDataGrid.TabIndex = 1;
             // 
             // DescrpBox

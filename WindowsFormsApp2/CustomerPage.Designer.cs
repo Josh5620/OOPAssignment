@@ -60,7 +60,6 @@
             this.Buttonspanel.Name = "Buttonspanel";
             this.Buttonspanel.Size = new System.Drawing.Size(184, 506);
             this.Buttonspanel.TabIndex = 0;
-            this.Buttonspanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnExit
             // 
@@ -133,8 +132,6 @@
             this.panel2.Controls.Add(this.homePage1);
             this.panel2.Controls.Add(this.feedback2);
             this.panel2.Controls.Add(this.updateProfile2);
-            this.panel2.Controls.Add(this.manageAppointments2);
-            this.panel2.Controls.Add(this.viewservices2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(184, 0);
             this.panel2.Name = "panel2";
@@ -154,7 +151,6 @@
             this.feedback2.Name = "feedback2";
             this.feedback2.Size = new System.Drawing.Size(835, 506);
             this.feedback2.TabIndex = 3;
-            this.feedback2.Load += new System.EventHandler(this.feedback2_Load);
             // 
             // updateProfile2
             // 

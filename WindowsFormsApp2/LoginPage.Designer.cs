@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.UsernameBox = new System.Windows.Forms.TextBox();
@@ -39,7 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.Logobox = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.RoleBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.Mechanic = new System.Windows.Forms.Button();
@@ -72,7 +73,7 @@
             // 
             this.UsernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameBox.Location = new System.Drawing.Point(630, 302);
-            this.UsernameBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(6);
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(392, 40);
             this.UsernameBox.TabIndex = 2;
@@ -81,7 +82,7 @@
             // 
             this.PasswordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordBox.Location = new System.Drawing.Point(630, 397);
-            this.PasswordBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(6);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(392, 40);
             this.PasswordBox.TabIndex = 3;
@@ -90,7 +91,7 @@
             // 
             this.btn_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.Location = new System.Drawing.Point(470, 706);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(6);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(238, 109);
             this.btn_login.TabIndex = 4;
@@ -102,7 +103,7 @@
             // 
             this.btn_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_exit.Location = new System.Drawing.Point(832, 706);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(6);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(238, 109);
             this.btn_exit.TabIndex = 5;
@@ -156,6 +157,7 @@
             // Logobox
             // 
             this.Logobox.BackColor = System.Drawing.SystemColors.Menu;
+            this.Logobox.Image = ((System.Drawing.Image)(resources.GetObject("Logobox.Image")));
             this.Logobox.Location = new System.Drawing.Point(14, 12);
             this.Logobox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Logobox.Name = "Logobox";
@@ -164,13 +166,13 @@
             this.Logobox.TabIndex = 10;
             this.Logobox.TabStop = false;
             // 
-            // comboBox1
+            // RoleBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(630, 502);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 33);
-            this.comboBox1.TabIndex = 11;
+            this.RoleBox.FormattingEnabled = true;
+            this.RoleBox.Location = new System.Drawing.Point(630, 502);
+            this.RoleBox.Name = "RoleBox";
+            this.RoleBox.Size = new System.Drawing.Size(121, 33);
+            this.RoleBox.TabIndex = 11;
             // 
             // label5
             // 
@@ -212,7 +214,7 @@
             this.Controls.Add(this.Mechanic);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.RoleBox);
             this.Controls.Add(this.Logobox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -224,7 +226,7 @@
             this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "LoginPage";
             this.Text = "LoginPage";
             ((System.ComponentModel.ISupportInitialize)(this.Logobox)).EndInit();
@@ -246,7 +248,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox Logobox;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox RoleBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button Mechanic;

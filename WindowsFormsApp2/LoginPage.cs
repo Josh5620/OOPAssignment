@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Assignment;
-using Assignment;
+
 
 namespace Assignment
 {
@@ -18,8 +18,21 @@ namespace Assignment
         public LoginPage()
         {
             InitializeComponent();
+            LoadJobTypes();
         }
-
+        //Authenticate function now takes the jobtype of the user before entering.
+        private void LoadJobTypes()
+        {
+            // Check if the ComboBox is empty 
+            if (RoleBox.Items.Count == 0)
+            {
+                // Add JobTypes to the Combo Box
+                RoleBox.Items.Add("Admin");
+                RoleBox.Items.Add("Receptionist");
+                RoleBox.Items.Add("Mechanic");
+                RoleBox.Items.Add("Customer");
+            }
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -40,10 +53,11 @@ namespace Assignment
         {
             string username = UsernameBox.Text;
             string password = PasswordBox.Text;
+            string JobType = RoleBox.Text;
 
-            User authenticateduser = User.Authenticate(username, password);
+            User authenticateduser = User.Authenticate(username, password, JobType);
 
-            if (authenticateduser != null)
+            if (authenticateduser != null && authenticateduser.JobType == JobType)
             {
                 switch (authenticateduser.JobType)
                 {
@@ -59,7 +73,7 @@ namespace Assignment
                         this.Hide();
                         break;
 
-                    /*case "Mechanic":
+                    case "Mechanic":
                         MechanicPage mechanicPage = new MechanicPage();
                         mechanicPage.Show();
                         this.Hide();
@@ -69,7 +83,7 @@ namespace Assignment
                         CustomerPage customerPage = new CustomerPage();
                         customerPage.Show();
                         this.Hide();
-                        break; */
+                        break; 
 
                     default:
                         MessageBox.Show("JobType Not Found.");

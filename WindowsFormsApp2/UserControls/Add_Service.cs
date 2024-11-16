@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,8 +22,20 @@ namespace Assignment
 
         private void Btn_AddService_Click(object sender, EventArgs e)
         {
-            admin.AddService(ServiceNBox.Text, DescrpBox.Text, int.Parse(PriceBox.Text), EstitmatedTBox.Text);
-            ServiceDataGrid.DataSource = admin.LoadDataGrid("service");
+            if (string.IsNullOrEmpty(ServiceNBox.Text) ||
+                string.IsNullOrEmpty(DescrpBox.Text) ||
+                string.IsNullOrEmpty(PriceBox.Text) ||
+                string.IsNullOrEmpty(EstitmatedTBox.Text))
+            {
+                MessageBox.Show("Please fill in the information required.");
+            }
+            else
+            {
+                admin.AddService(ServiceNBox.Text, DescrpBox.Text, int.Parse(PriceBox.Text), EstitmatedTBox.Text);
+                ServiceDataGrid.DataSource = admin.LoadDataGrid("service");
+            }
+                
+            }
         }
     }
-}
+

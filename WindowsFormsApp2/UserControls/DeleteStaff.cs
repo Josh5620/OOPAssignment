@@ -21,8 +21,15 @@ namespace Assignment
 
         private void Btn_delete_Click(object sender, EventArgs e)
         {
-            admin.DeleteStaff(int.Parse(StaffIDBox.Text));
-            StaffDataGrid.DataSource = admin.LoadDataGrid("staff");
+            if (string.IsNullOrEmpty(StaffIDBox.Text))
+            {
+                MessageBox.Show("Please type in the ID of the staff you would like to delete.");
+            }
+            else
+            {
+                admin.DeleteStaff(int.Parse(StaffIDBox.Text));
+                StaffDataGrid.DataSource = admin.LoadDataGrid("staff");
+            }
         }
     }
 }

@@ -13,28 +13,36 @@ namespace Assignment
 {
     public class User
     {
-        
-        protected string connectionString
-        { get 
-            { 
-                // Constructs the path to the database
-                string solutionDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\");
 
-                // Database path
-                string dbpath = Path.Combine(solutionDir, "UserDatabase.db");
+        protected string connectionString
+        {
+            get
+            {
+                string dbpath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "UserDatabase.db");
+                if (!File.Exists(dbpath))
+                {
+                    throw new FileNotFoundException($"Database file not found at {dbpath}");
+                }
                 return $"Data Source={dbpath};Version=3;";
             }
         }
 
         private SQLiteDataAdapter dataAdapter;
         private SQLiteConnection connection;
-        
+
         //Optional use for class connection to database.
         protected SQLiteConnection GetDatabaseConnection()
         {
-            var connection = new SQLiteConnection(connectionString);
-            connection.Open();
-            return connection;
+            try
+            {
+                var connection = new SQLiteConnection(connectionString);
+                connection.Open();
+                return connection;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Database connection failed: {ex.Message}");
+            }
         }
 
         public string Username;
@@ -70,7 +78,7 @@ namespace Assignment
         public User() 
         { }
 
-        public static User Authenticate(string username, string password)
+        public static User Authenticate(string username, string password, string JobType)
         {
             User authenticatedUser = null;
 
@@ -79,11 +87,11 @@ namespace Assignment
             {
                 // The query searches in both tables, with JobType used to differentiate between roles
                 string query = @"
-                SELECT staff_id AS UserID, Username, Password, JobType
+                SELECT StaffID AS UserID, Username, Password, JobType
                 FROM Staff_Table 
                 WHERE Username = @Username AND Password = @Password
                 UNION
-                SELECT customer_id AS UserID, Username, Password, 'Customer' AS JobType
+                SELECT CustomerId AS UserID, Username, Password, 'Customer' AS JobType
                 FROM Customer_Table 
                 WHERE Username = @Username AND Password = @Password";
 

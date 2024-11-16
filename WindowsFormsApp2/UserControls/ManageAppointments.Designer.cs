@@ -66,7 +66,6 @@
             this.btnSchedule.TabIndex = 1;
             this.btnSchedule.Text = "Schedule";
             this.btnSchedule.UseVisualStyleBackColor = false;
-            this.btnSchedule.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnViewAppointment
             // 

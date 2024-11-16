@@ -72,7 +72,6 @@
             this.comboBoxServices.Name = "comboBoxServices";
             this.comboBoxServices.Size = new System.Drawing.Size(121, 24);
             this.comboBoxServices.TabIndex = 4;
-            this.comboBoxServices.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Viewservices
             // 

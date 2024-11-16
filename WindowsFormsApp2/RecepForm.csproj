@@ -184,7 +184,7 @@
       <DependentUpon>HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ManageAppointments.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ManageAppointments.Designer.cs">
       <DependentUpon>ManageAppointments.cs</DependentUpon>

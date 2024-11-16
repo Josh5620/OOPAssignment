@@ -21,8 +21,15 @@ namespace Assignment
 
         private void Btn_UpdateService_Click(object sender, EventArgs e)
         {
-            admin.EditService(int.Parse(ServiceIdBox.Text), int.Parse(PriceBox.Text), EstimatedTBox.Text);
-            ServiceDataGrid.DataSource = admin.LoadDataGrid("service");
+            if (string.IsNullOrEmpty(ServiceIdBox.Text))
+            {
+                MessageBox.Show("Please input the id of the service you want to update.");
+            }
+            else
+            {
+                admin.EditService(int.Parse(ServiceIdBox.Text), int.Parse(PriceBox.Text), EstimatedTBox.Text);
+                ServiceDataGrid.DataSource = admin.LoadDataGrid("service");
+            }
         }
     }
 }

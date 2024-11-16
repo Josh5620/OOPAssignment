@@ -40,10 +40,10 @@
             // StaffDataGrid
             // 
             this.StaffDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StaffDataGrid.Location = new System.Drawing.Point(19, 15);
+            this.StaffDataGrid.Location = new System.Drawing.Point(40, 43);
             this.StaffDataGrid.Name = "StaffDataGrid";
             this.StaffDataGrid.RowHeadersWidth = 82;
-            this.StaffDataGrid.Size = new System.Drawing.Size(1223, 568);
+            this.StaffDataGrid.Size = new System.Drawing.Size(1130, 563);
             this.StaffDataGrid.TabIndex = 0;
             // 
             // Btn_delete
@@ -106,7 +106,7 @@
             this.Controls.Add(this.Btn_delete);
             this.Controls.Add(this.StaffDataGrid);
             this.Name = "DeleteStaff";
-            this.Size = new System.Drawing.Size(1370, 902);
+            this.Size = new System.Drawing.Size(1259, 821);
             ((System.ComponentModel.ISupportInitialize)(this.StaffDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
