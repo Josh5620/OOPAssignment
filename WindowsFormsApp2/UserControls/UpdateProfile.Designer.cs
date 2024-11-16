@@ -39,8 +39,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnUpdateProfile = new System.Windows.Forms.Button();
-            this.textBoxFirstname = new System.Windows.Forms.TextBox();
-            this.textBoxLastname = new System.Windows.Forms.TextBox();
+            this.textBoxUserName = new System.Windows.Forms.TextBox();
+            this.textBoxFullName = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
@@ -74,9 +74,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(370, 167);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Last Name:";
+            this.label1.Text = "FullName:";
             // 
             // label2
             // 
@@ -84,9 +84,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(368, 199);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 20);
+            this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Enter Address: ";
+            this.label2.Text = "Address: ";
             // 
             // label3
             // 
@@ -104,9 +104,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(370, 139);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 20);
+            this.label4.Size = new System.Drawing.Size(94, 20);
             this.label4.TabIndex = 5;
-            this.label4.Text = "First Name ";
+            this.label4.Text = "UserName ";
             // 
             // label5
             // 
@@ -149,19 +149,19 @@
             this.btnUpdateProfile.Text = "Update ";
             this.btnUpdateProfile.UseVisualStyleBackColor = false;
             // 
-            // textBoxFirstname
+            // textBoxUserName
             // 
-            this.textBoxFirstname.Location = new System.Drawing.Point(499, 136);
-            this.textBoxFirstname.Name = "textBoxFirstname";
-            this.textBoxFirstname.Size = new System.Drawing.Size(132, 22);
-            this.textBoxFirstname.TabIndex = 11;
+            this.textBoxUserName.Location = new System.Drawing.Point(499, 136);
+            this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.Size = new System.Drawing.Size(132, 22);
+            this.textBoxUserName.TabIndex = 11;
             // 
-            // textBoxLastname
+            // textBoxFullName
             // 
-            this.textBoxLastname.Location = new System.Drawing.Point(499, 164);
-            this.textBoxLastname.Name = "textBoxLastname";
-            this.textBoxLastname.Size = new System.Drawing.Size(132, 22);
-            this.textBoxLastname.TabIndex = 12;
+            this.textBoxFullName.Location = new System.Drawing.Point(499, 164);
+            this.textBoxFullName.Name = "textBoxFullName";
+            this.textBoxFullName.Size = new System.Drawing.Size(132, 22);
+            this.textBoxFullName.TabIndex = 12;
             // 
             // textBoxAddress
             // 
@@ -191,8 +191,8 @@
             this.Controls.Add(this.textBoxPhoneNumber);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.textBoxAddress);
-            this.Controls.Add(this.textBoxLastname);
-            this.Controls.Add(this.textBoxFirstname);
+            this.Controls.Add(this.textBoxFullName);
+            this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.btnUpdateProfile);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -225,8 +225,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnUpdateProfile;
-        private System.Windows.Forms.TextBox textBoxFirstname;
-        private System.Windows.Forms.TextBox textBoxLastname;
+        private System.Windows.Forms.TextBox textBoxUserName;
+        private System.Windows.Forms.TextBox textBoxFullName;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
