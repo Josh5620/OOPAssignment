@@ -23,7 +23,7 @@ namespace WindowsFormsApp2
 
         public SQLiteConnection GetDatabaseConnection()
         {
-            SQLiteConnection connection = new SQLiteConnection("Your_Connection_String_Here");
+            SQLiteConnection connection = new SQLiteConnection(connectionString);
             connection.Open();
             return connection;
         }
