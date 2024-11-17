@@ -182,6 +182,7 @@
             this.Controls.Add(this.dataGridViewAppointments);
             this.Name = "ManageAppointments";
             this.Size = new System.Drawing.Size(754, 531);
+            this.Load += new System.EventHandler(this.ManageAppointments_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

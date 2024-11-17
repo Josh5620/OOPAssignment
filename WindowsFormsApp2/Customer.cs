@@ -33,7 +33,36 @@ namespace Assignment
         public Customer(string username) : base()
         {
             this.Username = username; // Assuming Username is a property in User class
-            appointmentsData = LoadDataGrid("appointment");
+            appointmentsData = LoadDataGrid("Appointments");
+        }
+        public DataTable LoadAndFilterData(string tableName, List<string> fieldsToDisplay, string filterCondition = "")
+        {
+            try
+            {
+                using (var connection = GetDatabaseConnection())
+                {
+                    string columns = string.Join(", ", fieldsToDisplay);
+                    string query = $"SELECT {columns} FROM {tableName}";
+
+                    if (!string.IsNullOrEmpty(filterCondition))
+                    {
+                        query += $" WHERE {filterCondition}";
+                    }
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        return dataTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading filtered data: {ex.Message}");
+                return null;
+            }
         }
 
 
@@ -137,7 +166,7 @@ namespace Assignment
         // Reschedule an appointment
         public void RescheduleAppointment(int appointmentId, DateTime newDate)
         {
-            const string updateQuery = "UPDATE Appointments_Table SET AppointmentDate = @newDate WHERE AppointmentId = @appointmentId";
+            const string updateQuery = "UPDATE Appointments SET AppointmentDate = @newDate WHERE AppointmentId = @appointmentId";
 
             try
             {

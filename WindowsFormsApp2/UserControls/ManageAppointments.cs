@@ -26,45 +26,56 @@ namespace Assignment
             LoadServices();     // Load services into ComboBox
         }
 
-     
+
         private void LoadAllAppointments()
         {
-            string customerName = textBoxName.Text;  // Assuming TextBox for customer name
-            string selectedService = comboBoxAppointments.SelectedValue?.ToString(); // Assuming ComboBox for services
-
-            customer.appointmentsData = new DataTable();
-
             try
             {
-                string query = $"SELECT * FROM Appointments WHERE CustomerName = @CustomerName";
+                string customerName = textBoxName.Text.Trim();  // Trim to avoid leading/trailing spaces
+                int? selectedServiceId = comboBoxAppointments.SelectedValue as int?;
+                string filter = "";
 
-                if (!string.IsNullOrEmpty(selectedService))
+                if (!string.IsNullOrEmpty(customerName))
                 {
-                    query += " AND ServiceName = @ServiceName";
+                    filter += $"CustomerName LIKE '%{customerName}%'";
                 }
 
-                using (var connection = customer.GetDatabaseConnection())
-                using (var cmd = new SQLiteCommand(query, connection))
+                if (selectedServiceId.HasValue)
                 {
-                    cmd.Parameters.AddWithValue("@CustomerName", customerName);
-                    if (!string.IsNullOrEmpty(selectedService))
-                    {
-                        cmd.Parameters.AddWithValue("@ServiceName", selectedService);
-                    }
+                    if (!string.IsNullOrEmpty(filter))
+                        filter += " AND ";
 
-                    using (var adapter = new SQLiteDataAdapter(cmd))
-                    {
-                        adapter.Fill(customer.appointmentsData);
-                    }
+                    filter += $"ServiceId = {selectedServiceId.Value}";
                 }
 
-                dataGridViewAppointments.DataSource = customer.appointmentsData;
+                // Specify the columns you want to display
+                List<string> fieldsToDisplay = new List<string>
+        {
+            "AppointmentId",
+            "CustomerName",
+            "ServiceName",
+            "PreferredDate",
+            "Status"
+        };
+
+                DataTable filteredData = customer.LoadAndFilterData("Appointments", fieldsToDisplay, filter);
+
+                if (filteredData != null && filteredData.Rows.Count > 0)
+                {
+                    dataGridViewAppointments.DataSource = filteredData;
+                }
+                else
+                {
+                    dataGridViewAppointments.DataSource = null;
+                    MessageBox.Show("No appointments found for the specified criteria.");
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading appointments: {ex.Message}");
             }
         }
+
 
         private void LoadAppointmentsFromDatabase()
         {
@@ -250,6 +261,12 @@ namespace Assignment
                 customer.CancelAppointment(appointmentId);
                 LoadAllAppointments(); // Refresh DataGridView
             }
+        }
+
+        private void ManageAppointments_Load_1(object sender, EventArgs e)
+        {
+            List<string> fieldsToDisplay2 = new List<string> { "AppointmentId", "FullName", "CustomerId", "AppointmentDate", "ServiceId", "VehichleNumber", "AdditionalNotes", "Status" };
+            dataGridViewAppointments.DataSource = customer.LoadAndFilterData("Appointments", fieldsToDisplay2, "Status <> 'Completed'");
         }
     }
 }
