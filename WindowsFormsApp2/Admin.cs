@@ -172,6 +172,39 @@ namespace Assignment
                 MessageBox.Show($"Error in updating service! {ex.Message}");
             }
         }
+        public void GetReportsByMonth(string month)
+        {
+            // Form filter query
+            string filterquery = $"SELECT * FROM Appointments WHERE strftime('%m', AppoinmentDate) = @Month";
+
+            try
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand(filterquery, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Month", month);
+
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            DataTable filteredReports = new DataTable();
+                            filteredReports.Load(reader);  // Load data from reader into DataTable
+
+                            // Optionally: Bind the DataTable to a DataGridView or process it
+                            MessageBox.Show($"Reports successfully filtered by {month}!");
+                        }
+                        else
+                        {
+                            MessageBox.Show($"No reports found for {month}.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error in filtering reports: {ex.Message}");
+            }
+        }
     }
 }
 
