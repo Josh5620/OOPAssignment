@@ -138,15 +138,15 @@ namespace Assignment
             }
         }
 
-        public void UpdateMechanicFields(string appointmentId, string additionalRepairs, string CollectionTime)
+        public void UpdateMechanicFields(string appointmentId, string MechanicNotes, string CollectionTime)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                string query = "UPDATE Appointments SET AdditionalRepairs = @AdditionalRepairs, CollectionTime = @CollectionTime WHERE AppointmentId = @AppointmentId";
+                string query = "UPDATE Appointments SET MechanicNotes = @MechanicNotes, CollectionTime = @CollectionTime WHERE AppointmentId = @AppointmentId";
 
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@AdditionalRepairs", additionalRepairs);
+                    command.Parameters.AddWithValue("@MechanicNotes", MechanicNotes);
                     command.Parameters.AddWithValue("@CollectionTime", CollectionTime);
                     command.Parameters.AddWithValue("@AppointmentId", appointmentId);
 

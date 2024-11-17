@@ -48,7 +48,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCollectionTime = new System.Windows.Forms.TextBox();
-            this.txtAdditionalRepairs = new System.Windows.Forms.MaskedTextBox();
+            this.txtMechanicNotes = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView321)).BeginInit();
             this.SuspendLayout();
@@ -203,24 +203,30 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.Transparent;
             this.btnEdit.Location = new System.Drawing.Point(537, 879);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(6);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(204, 52);
             this.btnEdit.TabIndex = 19;
             this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(833, 769);
+            this.label7.Location = new System.Drawing.Point(853, 769);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(187, 25);
+            this.label7.Size = new System.Drawing.Size(167, 25);
             this.label7.TabIndex = 20;
-            this.label7.Text = "AdditionalRepairs:";
+            this.label7.Text = "MechanicNotes:";
             // 
             // label8
             // 
@@ -239,18 +245,18 @@
             this.txtCollectionTime.Size = new System.Drawing.Size(224, 31);
             this.txtCollectionTime.TabIndex = 22;
             // 
-            // txtAdditionalRepairs
+            // txtMechanicNotes
             // 
-            this.txtAdditionalRepairs.Location = new System.Drawing.Point(1040, 763);
-            this.txtAdditionalRepairs.Name = "txtAdditionalRepairs";
-            this.txtAdditionalRepairs.Size = new System.Drawing.Size(224, 31);
-            this.txtAdditionalRepairs.TabIndex = 24;
+            this.txtMechanicNotes.Location = new System.Drawing.Point(1040, 763);
+            this.txtMechanicNotes.Name = "txtMechanicNotes";
+            this.txtMechanicNotes.Size = new System.Drawing.Size(224, 31);
+            this.txtMechanicNotes.TabIndex = 24;
             // 
             // UpdateServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txtAdditionalRepairs);
+            this.Controls.Add(this.txtMechanicNotes);
             this.Controls.Add(this.txtCollectionTime);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -303,6 +309,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCollectionTime;
-        private System.Windows.Forms.MaskedTextBox txtAdditionalRepairs;
+        private System.Windows.Forms.MaskedTextBox txtMechanicNotes;
     }
 }

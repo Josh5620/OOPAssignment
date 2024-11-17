@@ -47,6 +47,9 @@ namespace Assignment
             panel1.Controls.Clear();
             panel1.Controls.Add(udManageInventory);
             udManageInventory.Dock = DockStyle.Fill;
+            // Initialize and add the RequestParts control with the username
+        
+
 
         }
 

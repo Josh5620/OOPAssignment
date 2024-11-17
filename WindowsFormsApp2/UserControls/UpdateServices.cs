@@ -34,7 +34,7 @@ namespace Assignment.UserControls
 
         private void UpdateServices_Load_1(object sender, EventArgs e)
         {
-            List<string> fieldsToDisplay1 = new List<string> { "FullName", "CustomerId", "AppointmentId", "VehicleNumber", "AppointmentDate", "Status", "AdditionalNotes", "AdditionalRepairs", "CollectionTime" };
+            List<string> fieldsToDisplay1 = new List<string> { "FullName", "CustomerId", "AppointmentId", "VehicleNumber", "AppointmentDate", "Status", "AdditionalNotes", "MechanicNotes", "CollectionTime" };
             DataGridView321.DataSource = mech.LoadAndFilterData("appointment", fieldsToDisplay1, "Status = 'Assigned'");
 
 
@@ -67,7 +67,7 @@ namespace Assignment.UserControls
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            // Check if only AdditionalRepairs and Completion Time are edited
+            // Check if only MechanicNotes and Completion Time are edited
             if (txtFullName.Modified || txtCustomerId.Modified || txtAppointmentId.Modified || txtVehicleNumber.Modified || txtAppointmentDate.Modified || txtAdditionalNotes.Modified || txtStatus.Modified)
             {
                 MessageBox.Show("You don't have access to change these fields.");
@@ -76,7 +76,7 @@ namespace Assignment.UserControls
 
             mech.UpdateMechanicFields(
                 txtAppointmentId.Text,
-                txtAdditionalRepairs.Text,
+                txtMechanicNotes.Text,
                 txtCollectionTime.Text
             );
 

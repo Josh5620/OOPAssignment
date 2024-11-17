@@ -359,3 +359,5 @@ C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ViewReports.resources
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ViewFeedback.resources
+C:\Mac\Home\Documents\New folder\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ViewFeedback.resources
+C:\Mac\Home\Documents\New folder\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ViewReports.resources
