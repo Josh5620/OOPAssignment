@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Data;
 using System.Data.SQLite;
+using System.Linq;
 using System.Windows.Forms;
-using WindowsFormsApp2;
+
 
 namespace Assignment
 {
     public partial class ManageAppointments : UserControl
     {
-        private Customer _customer; // Declare but don’t initialize here
+        private Customer _customer; // Declare Customer instance
 
         public ManageAppointments()
         {
@@ -18,11 +19,12 @@ namespace Assignment
 
         private void ManageAppointments_Load(object sender, EventArgs e)
         {
-            // Load the appointments data when the form loads
-            LoadAppointments();
+            LoadAllAppointments(); // Load appointments into DataGridView
+            LoadServices();     // Load services into ComboBox
         }
 
-        private void LoadAppointments()
+     
+        private void LoadAllAppointments()
         {
             try
             {
@@ -34,6 +36,9 @@ namespace Assignment
                 {
                     adapter.Fill(_customer.appointmentsData);
                 }
+
+                // Bind data to DataGridView
+                dataGridViewAppointments.DataSource = _customer.appointmentsData;
             }
             catch (Exception ex)
             {
@@ -41,28 +46,78 @@ namespace Assignment
             }
         }
 
+        private void LoadAppointmentsFromDatabase()
+        {
+            try
+            {
+                _customer.appointmentsData = _customer.LoadDataGrid("appointment");
+                if (_customer.appointmentsData != null)
+                {
+                    dataGridViewAppointments.DataSource = _customer.appointmentsData;
+                }
+                else
+                {
+                    MessageBox.Show("No data found in Appointments_Table.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading appointments: {ex.Message}");
+            }
+        }
+
+
+        private void LoadServices()
+        {
+            try
+            {
+                var services = _customer.ViewAvailableServices();
+                if (services != null && services.Any())
+                {
+                    comboBoxAppointments.DataSource = services;
+                    comboBoxAppointments.DisplayMember = "ServiceName";
+                    comboBoxAppointments.ValueMember = "ServiceId";
+                }
+                else
+                {
+                    MessageBox.Show("No services found in Service_Table.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading services: {ex.Message}");
+            }
+        }
+
+
+        /// <summary>
+        /// Handle when the Appointment ID is entered or changed.
+        /// Updates the corresponding fields in the form.
+        /// </summary>
         private void textBoxAppointmentId_TextChanged(object sender, EventArgs e)
         {
             try
             {
                 if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
+                    // Find the specific appointment row
                     DataRow[] rows = _customer.appointmentsData.Select($"AppointmentId = {appointmentId}");
                     if (rows.Length > 0)
                     {
                         DataRow row = rows[0];
                         textBoxName.Text = row["CustomerName"].ToString();
-                        comboBoxAppointments.Text = row["ServiceId"].ToString();
+                        comboBoxAppointments.SelectedValue = row["ServiceId"]; // Match ServiceId in ComboBox
                         dateTimePicker1.Value = Convert.ToDateTime(row["PreferredDate"]);
                     }
                     else
                     {
+                        ClearFields();
                         MessageBox.Show("No appointment found with that ID.");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid appointment ID.");
+                    ClearFields();
                 }
             }
             catch (Exception ex)
@@ -71,6 +126,10 @@ namespace Assignment
             }
         }
 
+        /// <summary>
+        /// Handle changes to the customer name.
+        /// Updates the database when the name is changed.
+        /// </summary>
         private void textBoxName_TextChanged(object sender, EventArgs e)
         {
             try
@@ -87,6 +146,9 @@ namespace Assignment
                         cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
                         cmd.ExecuteNonQuery();
                     }
+
+                    MessageBox.Show("Customer name updated successfully.");
+                    LoadAllAppointments(); // Refresh DataGridView
                 }
             }
             catch (Exception ex)
@@ -95,12 +157,16 @@ namespace Assignment
             }
         }
 
-        private void textBoxService_TextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Handle changes to the selected service.
+        /// Updates the database when the service is changed.
+        /// </summary>
+        private void comboBoxAppointments_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId) &&
-                    int.TryParse(comboBoxAppointments.Text, out int serviceId))
+                    comboBoxAppointments.SelectedValue is int serviceId)
                 {
                     string updateQuery = "UPDATE Appointments_Table SET ServiceId = @ServiceId WHERE AppointmentId = @AppointmentId";
 
@@ -111,14 +177,21 @@ namespace Assignment
                         cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
                         cmd.ExecuteNonQuery();
                     }
+
+                    MessageBox.Show("Service updated successfully.");
+                    LoadAllAppointments(); // Refresh DataGridView
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error updating service ID: {ex.Message}");
+                MessageBox.Show($"Error updating service: {ex.Message}");
             }
         }
 
+        /// <summary>
+        /// Handle changes to the preferred date.
+        /// Updates the database when the date is changed.
+        /// </summary>
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -135,6 +208,9 @@ namespace Assignment
                         cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
                         cmd.ExecuteNonQuery();
                     }
+
+                    MessageBox.Show("Appointment date updated successfully.");
+                    LoadAllAppointments(); // Refresh DataGridView
                 }
             }
             catch (Exception ex)
@@ -143,9 +219,14 @@ namespace Assignment
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Clear all input fields on the form.
+        /// </summary>
+        private void ClearFields()
         {
-            // Currently not used, but you can implement functionality here
+            textBoxName.Clear();
+            comboBoxAppointments.SelectedIndex = -1;
+            dateTimePicker1.Value = DateTime.Now;
         }
     }
 }

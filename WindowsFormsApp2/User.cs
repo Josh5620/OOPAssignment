@@ -11,8 +11,13 @@ using System.Windows.Forms;
 
 namespace Assignment
 {
+
     public class User
     {
+        // Private backing fields for properties
+        private string _username;
+        private string _password;
+        private string _jobType;
 
         protected string connectionString
         {
@@ -30,7 +35,34 @@ namespace Assignment
         private SQLiteDataAdapter dataAdapter;
         private SQLiteConnection connection;
 
-        //Optional use for class connection to database.
+        // Public properties with encapsulation
+        public string Username
+        {
+            get => _username;
+            set => _username = value ?? throw new ArgumentNullException(nameof(value), "Username cannot be null");
+        }
+
+        public string Password
+        {
+            get => _password;
+            set => _password = value ?? throw new ArgumentNullException(nameof(value), "Password cannot be null");
+        }
+
+        public string JobType
+        {
+            get => _jobType;
+            set => _jobType = value ?? throw new ArgumentNullException(nameof(value), "JobType cannot be null");
+        }
+
+        public User(string username, string password, string jobType)
+        {
+            Username = username;
+            Password = password;
+            JobType = jobType;
+        }
+
+        public User() { }
+
         protected SQLiteConnection GetDatabaseConnection()
         {
             try
@@ -44,10 +76,6 @@ namespace Assignment
                 throw new Exception($"Database connection failed: {ex.Message}");
             }
         }
-
-        public string Username;
-        public string Password;
-        public string JobType;
 
         public void RefreshDatabase(DataTable dt)
         {
@@ -68,24 +96,13 @@ namespace Assignment
             }
         }
 
-
-        public User(string username, string password, string jobType)
-        {
-            Username = username;
-            Password = password;
-            JobType = jobType;
-        }
-        public User() 
-        { }
-
-        public static User Authenticate(string username, string password, string JobType)
+        public static User Authenticate(string username, string password, string jobType)
         {
             User authenticatedUser = null;
 
             User tempUser = new User();
             using (SQLiteConnection connection = new SQLiteConnection(tempUser.connectionString))
             {
-                // The query searches in both tables, with JobType used to differentiate between roles
                 string query = @"
                 SELECT StaffID AS UserID, Username, Password, JobType
                 FROM Staff_Table 
@@ -104,23 +121,20 @@ namespace Assignment
 
                 if (reader.Read())
                 {
-                    // Create the authenticated user based on the data from the database
                     authenticatedUser = new User(
                         reader["Username"].ToString(),
                         reader["Password"].ToString(),
                         reader["JobType"].ToString()
                     );
-                    var userId = reader["UserID"].ToString();
                 }
             }
 
             return authenticatedUser;
         }
 
-        public DataTable LoadDataGrid(string tableName)  // General Function to load tables for data grid view
+        public DataTable LoadDataGrid(string tableName)
         {
-            // Keys used to load specific tables from the database
-            var validTables = new Dictionary<string, string>()
+            var validTables = new Dictionary<string, string>
             {
                 { "staff", "Staff_Table" },
                 { "customer", "Customer_Table" },
@@ -138,7 +152,6 @@ namespace Assignment
 
             string query = $"SELECT * FROM {validTables[tableName.ToLower()]}";
 
-            // Ensure the connection is open and properly managed
             using (SQLiteConnection connection = GetDatabaseConnection())
             {
                 SQLiteCommand command = new SQLiteCommand(query, connection);
@@ -151,7 +164,6 @@ namespace Assignment
                 }
                 catch (Exception ex)
                 {
-                    // Handle exceptions and provide feedback
                     MessageBox.Show($"Error loading data: {ex.Message}");
                 }
 
@@ -159,7 +171,6 @@ namespace Assignment
             }
         }
 
-        // Method to fetch user profile details
         public Dictionary<string, string> GetProfileInfo()
         {
             Dictionary<string, string> profileInfo = new Dictionary<string, string>();
@@ -189,7 +200,5 @@ namespace Assignment
 
             return profileInfo;
         }
-
     }
-
 }

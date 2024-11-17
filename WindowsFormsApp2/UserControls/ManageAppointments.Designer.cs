@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewAppointments = new System.Windows.Forms.DataGridView();
             this.btnViewAppointment = new System.Windows.Forms.Button();
             this.btnUpdateAppointment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,18 +43,18 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnSchedule = new System.Windows.Forms.Button();
             this.comboBoxAppointments = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewAppointments
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(722, 214);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAppointments.Location = new System.Drawing.Point(16, 13);
+            this.dataGridViewAppointments.Name = "dataGridViewAppointments";
+            this.dataGridViewAppointments.RowHeadersWidth = 51;
+            this.dataGridViewAppointments.RowTemplate.Height = 24;
+            this.dataGridViewAppointments.Size = new System.Drawing.Size(722, 214);
+            this.dataGridViewAppointments.TabIndex = 0;
             // 
             // btnViewAppointment
             // 
@@ -173,7 +173,7 @@
             this.comboBoxAppointments.Name = "comboBoxAppointments";
             this.comboBoxAppointments.Size = new System.Drawing.Size(100, 24);
             this.comboBoxAppointments.TabIndex = 15;
-            this.comboBoxAppointments.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxAppointments.SelectedIndexChanged += new System.EventHandler(this.comboBoxAppointments_SelectedIndexChanged);
             // 
             // ManageAppointments
             // 
@@ -191,10 +191,10 @@
             this.Controls.Add(this.btnUpdateAppointment);
             this.Controls.Add(this.btnViewAppointment);
             this.Controls.Add(this.btnSchedule);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewAppointments);
             this.Name = "ManageAppointments";
             this.Size = new System.Drawing.Size(754, 531);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +202,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewAppointments;
         private System.Windows.Forms.Button btnViewAppointment;
         private System.Windows.Forms.Button btnUpdateAppointment;
         private System.Windows.Forms.Label label1;
