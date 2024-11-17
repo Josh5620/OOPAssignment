@@ -17,7 +17,7 @@ namespace Assignment.UserControls
         public CMDEL_Control()
         {
             InitializeComponent();
-            
+            dataGridView1.DataSource = Recep.LoadDataGrid("customer");
         }
 
 
@@ -25,15 +25,14 @@ namespace Assignment.UserControls
 
         private void CMDEL_Control_Load(object sender, EventArgs e)
         {
-                       // Loads datatable using the recep class function and 
             dataGridView1.DataSource = Recep.LoadDataGrid("customer");
 
         }
 
         private void RefreshBtn_Click(object sender, EventArgs e)
         {
-            Receptionist Recep = new Receptionist();
             dataGridView1.DataSource = Recep.LoadDataGrid("customer");
+            
         }
 
         private void FilterBtn_Click(object sender, EventArgs e)
@@ -121,10 +120,7 @@ namespace Assignment.UserControls
                 {
                     MessageBox.Show("Please select a row to delete!");
                 }
-
-                Recep.RefreshDatabase(dataGridView1.DataSource as DataTable);
-
-
+                dataGridView1.DataSource = Recep.LoadDataGrid("customer");
             }
         }
 

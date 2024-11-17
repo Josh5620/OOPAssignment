@@ -39,12 +39,80 @@ namespace Assignment
             return filteredTable;
         }
 
-        public void AddData(string fullName, string customerId, string serviceId, string vehicleNumber, string appointmentDate, string additionalNotes, string status)
+
+        public bool AppointmentIdExists(string appointmentId)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                string query = "INSERT INTO Appointments (FullName, CustomerId, ServiceId, VehicleNumber, AppointmentDate, AdditionalNotes, Status) " +
-                               "VALUES (@FullName, @CustomerId, @ServiceId, @VehicleNumber, @AppointmentDate, @AdditionalNotes, @Status)";
+                string query = "SELECT COUNT(*) FROM Appointments WHERE AppointmentId = @AppointmentId";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@AppointmentId", appointmentId);
+
+                    connection.Open();
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+
+        public void ClearTextBoxes(UserControl userControl)
+        {
+            foreach (Control control in userControl.Controls)
+            {
+                if (control is TextBoxBase) // TextBoxBase is the base class for both TextBox and MaskedTextBox
+                {
+                    ((TextBoxBase)control).Text = string.Empty;
+                }
+                else if (control is Panel || control is GroupBox)
+                {
+                    // Recursively clear textboxes in nested containers
+                    ClearTextBoxes(control);
+                }
+            }
+        }
+
+        private void ClearTextBoxes(Control container)
+        {
+            foreach (Control control in container.Controls)
+            {
+                if (control is TextBoxBase) // TextBoxBase is the base class for both TextBox and MaskedTextBox
+                {
+                    ((TextBoxBase)control).Text = string.Empty;
+                }
+                else if (control is Panel || control is GroupBox)
+                {
+                    ClearTextBoxes(control);
+                }
+            }
+        }
+
+
+        //public void RefreshDataGridView(UserControl userControl, string dataGridViewName, string tableName)
+        //{
+        //  var dataGridView = userControl.Controls[dataGridViewName] as DataGridView;
+        // if (dataGridView == null)
+        //{
+        //  throw new ArgumentException($"No DataGridView with the name '{dataGridViewName}' found in the UserControl.");
+        //}
+
+        // Load data from the specified table
+        //DataTable dataTable = LoadDataGrid(tableName);
+
+        // Set the DataSource of the DataGridView to the loaded data
+        //dataGridView.DataSource = dataTable;
+        //}
+
+
+
+
+
+        public void UpdateData(string fullName, string customerId, string serviceId, string vehicleNumber, string appointmentDate, string additionalNotes, string status)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                string query = "UPDATE Appointments SET FullName = @FullName, CustomerId = @CustomerId, VehicleNumber = @VehicleNumber, AppointmentDate = @AppointmentDate, AdditionalNotes = @AdditionalNotes, Status = @Status WHERE ServiceId = @ServiceId";
 
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
@@ -60,68 +128,44 @@ namespace Assignment
                     try
                     {
                         command.ExecuteNonQuery();
-                        MessageBox.Show("Data added successfully!");
+                        MessageBox.Show("Data updated successfully!");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Error adding data: {ex.Message}");
+                        MessageBox.Show($"Error updating data: {ex.Message}");
                     }
                 }
             }
         }
 
-        public bool ServiceIdExists(string serviceId)
+        public void UpdateMechanicFields(string appointmentId, string additionalRepairs, string CollectionTime)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                string query = "SELECT COUNT(*) FROM Appointments WHERE ServiceId = @ServiceId";
+                string query = "UPDATE Appointments SET AdditionalRepairs = @AdditionalRepairs, CollectionTime = @CollectionTime WHERE AppointmentId = @AppointmentId";
 
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@ServiceId", serviceId);
+                    command.Parameters.AddWithValue("@AdditionalRepairs", additionalRepairs);
+                    command.Parameters.AddWithValue("@CollectionTime", CollectionTime);
+                    command.Parameters.AddWithValue("@AppointmentId", appointmentId);
 
                     connection.Open();
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-                    return count > 0;
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Data updated successfully!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error updating data: {ex.Message}");
+                    }
                 }
             }
         }
 
-        public void ClearTextBoxes(UserControl userControl)
-        {
-            foreach (Control control in userControl.Controls)
-            {
-                if (control is TextBox)
-                {
-                    ((TextBox)control).Text = string.Empty;
-                }
-                else if (control is Panel || control is GroupBox)
-                {
-                    // Recursively clear textboxes in nested containers
-                    ClearTextBoxes(control);
-                }
-            }
-        }
 
-        private void ClearTextBoxes(Control container)
-        {
-            foreach (Control control in container.Controls)
-            {
-                if (control is TextBox)
-                {
-                    ((TextBox)control).Text = string.Empty;
-                }
-                else if (control is Panel || control is GroupBox)
-                {
-                    ClearTextBoxes(control);
-                }
-            }
-        }
-
-        public void RefreshDataGridView(UserControl userControl)
-        {
-            List<string> fieldsToDisplay1 = new List<string> { "FullName", "CustomerId", "ServiceId", "VehichleNumber", "AppointmentDate", "AdditionalNotes", "Status" };
-            ((DataGridView)userControl.Controls["DataGridView321"]).DataSource = LoadAndFilterData("appointment", fieldsToDisplay1, "Status = 'Assigned'");
-        }
     }
+
+
 }

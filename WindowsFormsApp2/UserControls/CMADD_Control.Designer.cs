@@ -33,9 +33,7 @@
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
             this.VehicleNumberTextBox = new System.Windows.Forms.TextBox();
             this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.ContactInfoTextBox = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.AddressTextBox = new System.Windows.Forms.TextBox();
+            this.PasswordTextbox = new System.Windows.Forms.TextBox();
             this.ServiceComboBox = new System.Windows.Forms.ComboBox();
             this.ClrBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
@@ -43,9 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,41 +88,21 @@
             this.UsernameTextBox.Size = new System.Drawing.Size(100, 22);
             this.UsernameTextBox.TabIndex = 10;
             // 
-            // ContactInfoTextBox
+            // PasswordTextbox
             // 
-            this.ContactInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactInfoTextBox.Location = new System.Drawing.Point(452, 26);
-            this.ContactInfoTextBox.Name = "ContactInfoTextBox";
-            this.ContactInfoTextBox.Size = new System.Drawing.Size(100, 22);
-            this.ContactInfoTextBox.TabIndex = 11;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(351, 474);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 13;
-            // 
-            // AddressTextBox
-            // 
-            this.AddressTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressTextBox.Location = new System.Drawing.Point(452, 80);
-            this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(100, 22);
-            this.AddressTextBox.TabIndex = 12;
+            this.PasswordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextbox.Location = new System.Drawing.Point(452, 26);
+            this.PasswordTextbox.Name = "PasswordTextbox";
+            this.PasswordTextbox.Size = new System.Drawing.Size(100, 22);
+            this.PasswordTextbox.TabIndex = 11;
             // 
             // ServiceComboBox
             // 
-            this.ServiceComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServiceComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ServiceComboBox.FormattingEnabled = true;
-            this.ServiceComboBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.ServiceComboBox.Location = new System.Drawing.Point(452, 135);
+            this.ServiceComboBox.Location = new System.Drawing.Point(431, 84);
             this.ServiceComboBox.Name = "ServiceComboBox";
-            this.ServiceComboBox.Size = new System.Drawing.Size(121, 24);
+            this.ServiceComboBox.Size = new System.Drawing.Size(180, 21);
             this.ServiceComboBox.TabIndex = 14;
             // 
             // ClrBtn
@@ -182,40 +159,30 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(319, 30);
+            this.label5.Location = new System.Drawing.Point(331, 31);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 18);
+            this.label5.Size = new System.Drawing.Size(83, 18);
             this.label5.TabIndex = 21;
-            this.label5.Text = "ContactInfo (P/N):";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(348, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Address:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 192);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(327, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Password is set to N/A change, only 1 serice can be place at a time";
+            this.label5.Text = "Password: ";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(348, 135);
+            this.label7.Location = new System.Drawing.Point(331, 84);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 18);
             this.label7.TabIndex = 23;
             this.label7.Text = "Service:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(331, 137);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(218, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Only 1 ServiceID can be selected at the time";
             // 
             // CMADD_Control
             // 
@@ -223,7 +190,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -231,9 +197,7 @@
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.ClrBtn);
             this.Controls.Add(this.ServiceComboBox);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.AddressTextBox);
-            this.Controls.Add(this.ContactInfoTextBox);
+            this.Controls.Add(this.PasswordTextbox);
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.VehicleNumberTextBox);
             this.Controls.Add(this.FullNameTextBox);
@@ -254,9 +218,7 @@
         private System.Windows.Forms.TextBox FullNameTextBox;
         private System.Windows.Forms.TextBox VehicleNumberTextBox;
         private System.Windows.Forms.TextBox UsernameTextBox;
-        private System.Windows.Forms.TextBox ContactInfoTextBox;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox AddressTextBox;
+        private System.Windows.Forms.TextBox PasswordTextbox;
         private System.Windows.Forms.ComboBox ServiceComboBox;
         private System.Windows.Forms.Button ClrBtn;
         private System.Windows.Forms.Button AddBtn;
@@ -264,8 +226,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label3;
     }
 }

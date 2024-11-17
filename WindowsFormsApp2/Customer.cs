@@ -20,12 +20,8 @@ namespace Assignment
             public string EstimatedTime { get; set; }
         }
         public DataTable appointmentsData { get; set; }
-        public SQLiteConnection GetConnection()
-        {
-            return GetDatabaseConnection();
-        }
 
-        protected override SQLiteConnection GetDatabaseConnection()
+        public SQLiteConnection GetDatabaseConnection()
         {
             SQLiteConnection connection = new SQLiteConnection(connectionString);
             connection.Open();
@@ -37,7 +33,36 @@ namespace Assignment
         public Customer(string username) : base()
         {
             this.Username = username; // Assuming Username is a property in User class
-            appointmentsData = LoadDataGrid("appointment");
+            appointmentsData = LoadDataGrid("Appointments");
+        }
+        public DataTable LoadAndFilterData(string tableName, List<string> fieldsToDisplay, string filterCondition = "")
+        {
+            try
+            {
+                using (var connection = GetDatabaseConnection())
+                {
+                    string columns = string.Join(", ", fieldsToDisplay);
+                    string query = $"SELECT {columns} FROM {tableName}";
+
+                    if (!string.IsNullOrEmpty(filterCondition))
+                    {
+                        query += $" WHERE {filterCondition}";
+                    }
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+                    {
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        return dataTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading filtered data: {ex.Message}");
+                return null;
+            }
         }
 
         public DataTable LoadAndFilterData(string tableName, List<string> fieldsToDisplay, string filter)
@@ -82,7 +107,7 @@ namespace Assignment
             }
         }
         // Fetch list of available services
-        public override DataTable LoadDataGrid(string tableName)
+        public DataTable LoadDataGrid(string tableName)
         {
             var validTables = new Dictionary<string, string>()
     {
@@ -124,14 +149,15 @@ namespace Assignment
 
         public List<Service> ViewAvailableServices()
         {
+            var services = new List<Service>();
+            const string query = "SELECT * FROM Service_Table";
+
             try
             {
-                List<Service> services = new List<Service>();
-                using (var connection = GetConnection())
+                using (var connection = GetDatabaseConnection())
                 {
-                    string query = "SELECT ServiceId, ServiceName, Description, Price, EstimatedTime FROM Service_Table";
-                    using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
-                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    using (var command = new SQLiteCommand(query, connection))
+                    using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {
@@ -146,16 +172,14 @@ namespace Assignment
                         }
                     }
                 }
-                return services;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error retrieving services: {ex.Message}");
-                return null;
+                MessageBox.Show($"Error fetching services: {ex.Message}");
             }
+
+            return services;
         }
-
-
 
         // Schedule an appointment
         public void ScheduleAppointment(int serviceId, DateTime preferredDate)
@@ -223,16 +247,16 @@ namespace Assignment
         public void ProvideFeedback(int serviceId, string feedbackText, int rating)
         {
             var feedbackData = new Dictionary<string, object>
-    {
-        { "ServiceId", serviceId },
-        { "CustomerId", this.Username },
-        { "FeedbackText", feedbackText },
-        { "Rating", rating }
-    };
+            {
+                { "ServiceId", serviceId },
+                { "CustomerId", this.Username },
+                { "FeedbackText", feedbackText },
+                { "Rating", rating }
+            };
 
             try
             {
-                InsertRecord("Feedback", feedbackData); // Ensure table name matches the database
+                InsertRecord("Feedback", feedbackData);
                 MessageBox.Show("Feedback submitted successfully.");
             }
             catch (Exception ex)
@@ -241,14 +265,13 @@ namespace Assignment
             }
         }
 
-
         // Update customer profile
         public void UpdateProfile(string newName, string newEmail, string newPhoneNumber, string newAddress)
         {
             const string updateQuery = @"
-        UPDATE Profile_Table 
-        SET FullName = @name, Email = @Email, PhoneNumber = @phone, Address = @address 
-        WHERE Username = @Username";
+                UPDATE Profile_Table 
+                SET FullName = @name, Email = @Email, PhoneNumber = @phone, Address = @address 
+                WHERE Username = @Username";
 
             try
             {
@@ -263,25 +286,16 @@ namespace Assignment
 
                     int rowsAffected = cmd.ExecuteNonQuery();
 
-                    if (rowsAffected > 0)
-                    {
-                        // Show success message only if at least one row was updated
-                        MessageBox.Show("Profile updated successfully.");
-                    }
-                    else
-                    {
-                        // No rows were affected; show an error message
-                        MessageBox.Show("Error: Profile update failed. No changes were made.");
-                    }
+                    MessageBox.Show(rowsAffected > 0
+                        ? "Profile updated successfully."
+                        : "Error updating profile.");
                 }
             }
             catch (Exception ex)
             {
-                // Handle exceptions gracefully and display a meaningful error message
                 MessageBox.Show($"Error updating profile: {ex.Message}");
             }
         }
-
 
         // Insert a record into the database
         private void InsertRecord(string tableName, Dictionary<string, object> columns)
@@ -299,21 +313,14 @@ namespace Assignment
                     {
                         cmd.Parameters.AddWithValue($"@{column.Key}", column.Value);
                     }
-
-                    int rowsAffected = cmd.ExecuteNonQuery();
-
-                    if (rowsAffected == 0)
-                    {
-                        MessageBox.Show("No rows were inserted. Check the database structure and constraints.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error adding record to {tableName}: {ex.Message}\nQuery: {insertQuery}");
+                throw new Exception($"Error adding record to {tableName}: {ex.Message}");
             }
         }
-
 
         // Delete a record from the database
         private void DeleteRecord(string tableName, string columnName, object value)

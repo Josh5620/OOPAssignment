@@ -32,7 +32,8 @@ namespace Assignment
             }
         }
 
-        private SQLiteDataAdapter dataAdapter;
+        protected SQLiteDataAdapter dataAdapter;
+        protected SQLiteDataAdapter dataAdapterRecep;
         private SQLiteConnection connection;
 
         // Public properties with encapsulation
@@ -63,7 +64,7 @@ namespace Assignment
 
         public User() { }
 
-        protected virtual SQLiteConnection GetDatabaseConnection()
+        protected SQLiteConnection GetDatabaseConnection()
         {
             try
             {
@@ -76,26 +77,6 @@ namespace Assignment
                 throw new Exception($"Database connection failed: {ex.Message}");
             }
         }
-
-        public void RefreshDatabase(DataTable dt)
-        {
-            if (dataAdapter == null)
-            {
-                MessageBox.Show("DataAdapter is not initialized. Please load data first.");
-                return;
-            }
-
-            try
-            {
-                SQLiteCommandBuilder commandBuilder = new SQLiteCommandBuilder(dataAdapter);
-                dataAdapter.Update(dt);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Failed to refresh the database: {ex.Message}");
-            }
-        }
-
         public static User Authenticate(string username, string password, string jobType)
         {
             User authenticatedUser = null;
@@ -132,18 +113,18 @@ namespace Assignment
             return authenticatedUser;
         }
 
-        public virtual DataTable LoadDataGrid(string tableName)
+        public DataTable LoadDataGrid(string tableName)
         {
             var validTables = new Dictionary<string, string>
-            {
-                { "staff", "Staff_Table" },
-                { "customer", "Customer_Table" },
-                { "service", "Service_Table" },
-                { "feedback", "Feedback" },
-                { "appointment", "Appointments" },
-                { "profile", "Profile_Table" },
-                { "order", "Order_Table" }
-            };
+    {
+        { "staff", "Staff_Table" },
+        { "customer", "Customer_Table" },
+        { "service", "Service_Table" },
+        { "feedback", "Feedback" },
+        { "appointment", "Appointments" },
+        { "profile", "Profile_Table" },
+        { "order", "Order_Table" }
+    };
 
             if (!validTables.ContainsKey(tableName.ToLower()))
             {
@@ -154,36 +135,38 @@ namespace Assignment
 
             using (SQLiteConnection connection = GetDatabaseConnection())
             {
+                // Always create a new SQLiteDataAdapter to ensure fresh data
                 SQLiteCommand command = new SQLiteCommand(query, connection);
-                dataAdapter = new SQLiteDataAdapter(command);
-
-                DataTable dataTable = new DataTable();
-                try
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
                 {
-                    dataAdapter.Fill(dataTable);
+                    DataTable dataTable = new DataTable();
+                    try
+                    {
+                        adapter.Fill(dataTable); // Always fill a new DataTable
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading data: {ex.Message}");
+                    }
+                    dataAdapterRecep = adapter;
+                    return dataTable;
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error loading data: {ex.Message}");
-                }
-
-                return dataTable;
             }
         }
 
-        public Dictionary<string, string> GetProfileInfo()
+        public Dictionary<string, string> GetProfileInfo(string Username1)
         {
             Dictionary<string, string> profileInfo = new Dictionary<string, string>();
 
             using (SQLiteConnection connection = GetDatabaseConnection())
             {
-                string query = @"SELECT FullName, Username, Email, PhoneNumber, Address 
+                string query = @"SELECT FullName, Username, Email, JobType 
                          FROM Profile_Table 
                          WHERE Username = @Username";
 
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@Username", Username);
+                    command.Parameters.AddWithValue("@Username", Username1);
 
                     using (SQLiteDataReader reader = command.ExecuteReader())
                     {
@@ -192,8 +175,7 @@ namespace Assignment
                             profileInfo["FullName"] = reader["FullName"].ToString();
                             profileInfo["Username"] = reader["Username"].ToString();
                             profileInfo["Email"] = reader["Email"].ToString();
-                            profileInfo["PhoneNumber"] = reader["PhoneNumber"].ToString();
-                            profileInfo["Address"] = reader["Address"].ToString();
+                            profileInfo["JobType"] = reader["JobType"].ToString();
                         }
                     }
                 }

@@ -18,9 +18,8 @@ namespace Assignment
     {
 
         private string dbPath;
-        private SQLiteDataAdapter dataAdapter;      // Sets both connection and dataAdapter to class lvl variables and determines the main database file path
         public SQLiteConnection connection;
-
+        public SQLiteDataAdapter dataAdapter;
 
         public Receptionist()
         {
@@ -30,19 +29,7 @@ namespace Assignment
 
             connection = new SQLiteConnection(connectionString);
             connection.Open();
-        }
 
-        public void RefreshDatabase(DataTable dt)
-        {
-            if (dataAdapter == null)
-            {
-                // Handle the case where dataAdapter is still null
-                MessageBox.Show("DataAdapter is not initialized. Please load data first.");
-                return;
-            }
-
-            SQLiteCommandBuilder commandBuilder = new SQLiteCommandBuilder(dataAdapter);
-            dataAdapter.Update(dt);
         }
 
         public void DeleteCustomerRecord(int userID)
@@ -66,40 +53,27 @@ namespace Assignment
             }
         }
 
-        public void AddCustomerRecord(string fullName, string contactInfo,
+        public void AddCustomerRecord(string fullName, 
                                       string username, string vehicleNumber,
-                                      string address, string ServiceChoice)
+                                      string password, string ServiceChoice)
         {
-            Dictionary<string, string> serviceOptions = new Dictionary<string, string>
-             {
-                { "1", "Placeholder1" },
-                { "2", "Placeholder2" },
-                { "3", "Placeholder3" }         // Change the placeholders and the ones below when we decided what servicesto add 
-             };
 
-            try
-            {
-                string query = $"INSERT INTO Customer_Table (FullName, Password, ContactInfo, Username, VehicleNumber, Address, {serviceOptions[ServiceChoice]}) " +
-                               $"VALUES (@FullName, @Password, @ContactInfo, @Username, @VehicleNumber, @Address, @{serviceOptions[ServiceChoice]})";
+                string query = $"INSERT INTO Customer_Table (FullName, Password, Username, VehicleNumber, ServiceID ) " +
+                               $"VALUES (@FullName, @Password, @Username, @VehicleNumber, @ServiceID)";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@FullName", fullName);
-                    cmd.Parameters.AddWithValue("@Password", "N/A");
-                    cmd.Parameters.AddWithValue("@ContactInfo", contactInfo);
+                    cmd.Parameters.AddWithValue("@Password", password);
                     cmd.Parameters.AddWithValue("@Username", username);
                     cmd.Parameters.AddWithValue("@VehicleNumber", vehicleNumber);
-                    cmd.Parameters.AddWithValue("@Address", address);
-                    cmd.Parameters.AddWithValue($"@{serviceOptions[ServiceChoice]}", true);
+                    cmd.Parameters.AddWithValue("@ServiceID", ServiceChoice);
+
 
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Record added successfully.");
+
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error adding the record: {ex.Message}");
-            }
 
         }
 
@@ -125,7 +99,6 @@ namespace Assignment
             dataAdapter = new SQLiteDataAdapter(cmd); 
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
-            MessageBox.Show("Number of rows returned: " + dataTable.Rows.Count);
 
 
             return dataTable;
@@ -154,6 +127,44 @@ namespace Assignment
             return reader;
         }
 
+        public DataTable LoadDataGrid(string tableName)
+        {
+            var validTables = new Dictionary<string, string>
+    {
+        { "staff", "Staff_Table" },
+        { "customer", "Customer_Table" },
+        { "service", "Service_Table" },
+        { "feedback", "Feedback" },
+        { "appointment", "Appointments" },
+        { "profile", "Profile_Table" },
+        { "order", "Order_Table" }
+    };
+
+            if (!validTables.ContainsKey(tableName.ToLower()))
+            {
+                throw new ArgumentException("Invalid table name.");
+            }
+
+            string query = $"SELECT * FROM {validTables[tableName.ToLower()]}";
+
+   
+                // Always create a new SQLiteDataAdapter to ensure fresh data
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+                {
+                    DataTable dataTable = new DataTable();
+                    try
+                    {
+                        adapter.Fill(dataTable); // Always fill a new DataTable
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading data: {ex.Message}");
+                    }
+                    return dataTable;
+                }
+            
+        }
 
         public void UpdateStatus(int appointmentId)
         {
@@ -173,6 +184,115 @@ namespace Assignment
             cmd.ExecuteNonQuery();
             MessageBox.Show($"ID:{appointmentId} has been updated!");
         }
+
+        public void UpdateProfile(
+    string username,
+    string fullName,
+    string password,
+    string email,
+    string phoneNumber,
+    string address)
+        {
+            var updates = new Dictionary<string, Dictionary<string, string>>
+    {
+        { "Profile_Table", new Dictionary<string, string>
+            {
+                { "Email", email?.Trim() },
+                { "PhoneNumber", phoneNumber?.Trim() },
+                { "Address", address?.Trim() }
+            }
+        },
+        { "Staff_Table", new Dictionary<string, string>
+            {
+                { "FullName", fullName?.Trim() },
+                { "Password", password?.Trim() }
+            }
+        }
+    };
+
+                foreach (var table in updates)
+                {
+                    var fieldsToUpdate = table.Value
+                        .Where(field => !string.IsNullOrEmpty(field.Value))
+                        .Select(field => $"{field.Key} = @{field.Key}");
+
+                    if (fieldsToUpdate.Any())
+                    {
+                        string query = table.Key == "Profile_Table"
+                            ? $"UPDATE {table.Key} SET {string.Join(", ", fieldsToUpdate)} WHERE ProfileID = (SELECT ProfileID FROM Staff_Table WHERE Username = @Username)"
+                            : $"UPDATE {table.Key} SET {string.Join(", ", fieldsToUpdate)} WHERE Username = @Username";
+
+                        using (var command = new SQLiteCommand(query, connection))
+                        {
+                            foreach (var field in table.Value.Where(field => !string.IsNullOrEmpty(field.Value)))
+                            {
+                                command.Parameters.AddWithValue($"@{field.Key}", field.Value);
+                            }
+                            command.Parameters.AddWithValue("@Username", username);
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                MessageBox.Show("Profile updated successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+
+
+        public Dictionary<string, string> GetProfileInfo(string Username)
+        {
+            Dictionary<string, string> profileInfo = new Dictionary<string, string>();
+
+
+                string query = @"
+                        SELECT 
+                            p.ProfileID, 
+                            p.Email, 
+                            p.PhoneNumber, 
+                            p.Address, 
+                            s.FullName, 
+                            s.Password,
+                            s.Username
+                        FROM 
+                            Profile_Table p, 
+                            Staff_Table s
+                         WHERE s.Username = @Username";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", Username);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            profileInfo["FullName"] = reader["FullName"].ToString();
+                            profileInfo["Username"] = reader["Username"].ToString();
+                            profileInfo["Email"] = reader["Email"].ToString();
+                            profileInfo["PhoneNumber"] = reader["PhoneNumber"].ToString();
+                            profileInfo["Address"] = reader["Address"].ToString();
+                            profileInfo["Password"] = reader["Password"].ToString();
+
+
+                        }
+                    }
+                }
+            
+
+            return profileInfo;
+        }
+
+        public SQLiteDataReader LoadServiceChoice()
+        {
+            string query = @"SELECT ServiceID, ServiceName
+                            FROM Service_Table;";
+            SQLiteCommand cmd = new SQLiteCommand(query, connection);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+            return reader;
+
+        }
+
     }
 
 }

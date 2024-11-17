@@ -11,6 +11,7 @@ using System.Timers;
 using System.Drawing.Drawing2D;
 using Assignment.UserControls;
 using System.Data.SQLite;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 
@@ -19,14 +20,21 @@ namespace Assignment
 {
     public partial class RecepPage : Form
     {
-        public RecepPage()
+
+        public RecepPage(string username)
         {
             InitializeComponent();
             AddCust.Hide(); 
             DelCust.Hide();
+            username1 = username;
+            PROF_Control prof = new PROF_Control(username1);
+            addUserControl(prof);
 
         }
+
+
         bool hover = false;
+        private string username1;
         private void TimerCheck() // Counts as a method ig cause i might use it abunch 
                                   // for !hover and !add can be changed to accept arguements if want to use for other buttons
         {
@@ -39,11 +47,19 @@ namespace Assignment
                 {
                     AddCust.Hide();
                     DelCust.Hide();
+
                 }
             };
 
         }
 
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            ControlPanel.Controls.Clear();
+            ControlPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
         private void BtnHighlight(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -84,13 +100,6 @@ namespace Assignment
             TimerCheck();
         }
 
-        private void addUserControl(UserControl userControl)
-        {
-            userControl.Dock = DockStyle.Fill;
-            ControlPanel.Controls.Clear();
-            ControlPanel.Controls.Add(userControl);
-            userControl.BringToFront();
-        }
         private void ServBtn_Click(object sender, EventArgs e)
         {   
             SA_Control sac = new SA_Control();
@@ -111,7 +120,7 @@ namespace Assignment
         } 
         private void ProfBtn_Click(object sender, EventArgs e)
         {
-            PROF_Control prof = new PROF_Control();
+            PROF_Control prof = new PROF_Control(username1);
             addUserControl(prof);
         }
 
