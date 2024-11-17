@@ -173,28 +173,103 @@ namespace Assignment
             MessageBox.Show($"ID:{appointmentId} has been updated!");
         }
 
-        public SQLiteDataReader LoadProfDetails()
+        public void UpdateProfile(
+    string username,
+    string fullName,
+    string password,
+    string email,
+    string phoneNumber,
+    string address)
         {
+            var updates = new Dictionary<string, Dictionary<string, string>>
+    {
+        { "Profile_Table", new Dictionary<string, string>
+            {
+                { "Email", email?.Trim() },
+                { "PhoneNumber", phoneNumber?.Trim() },
+                { "Address", address?.Trim() }
+            }
+        },
+        { "Staff_Table", new Dictionary<string, string>
+            {
+                { "FullName", fullName?.Trim() },
+                { "Password", password?.Trim() }
+            }
+        }
+    };
 
-            string query = @"
+                foreach (var table in updates)
+                {
+                    var fieldsToUpdate = table.Value
+                        .Where(field => !string.IsNullOrEmpty(field.Value))
+                        .Select(field => $"{field.Key} = @{field.Key}");
+
+                    if (fieldsToUpdate.Any())
+                    {
+                        string query = table.Key == "Profile_Table"
+                            ? $"UPDATE {table.Key} SET {string.Join(", ", fieldsToUpdate)} WHERE ProfileID = (SELECT ProfileID FROM Staff_Table WHERE Username = @Username)"
+                            : $"UPDATE {table.Key} SET {string.Join(", ", fieldsToUpdate)} WHERE Username = @Username";
+
+                        using (var command = new SQLiteCommand(query, connection))
+                        {
+                            foreach (var field in table.Value.Where(field => !string.IsNullOrEmpty(field.Value)))
+                            {
+                                command.Parameters.AddWithValue($"@{field.Key}", field.Value);
+                            }
+                            command.Parameters.AddWithValue("@Username", username);
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+
+                MessageBox.Show("Profile updated successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+
+
+        public Dictionary<string, string> GetProfileInfo(string Username)
+        {
+            Dictionary<string, string> profileInfo = new Dictionary<string, string>();
+
+
+                string query = @"
                         SELECT 
                             p.ProfileID, 
                             p.Email, 
                             p.PhoneNumber, 
                             p.Address, 
                             s.FullName, 
-                            s.Password
+                            s.Password,
+                            s.Username
                         FROM 
                             Profile_Table p, 
-                            Staff_Table s";
+                            Staff_Table s
+                         WHERE s.Username = @Username";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Username", Username);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            profileInfo["FullName"] = reader["FullName"].ToString();
+                            profileInfo["Username"] = reader["Username"].ToString();
+                            profileInfo["Email"] = reader["Email"].ToString();
+                            profileInfo["PhoneNumber"] = reader["PhoneNumber"].ToString();
+                            profileInfo["Address"] = reader["Address"].ToString();
+                            profileInfo["Password"] = reader["Password"].ToString();
 
 
-            SQLiteCommand cmd = new SQLiteCommand(query, connection);
-            SQLiteDataReader reader = cmd.ExecuteReader();
+                        }
+                    }
+                }
+            
 
-
-            return reader;
+            return profileInfo;
         }
+
     }
 
 }
