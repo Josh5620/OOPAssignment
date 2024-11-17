@@ -234,8 +234,8 @@ namespace Assignment
 
         private void ManageAppointments_Load_1(object sender, EventArgs e)
         {
-            List<string> fieldsToDisplay2 = new List<string> { "AppointmentId", "FullName", "CustomerId", "AppointmentDate", "ServiceId", "VehichleNumber", "AdditionalNotes", "Status" };
-            dataGridViewAppointments.DataSource = customer.LoadAndFilterData("appointment", fieldsToDisplay2, "Status <> 'Completed'");
+            List<string> fieldsToDisplay2 = new List<string> { "AppointmentId", "FullName", "CustomerId", "AppointmentDate", "ServiceId", "VehicleNumber", "AdditionalNotes", "Status" };
+            dataGridViewAppointments.DataSource = customer.LoadAndFilterData("appointments", fieldsToDisplay2, "Status <> 'Completed'");
         }
     }
 }
