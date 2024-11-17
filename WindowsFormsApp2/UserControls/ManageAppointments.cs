@@ -1,23 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Windows.Forms;
-using static Assignment.Customer;
 
 
 namespace Assignment
 {
     public partial class ManageAppointments : UserControl
     {
-        private List<Customer.Service> services;
-        private Customer customer; // Declare Customer instance
-       
+        private Customer _customer; // Declare Customer instance
+
         public ManageAppointments()
         {
             InitializeComponent();
-            customer = new Customer(); // Initialize the Customer instance
+            _customer = new Customer(); // Initialize the Customer instance
         }
 
         private void ManageAppointments_Load(object sender, EventArgs e)
@@ -31,30 +28,21 @@ namespace Assignment
         {
             try
             {
-                customer.appointmentsData = new DataTable();
-                string query = "SELECT * FROM Appointments";
+                _customer.appointmentsData = new DataTable();
+                string query = "SELECT * FROM Appointments_Table";
 
-                using (var connection = customer.GetConnection())
+                using (var connection = _customer.GetDatabaseConnection())
                 using (var adapter = new SQLiteDataAdapter(query, connection))
                 {
-                    adapter.Fill(customer.appointmentsData);
+                    adapter.Fill(_customer.appointmentsData);
                 }
 
                 // Bind data to DataGridView
-                dataGridViewAppointments.DataSource = customer.appointmentsData;
+                dataGridViewAppointments.DataSource = _customer.appointmentsData;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading appointments: {ex.Message}");
-            }
-
-            using (var connection = customer.GetConnection())
-            {
-                if (connection.State != ConnectionState.Open)
-                {
-                    MessageBox.Show("Database connection failed.");
-                    return;
-                }
             }
         }
 
@@ -62,14 +50,14 @@ namespace Assignment
         {
             try
             {
-                customer.appointmentsData = customer.LoadDataGrid("appointment");
-                if (customer.appointmentsData != null)
+                _customer.appointmentsData = _customer.LoadDataGrid("appointment");
+                if (_customer.appointmentsData != null)
                 {
-                    dataGridViewAppointments.DataSource = customer.appointmentsData;
+                    dataGridViewAppointments.DataSource = _customer.appointmentsData;
                 }
                 else
                 {
-                    MessageBox.Show("No data found in Appointments.");
+                    MessageBox.Show("No data found in Appointments_Table.");
                 }
             }
             catch (Exception ex)
@@ -83,21 +71,21 @@ namespace Assignment
         {
             try
             {
-                services = customer.ViewAvailableServices(); // Fetch services
-                if (services != null && services.Count > 0)
+                var services = _customer.ViewAvailableServices();
+                if (services != null && services.Any())
                 {
                     comboBoxAppointments.DataSource = services;
-                    comboBoxAppointments.DisplayMember = "ServiceName"; // Display the service name
-                    comboBoxAppointments.ValueMember = "ServiceId"; // Use ServiceId as the value
+                    comboBoxAppointments.DisplayMember = "ServiceName";
+                    comboBoxAppointments.ValueMember = "ServiceId";
                 }
                 else
                 {
-                    MessageBox.Show("No services available for feedback.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No services found in Service_Table.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading services: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error loading services: {ex.Message}");
             }
         }
 
@@ -113,7 +101,7 @@ namespace Assignment
                 if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
                     // Find the specific appointment row
-                    DataRow[] rows = customer.appointmentsData.Select($"AppointmentId = {appointmentId}");
+                    DataRow[] rows = _customer.appointmentsData.Select($"AppointmentId = {appointmentId}");
                     if (rows.Length > 0)
                     {
                         DataRow row = rows[0];
@@ -149,9 +137,9 @@ namespace Assignment
                 if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
                     string newName = textBoxName.Text;
-                    string updateQuery = "UPDATE Appointments SET CustomerName = @CustomerName WHERE AppointmentId = @AppointmentId";
+                    string updateQuery = "UPDATE Appointments_Table SET CustomerName = @CustomerName WHERE AppointmentId = @AppointmentId";
 
-                    using (var connection = customer.GetConnection())
+                    using (var connection = _customer.GetDatabaseConnection())
                     using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
                         cmd.Parameters.AddWithValue("@CustomerName", newName);
@@ -175,7 +163,29 @@ namespace Assignment
         /// </summary>
         private void comboBoxAppointments_SelectedIndexChanged(object sender, EventArgs e)
         {
-         
+            try
+            {
+                if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId) &&
+                    comboBoxAppointments.SelectedValue is int serviceId)
+                {
+                    string updateQuery = "UPDATE Appointments_Table SET ServiceId = @ServiceId WHERE AppointmentId = @AppointmentId";
+
+                    using (var connection = _customer.GetDatabaseConnection())
+                    using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@ServiceId", serviceId);
+                        cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Service updated successfully.");
+                    LoadAllAppointments(); // Refresh DataGridView
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating service: {ex.Message}");
+            }
         }
 
         /// <summary>
@@ -189,9 +199,9 @@ namespace Assignment
                 if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
                     DateTime newDate = dateTimePicker1.Value;
-                    string updateQuery = "UPDATE Appointments SET PreferredDate = @PreferredDate WHERE AppointmentId = @AppointmentId";
+                    string updateQuery = "UPDATE Appointments_Table SET PreferredDate = @PreferredDate WHERE AppointmentId = @AppointmentId";
 
-                    using (var connection = customer.GetConnection())
+                    using (var connection = _customer.GetDatabaseConnection())
                     using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
                         cmd.Parameters.AddWithValue("@PreferredDate", newDate);

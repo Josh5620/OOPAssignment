@@ -64,7 +64,7 @@ namespace Assignment
 
         public User() { }
 
-        protected virtual SQLiteConnection GetDatabaseConnection()
+        protected SQLiteConnection GetDatabaseConnection()
         {
             try
             {
@@ -113,7 +113,7 @@ namespace Assignment
             return authenticatedUser;
         }
 
-        public virtual DataTable LoadDataGrid(string tableName)
+        public DataTable LoadDataGrid(string tableName)
         {
             var validTables = new Dictionary<string, string>
     {
@@ -160,7 +160,7 @@ namespace Assignment
 
             using (SQLiteConnection connection = GetDatabaseConnection())
             {
-                string query = @"SELECT FullName, Username, Email, PhoneNumber, Address 
+                string query = @"SELECT FullName, Username, Email, JobType 
                          FROM Profile_Table 
                          WHERE Username = @Username";
 
@@ -175,8 +175,7 @@ namespace Assignment
                             profileInfo["FullName"] = reader["FullName"].ToString();
                             profileInfo["Username"] = reader["Username"].ToString();
                             profileInfo["Email"] = reader["Email"].ToString();
-                            profileInfo["PhoneNumber"] = reader["PhoneNumber"].ToString();
-                            profileInfo["Address"] = reader["Address"].ToString();
+                            profileInfo["JobType"] = reader["JobType"].ToString();
                         }
                     }
                 }
