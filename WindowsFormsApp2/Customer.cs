@@ -6,7 +6,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp2
+namespace Assignment
 {
     public class Customer : User
     {
@@ -38,6 +38,46 @@ namespace WindowsFormsApp2
 
 
         // Fetch list of available services
+        public DataTable LoadDataGrid(string tableName)
+        {
+            var validTables = new Dictionary<string, string>()
+    {
+        { "staff", "Staff_Table" },
+        { "customer", "Customer_Table" },
+        { "service", "Service_Table" },
+        { "feedback", "Feedback" },
+        { "appointment", "Appointments_Table" }, // Fixed mapping
+        { "profile", "Profile_Table" },
+        { "order", "Order_Table" }
+    };
+
+            if (!validTables.ContainsKey(tableName.ToLower()))
+            {
+                throw new ArgumentException($"Invalid table name: {tableName}");
+            }
+
+            string query = $"SELECT * FROM {validTables[tableName.ToLower()]}";
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                using (var connection = GetDatabaseConnection())
+                {
+                    using (var command = new SQLiteCommand(query, connection))
+                    using (var adapter = new SQLiteDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data from {tableName}: {ex.Message}");
+            }
+
+            return dataTable;
+        }
+
         public List<Service> ViewAvailableServices()
         {
             var services = new List<Service>();
@@ -47,8 +87,8 @@ namespace WindowsFormsApp2
             {
                 using (var connection = GetDatabaseConnection())
                 {
-                    using (var cmd = new SQLiteCommand(query, connection))
-                    using (var reader = cmd.ExecuteReader())
+                    using (var command = new SQLiteCommand(query, connection))
+                    using (var reader = command.ExecuteReader())
                     {
                         while (reader.Read())
                         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using WindowsFormsApp2;
+
 
 namespace Assignment
 {
@@ -47,28 +47,33 @@ namespace Assignment
         // Event handler for the "View" button click
         private void btnViewServices_Click(object sender, EventArgs e)
         {
-            if (comboBoxServices.SelectedItem != null)
+            if (comboBoxServices.SelectedValue is int selectedServiceId)
             {
-                int selectedServiceId = (int)comboBoxServices.SelectedValue;
+                // Debugging message
+                MessageBox.Show($"Selected Service ID: {selectedServiceId}");
                 DisplayServiceDetails(selectedServiceId);
             }
             else
             {
-                MessageBox.Show("Please select a service to view.");
+                MessageBox.Show("Please select a valid service.");
             }
         }
 
         // Display selected service details in the DataGridView
         private void DisplayServiceDetails(int serviceId)
         {
-            // Clear the DataGridView before adding new details
-            dataGridViewServices.DataSource = null;
-
-            // Retrieve the selected service from the list
-            var selectedService = services.FirstOrDefault(s => s.ServiceId == serviceId);
-
-            if (selectedService != null)
+            try
             {
+                // Find the selected service
+                var selectedService = services.FirstOrDefault(s => s.ServiceId == serviceId);
+
+                if (selectedService == null)
+                {
+                    MessageBox.Show("Selected service could not be found.");
+                    return;
+                }
+
+                // Create DataTable
                 DataTable serviceTable = new DataTable();
                 serviceTable.Columns.Add("Service ID");
                 serviceTable.Columns.Add("Service Name");
@@ -76,7 +81,7 @@ namespace Assignment
                 serviceTable.Columns.Add("Price");
                 serviceTable.Columns.Add("Estimated Time");
 
-                // Add the selected service’s details to the DataTable
+                // Add service details to DataTable
                 serviceTable.Rows.Add(
                     selectedService.ServiceId,
                     selectedService.ServiceName,
@@ -85,14 +90,18 @@ namespace Assignment
                     selectedService.EstimatedTime
                 );
 
-                // Bind the DataTable to the DataGridView
+                // Bind DataTable to DataGridView
                 dataGridViewServices.DataSource = serviceTable;
+
+                // Debugging message
+                MessageBox.Show($"DataGridView now displays {serviceTable.Rows.Count} rows.");
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Error: Selected service not found.");
+                MessageBox.Show($"Error displaying service details: {ex.Message}");
             }
         }
+
 
         // Remove unused event handlers for cleaner code
         private void comboBoxServices_SelectedIndexChanged(object sender, EventArgs e)
@@ -107,6 +116,8 @@ namespace Assignment
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
             // Handle the cell click event here, if needed
             MessageBox.Show($"Cell clicked at Row {e.RowIndex}, Column {e.ColumnIndex}");
         }
