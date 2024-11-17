@@ -64,37 +64,16 @@ namespace Assignment.UserControls
         {
             if (e.KeyCode == Keys.Enter)
             {
-                AddDataToDatabase();
+                mech.AddDataToDatabase(this);
             }
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            AddDataToDatabase();
+            mech.AddDataToDatabase(this);
         }
 
-        private void AddDataToDatabase()
-        {
-
-            string serviceId = txtServiceId.Text;
-
-            if (mech.ServiceIdExists(serviceId))
-            {
-                MessageBox.Show("The service ID entered already exists.");
-                return;
-            }
-
-            mech.AddData(
-                txtFullName.Text,
-                txtCustomerId.Text,
-                txtServiceId.Text,
-                txtVehichleNumber.Text,
-                txtAppointmentDate.Text,
-                txtAdditionalNotes.Text,
-                txtStatus.Text
-            );
-            // Optionally, refresh the DataGridView here if needed
-        }
+        
 
         private void btnEdit_Click(object sender, EventArgs e)
         {

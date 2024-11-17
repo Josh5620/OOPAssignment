@@ -91,9 +91,9 @@ namespace Assignment
         {
             foreach (Control control in userControl.Controls)
             {
-                if (control is TextBox)
+                if (control is TextBoxBase) // TextBoxBase is the base class for both TextBox and MaskedTextBox
                 {
-                    ((TextBox)control).Text = string.Empty;
+                    ((TextBoxBase)control).Text = string.Empty;
                 }
                 else if (control is Panel || control is GroupBox)
                 {
@@ -107,9 +107,9 @@ namespace Assignment
         {
             foreach (Control control in container.Controls)
             {
-                if (control is TextBox)
+                if (control is TextBoxBase) // TextBoxBase is the base class for both TextBox and MaskedTextBox
                 {
-                    ((TextBox)control).Text = string.Empty;
+                    ((TextBoxBase)control).Text = string.Empty;
                 }
                 else if (control is Panel || control is GroupBox)
                 {
@@ -118,10 +118,66 @@ namespace Assignment
             }
         }
 
-        public void RefreshDataGridView(UserControl userControl)
+
+        public void RefreshDataGridView(UserControl userControl, string dataGridViewName, string tableName)
         {
-            List<string> fieldsToDisplay1 = new List<string> { "FullName", "CustomerId", "ServiceId", "VehichleNumber", "AppointmentDate", "AdditionalNotes", "Status" };
-            ((DataGridView)userControl.Controls["DataGridView321"]).DataSource = LoadAndFilterData("appointment", fieldsToDisplay1, "Status = 'Assigned'");
+            var dataGridView = userControl.Controls[dataGridViewName] as DataGridView;
+            if (dataGridView == null)
+            {
+                throw new ArgumentException($"No DataGridView with the name '{dataGridViewName}' found in the UserControl.");
+            }
+
+            // Load data from the specified table
+            DataTable dataTable = LoadDataGrid(tableName);
+
+            // Set the DataSource of the DataGridView to the loaded data
+            dataGridView.DataSource = dataTable;
+        }
+
+
+
+        public void AddDataToDatabase(UserControl userControl)
+        {
+            TextBoxBase txtFullName = (TextBoxBase)userControl.Controls["txtFullName"];
+            TextBoxBase txtCustomerId = (TextBoxBase)userControl.Controls["txtCustomerId"];
+            TextBoxBase txtServiceId = (TextBoxBase)userControl.Controls["txtServiceId"];
+            TextBoxBase txtVehichleNumber = (TextBoxBase)userControl.Controls["txtVehichleNumber"];
+            TextBoxBase txtAppointmentDate = (TextBoxBase)userControl.Controls["txtAppointmentDate"];
+            TextBoxBase txtAdditionalNotes = (TextBoxBase)userControl.Controls["txtAdditionalNotes"];
+            TextBoxBase txtStatus = (TextBoxBase)userControl.Controls["txtStatus"];
+
+            // Check if all required textboxes are filled
+            if (string.IsNullOrWhiteSpace(txtFullName.Text) ||
+                string.IsNullOrWhiteSpace(txtCustomerId.Text) ||
+                string.IsNullOrWhiteSpace(txtServiceId.Text) ||
+                string.IsNullOrWhiteSpace(txtVehichleNumber.Text) ||
+                string.IsNullOrWhiteSpace(txtAppointmentDate.Text) ||
+                string.IsNullOrWhiteSpace(txtStatus.Text))
+            {
+                MessageBox.Show("Please fill in all required fields before adding the information.");
+                return;
+            }
+
+            string serviceId = txtServiceId.Text;
+
+            if (ServiceIdExists(serviceId))
+            {
+                MessageBox.Show("The service ID entered already exists.");
+                return;
+            }
+
+            AddData(
+                txtFullName.Text,
+                txtCustomerId.Text,
+                serviceId,
+                txtVehichleNumber.Text,
+                txtAppointmentDate.Text,
+                txtAdditionalNotes.Text,
+                txtStatus.Text
+            );
+
+            ClearTextBoxes(userControl);
+            RefreshDataGridView(userControl, "DataGridView321", "appointment");
         }
     }
 }
