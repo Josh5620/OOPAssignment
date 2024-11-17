@@ -45,7 +45,7 @@ namespace Assignment
             }
         }
 
-        public  string Username;
+        public string Username;
         public string Password;
         public string JobType;
 
@@ -76,7 +76,7 @@ namespace Assignment
             Password = password;
             JobType = jobType;
         }
-        public User() 
+        public User()
         { }
 
         public static User Authenticate(string username, string password, string JobType)
@@ -114,7 +114,7 @@ namespace Assignment
                     var userId = reader["UserID"].ToString();
                 }
             }
-            
+
             return authenticatedUser;
         }
 
@@ -160,8 +160,6 @@ namespace Assignment
             }
         }
 
-
-
         // Method to fetch user profile details
         public Dictionary<string, string> GetProfileInfo(string Username)
         {
@@ -186,7 +184,7 @@ namespace Assignment
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Username", Username);
-                    MessageBox.Show(Username);
+
 
 
                     using (SQLiteDataReader reader = command.ExecuteReader())
@@ -199,7 +197,7 @@ namespace Assignment
                             profileInfo["PhoneNumber"] = reader["PhoneNumber"].ToString();
                             profileInfo["Address"] = reader["Address"].ToString();
                             profileInfo["Password"] = reader["Password"].ToString();
-                            MessageBox.Show(profileInfo["FullName"]);
+
                         }
                     }
                 }
@@ -208,6 +206,50 @@ namespace Assignment
             return profileInfo;
         }
 
-    }
+        public void UpdateProfile(string username, string fullName, string password, string email, string phoneNumber, string address)
+        {
+            var updates = new Dictionary<string, Dictionary<string, string>>
+            {
+            { "Profile_Table", new Dictionary<string, string>
 
+               {
+                 { "Email", email?.Trim() },
+                 { "PhoneNumber", phoneNumber?.Trim() },
+                 { "Address", address?.Trim() }
+               }
+
+            },
+            { "Staff_Table", new Dictionary<string, string>
+               {
+                  { "FullName", fullName?.Trim() },
+                  { "Password", password?.Trim() }
+               }
+            }
+            };
+            foreach (var table in updates)
+            {
+                var fieldsToUpdate = table.Value
+                    .Where(field => !string.IsNullOrEmpty(field.Value))
+                    .Select(field => $"{field.Key} = @{field.Key}");
+
+                if (fieldsToUpdate.Any())
+                {
+                    string query = table.Key == "Profile_Table"
+                        ? $"UPDATE {table.Key} SET {string.Join(", ", fieldsToUpdate)} WHERE ProfileID = (SELECT ProfileID FROM Staff_Table WHERE Username = @Username)"
+                        : $"UPDATE {table.Key} SET {string.Join(", ", fieldsToUpdate)} WHERE Username = @Username";
+
+                    using (var command = new SQLiteCommand(query, GetDatabaseConnection()))
+                    {
+                        foreach (var field in table.Value.Where(field => !string.IsNullOrEmpty(field.Value)))
+                        {
+                            command.Parameters.AddWithValue($"@{field.Key}", field.Value);
+                        }
+                        command.Parameters.AddWithValue("@Username", username);
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Profile has been updated!");
+                    }
+                }
+            }
+        }
+    }
 }

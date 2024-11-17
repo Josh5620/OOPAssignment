@@ -36,7 +36,7 @@ namespace Assignment
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var CForm = new RecepPage("Test");
+            var CForm = new RecepPage("Mac10");
             CForm.Closed += (s, args) => this.Close();
             CForm.Show();
         }
@@ -69,9 +69,7 @@ namespace Assignment
 
                     case "Receptionist":
                         RecepPage recepPage = new RecepPage(username);
-                        MessageBox.Show(username);
                         recepPage.Show();
-
                         this.Hide();
                         break;
 

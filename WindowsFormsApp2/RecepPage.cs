@@ -27,6 +27,8 @@ namespace Assignment
             AddCust.Hide(); 
             DelCust.Hide();
             username1 = username;
+            PROF_Control prof = new PROF_Control(username1);
+            addUserControl(prof);
 
         }
 
@@ -118,7 +120,6 @@ namespace Assignment
         } 
         private void ProfBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(username1);
             PROF_Control prof = new PROF_Control(username1);
             addUserControl(prof);
         }

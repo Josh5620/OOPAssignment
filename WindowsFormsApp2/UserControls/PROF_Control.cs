@@ -23,22 +23,21 @@ namespace Assignment.UserControls
             LoadData();
         }
         
-        public User user { get; set; }
 
         Receptionist Recep = new Receptionist();
+        string Username1;
         string FullName;
         string Password;
         string Email;
         string PhoneNumber;
         string Address;
-        string Username1;
-
 
         private void LoadData()
         {
 
             Dictionary<string,string> profileInfo =  Recep.GetProfileInfo(Username1);
 
+            label1.Text = $"Current Profile: {profileInfo["Username"]}";
             label2.Text = $"Fullname: {profileInfo["FullName"]}";
             label3.Text = $"Password: {profileInfo["Password"]}";
             label4.Text = $"Email: {profileInfo["Email"]}";
@@ -55,6 +54,26 @@ namespace Assignment.UserControls
         {
 
 
+        }
+
+        private void ConfirmBtn_Click(object sender, EventArgs e)
+        {
+            FullName = textBox1.Text;
+            Password = textBox2.Text;
+            Email = textBox3.Text;
+            PhoneNumber = textBox4.Text;
+            Address = textBox5.Text;
+            Recep.UpdateProfile(Username1,FullName,Password,Email,PhoneNumber,Address);
+            LoadData();
+        }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = string.Empty;
+            textBox2.Text = string.Empty;
+            textBox3.Text = string.Empty;
+            textBox4.Text = string.Empty;
+            textBox5.Text = string.Empty;
         }
     }
 }

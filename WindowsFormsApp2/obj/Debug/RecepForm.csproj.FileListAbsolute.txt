@@ -24,24 +24,8 @@ C:\Users\Administrator\source\repos\RecepForm\WindowsFormsApp2\obj\Debug\Windows
 C:\Users\Administrator\source\repos\RecepForm\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.UserControls.VI_Control.resources
 C:\Users\Administrator\source\repos\RecepForm\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.UserControls.CMADD_Control.resources
 C:\Users\Administrator\source\repos\RecepForm\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.UserControls.CMDEL_Control.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.AssemblyReference.cache
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.GenerateResource.cache
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.CoreCompileInputs.cache
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.dll
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.dll
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.xml
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.xml
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.Up2Date
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
@@ -64,9 +48,6 @@ C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignme
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.LoginPage.resources
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Add_Staff.resources
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.DeleteStaff.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.AdminPage.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.LoginPage.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.DeleteStaff.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\UserDatabase.db
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\UserDatabase.db
 C:\Users\Dylan\OneDrive - Asia Pacific University\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
@@ -79,17 +60,6 @@ C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignme
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.PROF_Control.resources
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.SA_Control.resources
 C:\Users\Administrator\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.VI_Control.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.RecepPage.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CIO_Control.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMADD_Control.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMDEL_Control.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.PROF_Control.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.SA_Control.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.VI_Control.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Addstaffs.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Add_Service.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Delete_Service.resources
-C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Edit_Service.resources
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\bin\Debug\UserDatabase.db
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
@@ -347,13 +317,43 @@ C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Ass
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.AssignedServcies.resources
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ManageInventory.resources
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.UpdateServices.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.dll
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.xml
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\bin\Debug\System.Data.SQLite.xml
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.AssemblyReference.cache
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.AdminPage.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.CustomerPage.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.LoginPage.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.MechanicPage.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.RecepPage.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Addstaffs.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Add_Service.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.AssignedServcies.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.DeleteStaff.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CIO_Control.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMADD_Control.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.CMDEL_Control.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Delete_Service.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Edit_Service.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Feedback.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.HomePage.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.ManageAppointments.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ManageInventory.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.PROF_Control.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.SA_Control.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UpdateProfile.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.UpdateServices.resources
 C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.Viewservices.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.VI_Control.resources
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.GenerateResource.cache
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.CoreCompileInputs.cache
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\RecepForm.csproj.Up2Date
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\joshu\Desktop\OOPAssignment\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
