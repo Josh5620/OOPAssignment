@@ -39,46 +39,16 @@ namespace Assignment
             return filteredTable;
         }
 
-        public void AddData(string fullName, string customerId, string serviceId, string vehicleNumber, string appointmentDate, string additionalNotes, string status)
+
+        public bool AppointmentIdExists(string appointmentId)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                string query = "INSERT INTO Appointments (FullName, CustomerId, ServiceId, VehicleNumber, AppointmentDate, AdditionalNotes, Status) " +
-                               "VALUES (@FullName, @CustomerId, @ServiceId, @VehicleNumber, @AppointmentDate, @AdditionalNotes, @Status)";
+                string query = "SELECT COUNT(*) FROM Appointments WHERE AppointmentId = @AppointmentId";
 
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@FullName", fullName);
-                    command.Parameters.AddWithValue("@CustomerId", customerId);
-                    command.Parameters.AddWithValue("@ServiceId", serviceId);
-                    command.Parameters.AddWithValue("@VehicleNumber", vehicleNumber);
-                    command.Parameters.AddWithValue("@AppointmentDate", appointmentDate);
-                    command.Parameters.AddWithValue("@AdditionalNotes", additionalNotes);
-                    command.Parameters.AddWithValue("@Status", status);
-
-                    connection.Open();
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Data added successfully!");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Error adding data: {ex.Message}");
-                    }
-                }
-            }
-        }
-
-        public bool ServiceIdExists(string serviceId)
-        {
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                string query = "SELECT COUNT(*) FROM Appointments WHERE ServiceId = @ServiceId";
-
-                using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@ServiceId", serviceId);
+                    command.Parameters.AddWithValue("@AppointmentId", appointmentId);
 
                     connection.Open();
                     int count = Convert.ToInt32(command.ExecuteScalar());
@@ -119,65 +89,83 @@ namespace Assignment
         }
 
 
-        public void RefreshDataGridView(UserControl userControl, string dataGridViewName, string tableName)
+        //public void RefreshDataGridView(UserControl userControl, string dataGridViewName, string tableName)
+        //{
+        //  var dataGridView = userControl.Controls[dataGridViewName] as DataGridView;
+        // if (dataGridView == null)
+        //{
+        //  throw new ArgumentException($"No DataGridView with the name '{dataGridViewName}' found in the UserControl.");
+        //}
+
+        // Load data from the specified table
+        //DataTable dataTable = LoadDataGrid(tableName);
+
+        // Set the DataSource of the DataGridView to the loaded data
+        //dataGridView.DataSource = dataTable;
+        //}
+
+
+
+
+
+        public void UpdateData(string fullName, string customerId, string serviceId, string vehicleNumber, string appointmentDate, string additionalNotes, string status)
         {
-            var dataGridView = userControl.Controls[dataGridViewName] as DataGridView;
-            if (dataGridView == null)
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                throw new ArgumentException($"No DataGridView with the name '{dataGridViewName}' found in the UserControl.");
+                string query = "UPDATE Appointments SET FullName = @FullName, CustomerId = @CustomerId, VehicleNumber = @VehicleNumber, AppointmentDate = @AppointmentDate, AdditionalNotes = @AdditionalNotes, Status = @Status WHERE ServiceId = @ServiceId";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@FullName", fullName);
+                    command.Parameters.AddWithValue("@CustomerId", customerId);
+                    command.Parameters.AddWithValue("@ServiceId", serviceId);
+                    command.Parameters.AddWithValue("@VehicleNumber", vehicleNumber);
+                    command.Parameters.AddWithValue("@AppointmentDate", appointmentDate);
+                    command.Parameters.AddWithValue("@AdditionalNotes", additionalNotes);
+                    command.Parameters.AddWithValue("@Status", status);
+
+                    connection.Open();
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Data updated successfully!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error updating data: {ex.Message}");
+                    }
+                }
             }
+        }
 
-            // Load data from the specified table
-            DataTable dataTable = LoadDataGrid(tableName);
+        public void UpdateMechanicFields(string appointmentId, string additionalRepairs, string CollectionTime)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                string query = "UPDATE Appointments SET AdditionalRepairs = @AdditionalRepairs, CollectionTime = @CollectionTime WHERE AppointmentId = @AppointmentId";
 
-            // Set the DataSource of the DataGridView to the loaded data
-            dataGridView.DataSource = dataTable;
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@AdditionalRepairs", additionalRepairs);
+                    command.Parameters.AddWithValue("@CollectionTime", CollectionTime);
+                    command.Parameters.AddWithValue("@AppointmentId", appointmentId);
+
+                    connection.Open();
+                    try
+                    {
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Data updated successfully!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error updating data: {ex.Message}");
+                    }
+                }
+            }
         }
 
 
-
-        public void AddDataToDatabase(UserControl userControl)
-        {
-            TextBoxBase txtFullName = (TextBoxBase)userControl.Controls["txtFullName"];
-            TextBoxBase txtCustomerId = (TextBoxBase)userControl.Controls["txtCustomerId"];
-            TextBoxBase txtServiceId = (TextBoxBase)userControl.Controls["txtServiceId"];
-            TextBoxBase txtVehichleNumber = (TextBoxBase)userControl.Controls["txtVehichleNumber"];
-            TextBoxBase txtAppointmentDate = (TextBoxBase)userControl.Controls["txtAppointmentDate"];
-            TextBoxBase txtAdditionalNotes = (TextBoxBase)userControl.Controls["txtAdditionalNotes"];
-            TextBoxBase txtStatus = (TextBoxBase)userControl.Controls["txtStatus"];
-
-            // Check if all required textboxes are filled
-            if (string.IsNullOrWhiteSpace(txtFullName.Text) ||
-                string.IsNullOrWhiteSpace(txtCustomerId.Text) ||
-                string.IsNullOrWhiteSpace(txtServiceId.Text) ||
-                string.IsNullOrWhiteSpace(txtVehichleNumber.Text) ||
-                string.IsNullOrWhiteSpace(txtAppointmentDate.Text) ||
-                string.IsNullOrWhiteSpace(txtStatus.Text))
-            {
-                MessageBox.Show("Please fill in all required fields before adding the information.");
-                return;
-            }
-
-            string serviceId = txtServiceId.Text;
-
-            if (ServiceIdExists(serviceId))
-            {
-                MessageBox.Show("The service ID entered already exists.");
-                return;
-            }
-
-            AddData(
-                txtFullName.Text,
-                txtCustomerId.Text,
-                serviceId,
-                txtVehichleNumber.Text,
-                txtAppointmentDate.Text,
-                txtAdditionalNotes.Text,
-                txtStatus.Text
-            );
-
-            ClearTextBoxes(userControl);
-            RefreshDataGridView(userControl, "DataGridView321", "appointment");
-        }
     }
+
+
 }

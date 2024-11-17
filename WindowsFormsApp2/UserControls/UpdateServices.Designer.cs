@@ -39,13 +39,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.txtCustomerId = new System.Windows.Forms.MaskedTextBox();
-            this.txtServiceId = new System.Windows.Forms.MaskedTextBox();
+            this.txtAppointmentId = new System.Windows.Forms.MaskedTextBox();
             this.txtAdditionalNotes = new System.Windows.Forms.MaskedTextBox();
             this.txtAppointmentDate = new System.Windows.Forms.MaskedTextBox();
-            this.txtVehichleNumber = new System.Windows.Forms.TextBox();
+            this.txtVehicleNumber = new System.Windows.Forms.TextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtCollectionTime = new System.Windows.Forms.TextBox();
+            this.txtAdditionalRepairs = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView321)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +57,7 @@
             // 
             this.panel1.Controls.Add(this.DataGridView321);
             this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1280, 588);
             this.panel1.TabIndex = 1;
@@ -63,7 +66,7 @@
             // 
             this.DataGridView321.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView321.Location = new System.Drawing.Point(0, 4);
-            this.DataGridView321.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DataGridView321.Margin = new System.Windows.Forms.Padding(4);
             this.DataGridView321.Name = "DataGridView321";
             this.DataGridView321.RowHeadersWidth = 82;
             this.DataGridView321.RowTemplate.Height = 33;
@@ -74,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(54, 650);
+            this.label1.Location = new System.Drawing.Point(20, 645);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 25);
@@ -84,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 712);
+            this.label2.Location = new System.Drawing.Point(20, 707);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 25);
@@ -94,17 +97,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(54, 777);
+            this.label3.Location = new System.Drawing.Point(862, 639);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 25);
+            this.label3.Size = new System.Drawing.Size(158, 25);
             this.label3.TabIndex = 4;
-            this.label3.Text = "ServiceID:";
+            this.label3.Text = "AppointmentID:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(908, 644);
+            this.label4.Location = new System.Drawing.Point(68, 769);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 25);
@@ -114,7 +117,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(452, 712);
+            this.label5.Location = new System.Drawing.Point(405, 707);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 25);
@@ -124,7 +127,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(452, 650);
+            this.label6.Location = new System.Drawing.Point(405, 645);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(176, 25);
@@ -134,7 +137,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(452, 777);
+            this.label9.Location = new System.Drawing.Point(405, 772);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(169, 25);
@@ -143,8 +146,8 @@
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(202, 644);
-            this.txtFullName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFullName.Location = new System.Drawing.Point(168, 639);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(224, 31);
             this.txtFullName.TabIndex = 11;
@@ -152,67 +155,56 @@
             // 
             // txtCustomerId
             // 
-            this.txtCustomerId.Location = new System.Drawing.Point(202, 712);
-            this.txtCustomerId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCustomerId.Location = new System.Drawing.Point(168, 707);
+            this.txtCustomerId.Margin = new System.Windows.Forms.Padding(4);
             this.txtCustomerId.Name = "txtCustomerId";
             this.txtCustomerId.Size = new System.Drawing.Size(224, 31);
             this.txtCustomerId.TabIndex = 12;
             // 
-            // txtServiceId
+            // txtAppointmentId
             // 
-            this.txtServiceId.Location = new System.Drawing.Point(202, 777);
-            this.txtServiceId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtServiceId.Name = "txtServiceId";
-            this.txtServiceId.Size = new System.Drawing.Size(224, 31);
-            this.txtServiceId.TabIndex = 13;
+            this.txtAppointmentId.Location = new System.Drawing.Point(1040, 639);
+            this.txtAppointmentId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAppointmentId.Name = "txtAppointmentId";
+            this.txtAppointmentId.Size = new System.Drawing.Size(224, 31);
+            this.txtAppointmentId.TabIndex = 13;
             // 
             // txtAdditionalNotes
             // 
-            this.txtAdditionalNotes.Location = new System.Drawing.Point(634, 771);
-            this.txtAdditionalNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAdditionalNotes.Location = new System.Drawing.Point(587, 766);
+            this.txtAdditionalNotes.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdditionalNotes.Name = "txtAdditionalNotes";
             this.txtAdditionalNotes.Size = new System.Drawing.Size(236, 31);
             this.txtAdditionalNotes.TabIndex = 16;
             // 
             // txtAppointmentDate
             // 
-            this.txtAppointmentDate.Location = new System.Drawing.Point(634, 712);
-            this.txtAppointmentDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAppointmentDate.Location = new System.Drawing.Point(587, 707);
+            this.txtAppointmentDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtAppointmentDate.Name = "txtAppointmentDate";
             this.txtAppointmentDate.Size = new System.Drawing.Size(236, 31);
             this.txtAppointmentDate.TabIndex = 15;
             // 
-            // txtVehichleNumber
+            // txtVehicleNumber
             // 
-            this.txtVehichleNumber.Location = new System.Drawing.Point(634, 644);
-            this.txtVehichleNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtVehichleNumber.Name = "txtVehichleNumber";
-            this.txtVehichleNumber.Size = new System.Drawing.Size(236, 31);
-            this.txtVehichleNumber.TabIndex = 14;
+            this.txtVehicleNumber.Location = new System.Drawing.Point(587, 639);
+            this.txtVehicleNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVehicleNumber.Name = "txtVehicleNumber";
+            this.txtVehicleNumber.Size = new System.Drawing.Size(236, 31);
+            this.txtVehicleNumber.TabIndex = 14;
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(996, 644);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStatus.Location = new System.Drawing.Point(156, 769);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(236, 31);
             this.txtStatus.TabIndex = 17;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Location = new System.Drawing.Point(330, 887);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(204, 52);
-            this.btnAdd.TabIndex = 18;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(670, 887);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnEdit.Location = new System.Drawing.Point(537, 879);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(6);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(204, 52);
             this.btnEdit.TabIndex = 19;
@@ -220,17 +212,54 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(833, 769);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(187, 25);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "AdditionalRepairs:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(860, 707);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(160, 25);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "CollectionTime:";
+            // 
+            // txtCollectionTime
+            // 
+            this.txtCollectionTime.Location = new System.Drawing.Point(1040, 701);
+            this.txtCollectionTime.Name = "txtCollectionTime";
+            this.txtCollectionTime.Size = new System.Drawing.Size(224, 31);
+            this.txtCollectionTime.TabIndex = 22;
+            // 
+            // txtAdditionalRepairs
+            // 
+            this.txtAdditionalRepairs.Location = new System.Drawing.Point(1040, 763);
+            this.txtAdditionalRepairs.Name = "txtAdditionalRepairs";
+            this.txtAdditionalRepairs.Size = new System.Drawing.Size(224, 31);
+            this.txtAdditionalRepairs.TabIndex = 24;
+            // 
             // UpdateServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtAdditionalRepairs);
+            this.Controls.Add(this.txtCollectionTime);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtAdditionalNotes);
             this.Controls.Add(this.txtAppointmentDate);
-            this.Controls.Add(this.txtVehichleNumber);
-            this.Controls.Add(this.txtServiceId);
+            this.Controls.Add(this.txtVehicleNumber);
+            this.Controls.Add(this.txtAppointmentId);
             this.Controls.Add(this.txtCustomerId);
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.label9);
@@ -241,7 +270,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateServices";
             this.Size = new System.Drawing.Size(1284, 983);
             this.Load += new System.EventHandler(this.UpdateServices_Load_1);
@@ -265,12 +294,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.MaskedTextBox txtCustomerId;
-        private System.Windows.Forms.MaskedTextBox txtServiceId;
+        private System.Windows.Forms.MaskedTextBox txtAppointmentId;
         private System.Windows.Forms.MaskedTextBox txtAdditionalNotes;
         private System.Windows.Forms.MaskedTextBox txtAppointmentDate;
-        private System.Windows.Forms.TextBox txtVehichleNumber;
+        private System.Windows.Forms.TextBox txtVehicleNumber;
         private System.Windows.Forms.TextBox txtStatus;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCollectionTime;
+        private System.Windows.Forms.MaskedTextBox txtAdditionalRepairs;
     }
 }
