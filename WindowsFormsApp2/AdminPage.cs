@@ -196,6 +196,13 @@ namespace Assignment
         {
 
         }
+
+        private void btn_Adminlogout_Click(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
     }
 }
 

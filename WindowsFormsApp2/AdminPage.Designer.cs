@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Adminlogout = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@
             this.panel1.Controls.Add(this.Logobox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 1037);
             this.panel1.TabIndex = 0;
@@ -72,27 +73,28 @@
             this.panel2.Controls.Add(this.btn_addstaf);
             this.panel2.Controls.Add(this.Btn_StaffA);
             this.panel2.Location = new System.Drawing.Point(4, 215);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(248, 819);
             this.panel2.TabIndex = 9;
             // 
             // btn_Adminlogout
             // 
-            this.btn_Adminlogout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_Adminlogout.Location = new System.Drawing.Point(0, 736);
-            this.btn_Adminlogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Adminlogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Adminlogout.Location = new System.Drawing.Point(0, 747);
+            this.btn_Adminlogout.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Adminlogout.Name = "btn_Adminlogout";
             this.btn_Adminlogout.Size = new System.Drawing.Size(248, 83);
             this.btn_Adminlogout.TabIndex = 6;
             this.btn_Adminlogout.Text = "Log Out";
             this.btn_Adminlogout.UseVisualStyleBackColor = true;
+            this.btn_Adminlogout.Click += new System.EventHandler(this.btn_Adminlogout_Click);
             // 
             // btn_ServiceReports
             // 
             this.btn_ServiceReports.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_ServiceReports.Location = new System.Drawing.Point(0, 664);
-            this.btn_ServiceReports.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ServiceReports.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ServiceReports.Name = "btn_ServiceReports";
             this.btn_ServiceReports.Size = new System.Drawing.Size(248, 83);
             this.btn_ServiceReports.TabIndex = 2;
@@ -103,7 +105,7 @@
             // 
             this.btn_CustomerFeedback.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_CustomerFeedback.Location = new System.Drawing.Point(0, 581);
-            this.btn_CustomerFeedback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_CustomerFeedback.Margin = new System.Windows.Forms.Padding(4);
             this.btn_CustomerFeedback.Name = "btn_CustomerFeedback";
             this.btn_CustomerFeedback.Size = new System.Drawing.Size(248, 83);
             this.btn_CustomerFeedback.TabIndex = 3;
@@ -114,7 +116,7 @@
             // 
             this.Btn_DeleteService.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_DeleteService.Location = new System.Drawing.Point(0, 498);
-            this.Btn_DeleteService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_DeleteService.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_DeleteService.Name = "Btn_DeleteService";
             this.Btn_DeleteService.Size = new System.Drawing.Size(248, 83);
             this.Btn_DeleteService.TabIndex = 7;
@@ -128,7 +130,7 @@
             // 
             this.Btn_EditService.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_EditService.Location = new System.Drawing.Point(0, 415);
-            this.Btn_EditService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_EditService.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_EditService.Name = "Btn_EditService";
             this.Btn_EditService.Size = new System.Drawing.Size(248, 83);
             this.Btn_EditService.TabIndex = 6;
@@ -142,7 +144,7 @@
             // 
             this.Btn_AddService.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_AddService.Location = new System.Drawing.Point(0, 332);
-            this.Btn_AddService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_AddService.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_AddService.Name = "Btn_AddService";
             this.Btn_AddService.Size = new System.Drawing.Size(248, 83);
             this.Btn_AddService.TabIndex = 1;
@@ -156,7 +158,7 @@
             // 
             this.btn_ServiceInfo.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_ServiceInfo.Location = new System.Drawing.Point(0, 249);
-            this.btn_ServiceInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_ServiceInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ServiceInfo.Name = "btn_ServiceInfo";
             this.btn_ServiceInfo.Size = new System.Drawing.Size(248, 83);
             this.btn_ServiceInfo.TabIndex = 4;
@@ -169,7 +171,7 @@
             // 
             this.Btn_deletestaff.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_deletestaff.Location = new System.Drawing.Point(0, 166);
-            this.Btn_deletestaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_deletestaff.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_deletestaff.Name = "Btn_deletestaff";
             this.Btn_deletestaff.Size = new System.Drawing.Size(248, 83);
             this.Btn_deletestaff.TabIndex = 7;
@@ -183,7 +185,7 @@
             // 
             this.btn_addstaf.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_addstaf.Location = new System.Drawing.Point(0, 83);
-            this.btn_addstaf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_addstaf.Margin = new System.Windows.Forms.Padding(4);
             this.btn_addstaf.Name = "btn_addstaf";
             this.btn_addstaf.Size = new System.Drawing.Size(248, 83);
             this.btn_addstaf.TabIndex = 5;
@@ -197,7 +199,7 @@
             // 
             this.Btn_StaffA.Dock = System.Windows.Forms.DockStyle.Top;
             this.Btn_StaffA.Location = new System.Drawing.Point(0, 0);
-            this.Btn_StaffA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_StaffA.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_StaffA.Name = "Btn_StaffA";
             this.Btn_StaffA.Size = new System.Drawing.Size(248, 83);
             this.Btn_StaffA.TabIndex = 0;
@@ -209,8 +211,9 @@
             // Logobox
             // 
             this.Logobox.BackColor = System.Drawing.SystemColors.Menu;
+            this.Logobox.Image = ((System.Drawing.Image)(resources.GetObject("Logobox.Image")));
             this.Logobox.Location = new System.Drawing.Point(0, -8);
-            this.Logobox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Logobox.Margin = new System.Windows.Forms.Padding(4);
             this.Logobox.Name = "Logobox";
             this.Logobox.Size = new System.Drawing.Size(252, 223);
             this.Logobox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,7 +225,7 @@
             this.AdminPContainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.AdminPContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AdminPContainer.Location = new System.Drawing.Point(252, 0);
-            this.AdminPContainer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.AdminPContainer.Margin = new System.Windows.Forms.Padding(6);
             this.AdminPContainer.Name = "AdminPContainer";
             this.AdminPContainer.Size = new System.Drawing.Size(1500, 1037);
             this.AdminPContainer.TabIndex = 1;
@@ -235,7 +238,7 @@
             this.ClientSize = new System.Drawing.Size(1752, 1037);
             this.Controls.Add(this.AdminPContainer);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AdminPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminPage";
