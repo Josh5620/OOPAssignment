@@ -122,5 +122,19 @@ namespace Assignment
             MessageBox.Show($"Cell clicked at Row {e.RowIndex}, Column {e.ColumnIndex}");
         }
 
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            string customerName = textBoxName.Text; // Assuming a TextBox for customer name
+            if (comboBoxServices.SelectedValue is int selectedServiceId && !string.IsNullOrWhiteSpace(customerName))
+            {
+                DateTime preferredDate = dateTimePickerAppointment.Value; // Assuming DateTimePicker for selecting date
+                customer.ScheduleAppointment(selectedServiceId, preferredDate);
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid name and select a service.");
+            }
+
+        }
     }
 }
