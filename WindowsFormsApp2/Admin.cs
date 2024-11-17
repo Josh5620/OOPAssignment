@@ -31,6 +31,7 @@ namespace Assignment
             staffData = LoadDataGrid("staff");
             serviceTData = LoadDataGrid("service");
             feedbackdata = LoadDataGrid("feedback");
+            ReportData = LoadDataGrid("appointment");
 
         }
 
@@ -145,52 +146,64 @@ namespace Assignment
             DeleteRecord("Service_Table", "ServiceId", ServiceId);
         }
 
-        public void EditService(int ServiceId, int price, string EstimatedTime)
+        public void EditService(int serviceId, int price, string estimatedTime)
         {
-            //Form the SQL query
-            string Editquery = $"UPDATE Service_Table SET Price = @price AND EstimatedTime = @ET WHERE ServiceId = @ServiceId";
+            // Correct SQL query
+            string editQuery = "UPDATE Service_Table SET Price = @price, EstimatedTime = @ET WHERE ServiceId = @ServiceId";
+
             try
             {
-                using (SQLiteCommand cmd = new SQLiteCommand(Editquery, connection))
+                using (SQLiteCommand cmd = new SQLiteCommand(editQuery, connection))
                 {
                     cmd.Parameters.AddWithValue("@price", price);
-                    cmd.Parameters.AddWithValue("@ET", EstimatedTime);
+                    cmd.Parameters.AddWithValue("@ET", estimatedTime);
+                    cmd.Parameters.AddWithValue("@ServiceId", serviceId);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
+
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show($"Service {ServiceId} ID successfully updated!");
+                        MessageBox.Show($"Service with ID {serviceId} successfully updated!");
                     }
                     else
                     {
-                        MessageBox.Show($"Service with {ServiceId} ID does not exist! Please enter a valid service ID!");
+                        MessageBox.Show($"Service with ID {serviceId} does not exist! Please enter a valid service ID.");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error in updating service! {ex.Message}");
+                MessageBox.Show($"Error in updating service: {ex.Message}");
             }
         }
+
         public void GetReportsByMonth(string month)
         {
-            // Form filter query
-            string filterquery = $"SELECT * FROM Appointments WHERE strftime('%m', AppoinmentDate) = @Month";
+            // Updated query to select only the required columns
+            string filterquery = @"
+        SELECT AppointmentId, ServiceId, MechanicId, strftime('%m', AppointmentDate) AS Month, BillAmount
+        FROM Appointments
+        WHERE strftime('%m', AppointmentDate) = @Month";
 
             try
             {
                 using (SQLiteCommand cmd = new SQLiteCommand(filterquery, connection))
                 {
+                    // Add the month parameter to the query
                     cmd.Parameters.AddWithValue("@Month", month);
 
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.HasRows)
                         {
+                            // Create a DataTable to hold filtered reports
                             DataTable filteredReports = new DataTable();
                             filteredReports.Load(reader);  // Load data from reader into DataTable
 
-                            // Optionally: Bind the DataTable to a DataGridView or process it
+                            // Assign the filtered reports to the ReportData property
+                            ReportData = filteredReports;
+
+                            // Optionally, bind the DataTable to a DataGridView for displaying the reports
                             MessageBox.Show($"Reports successfully filtered by {month}!");
                         }
                         else
@@ -205,6 +218,43 @@ namespace Assignment
                 MessageBox.Show($"Error in filtering reports: {ex.Message}");
             }
         }
+        public void GetFeedbackByMonth(string month)
+        {
+            // Form the SQL query to filter feedback by the FeedbackDate month
+            string filterquery = @"
+        SELECT FeedbackId, CustomerId, ServiceId, FeedbackText, Rating, FeedbackDate
+        FROM Feedback
+        WHERE strftime('%m', FeedbackDate) = @Month";  // Use strftime to get the month part of FeedbackDate
+
+            try
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand(filterquery, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Month", month);  // Add the selected month as a parameter
+
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            DataTable filteredFeedback = new DataTable();
+                            filteredFeedback.Load(reader);  // Load data from reader into DataTable
+
+                            feedbackdata = filteredFeedback;  // Store the filtered feedback in the FeedbackData table
+                            MessageBox.Show($"Feedback successfully filtered by {month}!");
+                        }
+                        else
+                        {
+                            MessageBox.Show($"No feedback found for {month}.");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error in filtering feedback: {ex.Message}");
+            }
+        }
+
     }
 }
 

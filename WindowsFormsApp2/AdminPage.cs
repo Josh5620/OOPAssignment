@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace Assignment
 {
@@ -202,6 +204,18 @@ namespace Assignment
             LoginPage loginPage = new LoginPage();
             loginPage.Show();
             this.Hide();
+        }
+
+        private void btn_ServiceReports_Click(object sender, EventArgs e)
+        {
+            ViewReports uc = new ViewReports();
+            AddUserControl(uc);
+        }
+
+        private void btn_CustomerFeedback_Click(object sender, EventArgs e)
+        {
+            ViewFeedback uc = new ViewFeedback();
+            AddUserControl(uc);
         }
     }
 }

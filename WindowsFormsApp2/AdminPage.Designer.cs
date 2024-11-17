@@ -100,6 +100,7 @@
             this.btn_ServiceReports.TabIndex = 2;
             this.btn_ServiceReports.Text = "View Service Reports";
             this.btn_ServiceReports.UseVisualStyleBackColor = true;
+            this.btn_ServiceReports.Click += new System.EventHandler(this.btn_ServiceReports_Click);
             // 
             // btn_CustomerFeedback
             // 
@@ -111,6 +112,7 @@
             this.btn_CustomerFeedback.TabIndex = 3;
             this.btn_CustomerFeedback.Text = "View Customer Feedback";
             this.btn_CustomerFeedback.UseVisualStyleBackColor = true;
+            this.btn_CustomerFeedback.Click += new System.EventHandler(this.btn_CustomerFeedback_Click);
             // 
             // Btn_DeleteService
             // 

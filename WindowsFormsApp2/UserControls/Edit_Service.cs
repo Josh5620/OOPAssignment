@@ -21,15 +21,33 @@ namespace Assignment
 
         private void Btn_UpdateService_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(ServiceIdBox.Text))
+            if (string.IsNullOrEmpty(ServiceIdBox.Text) || string.IsNullOrEmpty(PriceBox.Text) || string.IsNullOrEmpty(EstimatedTBox.Text))
             {
-                MessageBox.Show("Please input the id of the service you want to update.");
+                MessageBox.Show("Please ensure all fields are filled.");
+                return;
             }
-            else
+
+            if (!int.TryParse(ServiceIdBox.Text, out int serviceId))
             {
-                admin.EditService(int.Parse(ServiceIdBox.Text), int.Parse(PriceBox.Text), EstimatedTBox.Text);
-                ServiceDataGrid.DataSource = admin.LoadDataGrid("service");
+                MessageBox.Show("Service ID must be a valid number.");
+                return;
             }
+
+            if (!int.TryParse(PriceBox.Text, out int price))
+            {
+                MessageBox.Show("Price must be a valid number.");
+                return;
+            }
+
+            if (!TimeSpan.TryParse(EstimatedTBox.Text, out _))
+            {
+                MessageBox.Show("Estimated Time must be in a valid hh:mm:ss format.");
+                return;
+            }
+
+            admin.EditService(serviceId, price, EstimatedTBox.Text);
+            ServiceDataGrid.DataSource = admin.LoadDataGrid("service");
+
         }
     }
 }

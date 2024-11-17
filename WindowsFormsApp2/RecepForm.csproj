@@ -219,6 +219,18 @@
     <Compile Include="UserControls\UpdateServices.Designer.cs">
       <DependentUpon>UpdateServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ViewFeedback.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ViewFeedback.Designer.cs">
+      <DependentUpon>ViewFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ViewReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ViewReports.Designer.cs">
+      <DependentUpon>ViewReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Viewservices.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -306,6 +318,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UpdateServices.resx">
       <DependentUpon>UpdateServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ViewFeedback.resx">
+      <DependentUpon>ViewFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ViewReports.resx">
+      <DependentUpon>ViewReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Viewservices.resx">
       <DependentUpon>Viewservices.cs</DependentUpon>
