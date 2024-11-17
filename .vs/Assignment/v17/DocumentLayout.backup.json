@@ -1,169 +1,105 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\",
+  "WorkspaceRootPath": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\usercontrols\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\usercontrols\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-=======
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\usercontrols\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\usercontrols\\homepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\homepage.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\manageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\manageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\mechanic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\mechanic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\usercontrols\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\feedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\usercontrols\\viewservices.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewservices.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\manageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\manageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\feedback.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\feedback.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\edit_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\edit_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\manageappointments.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\manageappointments.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
->>>>>>> Stashed changes
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\updateservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\usercontrols\\manageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\manageappointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\mechanic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\mechanic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\vi_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\mac\\home\\documents\\new folder\\oopassignment\\windowsformsapp2\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewfeedback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\usercontrols\\edit_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\edit_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewreports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\windowsformsapp2\\usercontrols\\add_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\add_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\add_service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -174,550 +110,303 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< Updated upstream
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-=======
-          "SelectedChildIndex": 3,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ManageInventory.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageInventory.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T08:44:25.361Z",
-              "IsPinned": true
-            },
-            {
->>>>>>> Stashed changes
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 2,
-              "Title": "MechanicPage.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\MechanicPage.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\MechanicPage.cs",
-              "ViewState": "AgIAAAkAAABAMzMzM7MiwBcAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T14:01:13.662Z",
-              "EditorCaption": ""
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ManageInventory.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageInventory.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ManageInventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
-=======
-              "DocumentIndex": 1,
-              "Title": "HomePage.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\HomePage.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\HomePage.Designer.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\HomePage.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\HomePage.Designer.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAnwCUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T14:02:33.66Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomePage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\HomePage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\HomePage.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\HomePage.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\HomePage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T13:58:20.06Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Viewservices.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Viewservices.Designer.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Viewservices.Designer.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:56:29.92Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UpdateServices.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:34:37.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UpdateServices.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\UpdateServices.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:34:32.518Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Feedback.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Feedback.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Feedback.Designer.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Feedback.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Feedback.Designer.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T11:52:41.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "UpdateProfile.cs",
               "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateProfile.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\UpdateProfile.cs",
               "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateProfile.cs",
               "RelativeToolTip": "WindowsFormsApp2\\UserControls\\UpdateProfile.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAjwB8AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAswGkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T11:45:02.683Z",
+              "WhenOpened": "2024-11-17T14:15:21.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "UpdateProfile.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateProfile.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\UpdateProfile.cs",
               "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateProfile.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp2\\UserControls\\UpdateProfile.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T11:44:58.979Z",
+              "WhenOpened": "2024-11-17T14:15:19.644Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\User.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\User.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\User.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\User.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T11:00:29.633Z"
+              "DocumentIndex": 5,
+              "Title": "MechanicPage.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\MechanicPage.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\MechanicPage.cs",
+              "ViewState": "AgIAAAkAAABAMzMzM7MiwBcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-17T14:14:13.666Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ManageAppointments.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageAppointments.Designer.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ManageAppointments.Designer.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAgwJgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ManageInventory.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageInventory.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ManageInventory.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T10:28:14.333Z",
+              "WhenOpened": "2024-11-17T14:14:13.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 7,
+              "Title": "UpdateServices.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\UpdateServices.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\UpdateServices.cs",
+              "ViewState": "AgIAAAIAAABAAAAAAAAhwEUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:14:13.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateServices.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\UpdateServices.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\UpdateServices.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T14:14:13.999Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ManageAppointments.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ManageInventory.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageInventory.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MechanicPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\MechanicPage.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-17T14:14:14.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\LoginPage.cs",
+              "ViewState": "AgIAAD0AAAAANDMzMzMFwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-17T14:14:14.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\LoginPage.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-17T14:14:14.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Mechanic.cs",
               "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\Mechanic.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\Mechanic.cs",
               "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\Mechanic.cs",
               "RelativeToolTip": "WindowsFormsApp2\\Mechanic.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T10:12:34.028Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LoginPage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\LoginPage.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\LoginPage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T15:36:00.693Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\Customer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\Customer.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\Customer.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\Customer.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAADwv10AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T12:55:26.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ManageAppointments.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ManageAppointments.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T12:56:13.864Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ManageAppointments.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAuwEQAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T12:58:29.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Viewservices.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Viewservices.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Viewservices.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T12:56:16.802Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Viewservices.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Viewservices.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Viewservices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T12:56:24.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Feedback.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Feedback.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Feedback.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Feedback.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Feedback.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T15:01:45.926Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Feedback.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Feedback.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Feedback.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Feedback.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Feedback.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAewBUAAABJAAAAAAAAAA==",
->>>>>>> Stashed changes
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T13:51:08.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UpdateServices.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "ViewState": "AgIAAAIAAABAAAAAAAAhwEUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T13:22:33.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UpdateServices.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\UpdateServices.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\UpdateServices.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\UpdateServices.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T13:12:22.399Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ManageAppointments.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageAppointments.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageAppointments.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ManageAppointments.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:58:36.204Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManageInventory.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageInventory.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:58:38.145Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MechanicPage.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\MechanicPage.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\MechanicPage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T13:01:15.752Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LoginPage.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\LoginPage.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\LoginPage.cs",
-              "ViewState": "AgIAAD0AAAAANDMzMzMFwFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T13:57:36.707Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "LoginPage.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\LoginPage.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\LoginPage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T15:36:00.693Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Mechanic.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\Mechanic.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\Mechanic.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\Mechanic.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\Mechanic.cs",
               "ViewState": "AgIAAHkAAAAAzMzMzEwqwIMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:53:27.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "VI_Control.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\VI_Control.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\VI_Control.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\VI_Control.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\VI_Control.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T13:12:19.963Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AssignedServcies.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:53:00.476Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-17T14:14:14.004Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "AssignedServcies.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
-              "ViewState": "AgIAAAQAAABAAAAAAMAtwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:53:07.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ViewFeedback.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAmwEcAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:33:45.619Z",
-              "EditorCaption": ""
+              "Title": "VI_Control.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\VI_Control.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\VI_Control.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\VI_Control.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\VI_Control.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.005Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "AdminPage.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\AdminPage.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\AdminPage.cs",
-              "ViewState": "AgIAAIEAAADYMzMzM3M9wAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:20:51.092Z",
-              "EditorCaption": ""
+              "Title": "AssignedServcies.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.007Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AdminPage.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\AdminPage.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\AdminPage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:20:48.278Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\Admin.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\Admin.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\Admin.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\Admin.cs",
-              "ViewState": "AgIAALQAAAAAAAAAAAAcwAIBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:06:44.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Edit_Service.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Edit_Service.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Edit_Service.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Edit_Service.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Edit_Service.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:06:43.627Z",
-              "EditorCaption": " [Design]"
+              "DocumentIndex": 14,
+              "Title": "AssignedServcies.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "ViewState": "AgIAAAQAAABAAAAAAMAtwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.008Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "ViewFeedback.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
+              "Title": "ViewFeedback.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewFeedback.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ViewFeedback.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:01:48.447Z",
-              "EditorCaption": " [Design]"
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAmwEcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ViewReports.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewReports.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ViewReports.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewReports.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ViewReports.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAmwC0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:03:51.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ViewReports.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewReports.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ViewReports.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewReports.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ViewReports.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T11:56:54.524Z",
-              "EditorCaption": " [Design]"
+              "DocumentIndex": 15,
+              "Title": "AdminPage.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\AdminPage.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\AdminPage.cs",
+              "ViewState": "AgIAAIEAAADYMzMzM3M9wAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-17T14:14:14.01Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "Add_Service.cs [Design]",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Add_Service.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Add_Service.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Add_Service.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Add_Service.cs [Design]",
+              "Title": "AdminPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\AdminPage.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\AdminPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-11-17T14:14:14.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\Admin.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\Admin.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\Admin.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\Admin.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAcwAIBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T11:57:28.172Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-17T14:14:14.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Edit_Service.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Edit_Service.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Edit_Service.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Edit_Service.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Edit_Service.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ViewFeedback.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ViewFeedback.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewFeedback.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewFeedback.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ViewReports.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewReports.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ViewReports.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewReports.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ViewReports.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAmwC0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.016Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
+              "Title": "ViewReports.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewReports.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ViewReports.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewReports.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ViewReports.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Add_Service.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Add_Service.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Add_Service.cs",
+              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Add_Service.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Add_Service.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2024-11-17T14:14:14.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\User.cs",
+              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\User.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\User.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\User.cs",
+              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\User.cs",
               "RelativeToolTip": "WindowsFormsApp2\\User.cs",
               "ViewState": "AgIAAHAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T11:00:29.633Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T14:14:14.019Z"
             }
           ]
         }
