@@ -22,15 +22,7 @@ namespace Assignment.UserControls
 
         private void InitializeEventHandlers()
         {
-            txtFullName.KeyDown += TextBox_KeyDown;
-            txtCustomerId.KeyDown += TextBox_KeyDown;
-            txtServiceId.KeyDown += TextBox_KeyDown;
-            txtVehichleNumber.KeyDown += TextBox_KeyDown;
-            txtAppointmentDate.KeyDown += TextBox_KeyDown;
-            txtAdditionalNotes.KeyDown += TextBox_KeyDown;
-            txtStatus.KeyDown += TextBox_KeyDown;
-
-            btnAdd.Click += BtnAdd_Click;
+            DataGridView321.CellClick += DataGridView321_CellClick;
             btnEdit.Click += btnEdit_Click;
 
         }
@@ -42,14 +34,15 @@ namespace Assignment.UserControls
 
         private void UpdateServices_Load_1(object sender, EventArgs e)
         {
-            List<string> fieldsToDisplay1 = new List<string> { "FullName", "CustomerId", "ServiceId", "VehichleNumber", "AppointmentDate", "AdditionalNotes", "Status" };
+            List<string> fieldsToDisplay1 = new List<string> { "FullName", "CustomerId", "AppointmentId", "VehicleNumber", "AppointmentDate", "Status", "AdditionalNotes", "AdditionalRepairs", "CollectionTime" };
             DataGridView321.DataSource = mech.LoadAndFilterData("appointment", fieldsToDisplay1, "Status = 'Assigned'");
+
 
         }
 
 
 
-            private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
            
 
@@ -62,23 +55,55 @@ namespace Assignment.UserControls
 
         private void TextBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                mech.AddDataToDatabase(this);
-            }
+
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            mech.AddDataToDatabase(this);
+       
         }
 
         
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            // Check if only AdditionalRepairs and Completion Time are edited
+            if (txtFullName.Modified || txtCustomerId.Modified || txtAppointmentId.Modified || txtVehicleNumber.Modified || txtAppointmentDate.Modified || txtAdditionalNotes.Modified || txtStatus.Modified)
+            {
+                MessageBox.Show("You don't have access to change these fields.");
+                return;
+            }
+
+            mech.UpdateMechanicFields(
+                txtAppointmentId.Text,
+                txtAdditionalRepairs.Text,
+                txtCollectionTime.Text
+            );
+
+            mech.ClearTextBoxes(this);
+            // mech.RefreshDataGridView(this, "DataGridView321", "appointment"); // Uncomment when ready to use
 
         }
+        private void DataGridView321_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = DataGridView321.Rows[e.RowIndex];
+                    txtFullName.Text = row.Cells["FullName"].Value.ToString();
+                    txtCustomerId.Text = row.Cells["CustomerId"].Value.ToString();
+                    txtAppointmentId.Text = row.Cells["AppointmentId"].Value.ToString();
+                    txtVehicleNumber.Text = row.Cells["VehicleNumber"].Value.ToString();
+                    txtAppointmentDate.Text = row.Cells["AppointmentDate"].Value.ToString();
+                    txtAdditionalNotes.Text = row.Cells["AdditionalNotes"].Value.ToString();
+                    txtStatus.Text = row.Cells["Status"].Value.ToString();
+                    txtAdditionalRepairs.Text = row.Cells["AdditionalRepairs"].Value.ToString();
+                    txtCollectionTime.Text = row.Cells["CollectionTime"].Value.ToString();
+                }
+            }
+
+        }
+
 
     }
 }
