@@ -18,9 +18,8 @@ namespace Assignment
     {
 
         private string dbPath;
-        private SQLiteDataAdapter dataAdapter;      // Sets both connection and dataAdapter to class lvl variables and determines the main database file path
         public SQLiteConnection connection;
-
+        public SQLiteDataAdapter dataAdapter;
 
         public Receptionist()
         {
@@ -30,19 +29,7 @@ namespace Assignment
 
             connection = new SQLiteConnection(connectionString);
             connection.Open();
-        }
 
-        public void RefreshDatabase(DataTable dt)
-        {
-            if (dataAdapter == null)
-            {
-                // Handle the case where dataAdapter is still null
-                MessageBox.Show("DataAdapter is not initialized. Please load data first.");
-                return;
-            }
-
-            SQLiteCommandBuilder commandBuilder = new SQLiteCommandBuilder(dataAdapter);
-            dataAdapter.Update(dt);
         }
 
         public void DeleteCustomerRecord(int userID)
@@ -66,40 +53,27 @@ namespace Assignment
             }
         }
 
-        public void AddCustomerRecord(string fullName, string contactInfo,
+        public void AddCustomerRecord(string fullName, 
                                       string username, string vehicleNumber,
-                                      string address, string ServiceChoice)
+                                      string password, string ServiceChoice)
         {
-            Dictionary<string, string> serviceOptions = new Dictionary<string, string>
-             {
-                { "1", "Placeholder1" },
-                { "2", "Placeholder2" },
-                { "3", "Placeholder3" }         // Change the placeholders and the ones below when we decided what servicesto add 
-             };
 
-            try
-            {
-                string query = $"INSERT INTO Customer_Table (FullName, Password, ContactInfo, Username, VehicleNumber, Address, {serviceOptions[ServiceChoice]}) " +
-                               $"VALUES (@FullName, @Password, @ContactInfo, @Username, @VehicleNumber, @Address, @{serviceOptions[ServiceChoice]})";
+                string query = $"INSERT INTO Customer_Table (FullName, Password, Username, VehicleNumber, ServiceID ) " +
+                               $"VALUES (@FullName, @Password, @Username, @VehicleNumber, @ServiceID)";
                 using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@FullName", fullName);
-                    cmd.Parameters.AddWithValue("@Password", "N/A");
-                    cmd.Parameters.AddWithValue("@ContactInfo", contactInfo);
+                    cmd.Parameters.AddWithValue("@Password", password);
                     cmd.Parameters.AddWithValue("@Username", username);
                     cmd.Parameters.AddWithValue("@VehicleNumber", vehicleNumber);
-                    cmd.Parameters.AddWithValue("@Address", address);
-                    cmd.Parameters.AddWithValue($"@{serviceOptions[ServiceChoice]}", true);
+                    cmd.Parameters.AddWithValue("@ServiceID", ServiceChoice);
+
 
 
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Record added successfully.");
+
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error adding the record: {ex.Message}");
-            }
 
         }
 
@@ -125,7 +99,6 @@ namespace Assignment
             dataAdapter = new SQLiteDataAdapter(cmd); 
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
-            MessageBox.Show("Number of rows returned: " + dataTable.Rows.Count);
 
 
             return dataTable;
@@ -152,6 +125,45 @@ namespace Assignment
             SQLiteDataReader reader = cmd.ExecuteReader();
 
             return reader;
+        }
+
+        public DataTable LoadDataGrid(string tableName)
+        {
+            var validTables = new Dictionary<string, string>
+    {
+        { "staff", "Staff_Table" },
+        { "customer", "Customer_Table" },
+        { "service", "Service_Table" },
+        { "feedback", "Feedback" },
+        { "appointment", "Appointments" },
+        { "profile", "Profile_Table" },
+        { "order", "Order_Table" }
+    };
+
+            if (!validTables.ContainsKey(tableName.ToLower()))
+            {
+                throw new ArgumentException("Invalid table name.");
+            }
+
+            string query = $"SELECT * FROM {validTables[tableName.ToLower()]}";
+
+   
+                // Always create a new SQLiteDataAdapter to ensure fresh data
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+                {
+                    DataTable dataTable = new DataTable();
+                    try
+                    {
+                        adapter.Fill(dataTable); // Always fill a new DataTable
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error loading data: {ex.Message}");
+                    }
+                    return dataTable;
+                }
+            
         }
 
         public void UpdateStatus(int appointmentId)
@@ -268,6 +280,17 @@ namespace Assignment
             
 
             return profileInfo;
+        }
+
+        public SQLiteDataReader LoadServiceChoice()
+        {
+            string query = @"SELECT ServiceID, ServiceName
+                            FROM Service_Table;";
+            SQLiteCommand cmd = new SQLiteCommand(query, connection);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+            return reader;
+
         }
 
     }
