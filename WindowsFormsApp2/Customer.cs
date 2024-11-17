@@ -65,7 +65,47 @@ namespace Assignment
             }
         }
 
+        public DataTable LoadAndFilterData(string tableName, List<string> fieldsToDisplay, string filter)
+        {
+            DataTable fullDataTable = LoadDataGrid(tableName);
+            DataView dataView = new DataView(fullDataTable);
+            dataView.RowFilter = filter;
 
+            DataTable filteredTable = dataView.ToTable();
+
+            foreach (DataColumn column in filteredTable.Columns)
+            {
+                if (!fieldsToDisplay.Contains(column.ColumnName))
+                {
+                    column.ColumnMapping = MappingType.Hidden;
+                }
+            }
+
+            return filteredTable;
+        }
+
+        public static void LoadServicesIntoComboBox(ComboBox comboBox, Func<List<Service>> getData)
+        {
+            try
+            {
+                var services = getData(); // Retrieve services using the provided delegate
+
+                if (services != null && services.Any())
+                {
+                    comboBox.DataSource = services;
+                    comboBox.DisplayMember = "ServiceName";  // Display ServiceName
+                    comboBox.ValueMember = "ServiceId";      // Use ServiceId as the value
+                }
+                else
+                {
+                    MessageBox.Show("No services available to display.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading services: {ex.Message}");
+            }
+        }
         // Fetch list of available services
         public DataTable LoadDataGrid(string tableName)
         {
