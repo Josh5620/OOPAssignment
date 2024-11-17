@@ -95,12 +95,12 @@ namespace Assignment
                 if (services != null && services.Count > 0)
                 {
                     comboBoxAppointments.DataSource = services;
-                    comboBoxAppointments.DisplayMember = "ServiceName"; // Display service name
-                    comboBoxAppointments.ValueMember = "ServiceId"; // Use ServiceId as the value
+                    comboBoxAppointments.DisplayMember = "ServiceName"; 
+                    comboBoxAppointments.ValueMember = "ServiceId"; 
                 }
-                else
+                else 
                 {
-                    MessageBox.Show("No services available.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No services available for feedback.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
