@@ -46,7 +46,7 @@ namespace Assignment
         { "customer", "Customer_Table" },
         { "service", "Service_Table" },
         { "feedback", "Feedback" },
-        { "appointment", "Appointments_Table" }, // Fixed mapping
+        { "appointment", "Appointments" }, // Fixed mapping
         { "profile", "Profile_Table" },
         { "order", "Order_Table" }
     };
@@ -125,7 +125,7 @@ namespace Assignment
 
             try
             {
-                InsertRecord("Appointments_Table", appointmentData);
+                InsertRecord("Appointments", appointmentData);
                 MessageBox.Show("Appointment scheduled successfully.");
             }
             catch (Exception ex)
@@ -165,7 +165,7 @@ namespace Assignment
         {
             try
             {
-                DeleteRecord("Appointments_Table", "AppointmentId", appointmentId);
+                DeleteRecord("Appointments", "AppointmentId", appointmentId);
                 MessageBox.Show("Appointment cancelled successfully.");
             }
             catch (Exception ex)
@@ -187,7 +187,7 @@ namespace Assignment
 
             try
             {
-                InsertRecord("Feedback_Table", feedbackData);
+                InsertRecord("Feedback", feedbackData);
                 MessageBox.Show("Feedback submitted successfully.");
             }
             catch (Exception ex)
