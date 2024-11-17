@@ -29,9 +29,9 @@ namespace Assignment
             try
             {
                 _customer.appointmentsData = new DataTable();
-                string query = "SELECT * FROM Appointments_Table";
+                string query = "SELECT * FROM Appointments";
 
-                using (var connection = _customer.GetDatabaseConnection())
+                using (var connection = _customer.GetConnection())
                 using (var adapter = new SQLiteDataAdapter(query, connection))
                 {
                     adapter.Fill(_customer.appointmentsData);
@@ -43,6 +43,15 @@ namespace Assignment
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading appointments: {ex.Message}");
+            }
+
+            using (var connection = _customer.GetConnection())
+            {
+                if (connection.State != ConnectionState.Open)
+                {
+                    MessageBox.Show("Database connection failed.");
+                    return;
+                }
             }
         }
 
@@ -57,7 +66,7 @@ namespace Assignment
                 }
                 else
                 {
-                    MessageBox.Show("No data found in Appointments_Table.");
+                    MessageBox.Show("No data found in Appointments.");
                 }
             }
             catch (Exception ex)
@@ -87,6 +96,10 @@ namespace Assignment
             {
                 MessageBox.Show($"Error loading services: {ex.Message}");
             }
+
+            MessageBox.Show("LoadAllAppointments called.");
+            MessageBox.Show($"Appointments data count: {_customer.appointmentsData.Rows.Count}");
+
         }
 
 
@@ -137,9 +150,9 @@ namespace Assignment
                 if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
                     string newName = textBoxName.Text;
-                    string updateQuery = "UPDATE Appointments_Table SET CustomerName = @CustomerName WHERE AppointmentId = @AppointmentId";
+                    string updateQuery = "UPDATE Appointments SET CustomerName = @CustomerName WHERE AppointmentId = @AppointmentId";
 
-                    using (var connection = _customer.GetDatabaseConnection())
+                    using (var connection = _customer.GetConnection())
                     using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
                         cmd.Parameters.AddWithValue("@CustomerName", newName);
@@ -168,9 +181,9 @@ namespace Assignment
                 if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId) &&
                     comboBoxAppointments.SelectedValue is int serviceId)
                 {
-                    string updateQuery = "UPDATE Appointments_Table SET ServiceId = @ServiceId WHERE AppointmentId = @AppointmentId";
+                    string updateQuery = "UPDATE Appointments SET ServiceId = @ServiceId WHERE AppointmentId = @AppointmentId";
 
-                    using (var connection = _customer.GetDatabaseConnection())
+                    using (var connection = _customer.GetConnection())
                     using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
                         cmd.Parameters.AddWithValue("@ServiceId", serviceId);
@@ -199,9 +212,9 @@ namespace Assignment
                 if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
                     DateTime newDate = dateTimePicker1.Value;
-                    string updateQuery = "UPDATE Appointments_Table SET PreferredDate = @PreferredDate WHERE AppointmentId = @AppointmentId";
+                    string updateQuery = "UPDATE Appointments SET PreferredDate = @PreferredDate WHERE AppointmentId = @AppointmentId";
 
-                    using (var connection = _customer.GetDatabaseConnection())
+                    using (var connection = _customer.GetConnection())
                     using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
                         cmd.Parameters.AddWithValue("@PreferredDate", newDate);

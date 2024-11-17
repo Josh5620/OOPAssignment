@@ -20,8 +20,12 @@ namespace Assignment
             public string EstimatedTime { get; set; }
         }
         public DataTable appointmentsData { get; set; }
+        public SQLiteConnection GetConnection()
+        {
+            return GetDatabaseConnection();
+        }
 
-        public SQLiteConnection GetDatabaseConnection()
+        protected override SQLiteConnection GetDatabaseConnection()
         {
             SQLiteConnection connection = new SQLiteConnection(connectionString);
             connection.Open();
@@ -38,7 +42,7 @@ namespace Assignment
 
 
         // Fetch list of available services
-        public DataTable LoadDataGrid(string tableName)
+        public override DataTable LoadDataGrid(string tableName)
         {
             var validTables = new Dictionary<string, string>()
     {
@@ -46,7 +50,7 @@ namespace Assignment
         { "customer", "Customer_Table" },
         { "service", "Service_Table" },
         { "feedback", "Feedback" },
-        { "appointment", "Appointments_Table" }, // Fixed mapping
+        { "appointment", "Appointments" }, // Fixed mapping
         { "profile", "Profile_Table" },
         { "order", "Order_Table" }
     };
@@ -80,37 +84,34 @@ namespace Assignment
 
         public List<Service> ViewAvailableServices()
         {
-            var services = new List<Service>();
-            const string query = "SELECT * FROM Service_Table";
-
             try
             {
-                using (var connection = GetDatabaseConnection())
+                List<Service> services = new List<Service>();
+                using (var connection = GetConnection())
                 {
-                    using (var command = new SQLiteCommand(query, connection))
-                    using (var reader = command.ExecuteReader())
+                    string query = "SELECT ServiceId, ServiceName FROM Service_Table";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
                             services.Add(new Service
                             {
                                 ServiceId = reader.GetInt32(0),
-                                ServiceName = reader.GetString(1),
-                                Description = reader.GetString(2),
-                                Price = reader.GetInt32(3),
-                                EstimatedTime = reader.GetString(4)
+                                ServiceName = reader.GetString(1)
                             });
                         }
                     }
                 }
+                return services;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error fetching services: {ex.Message}");
+                MessageBox.Show($"Error retrieving services: {ex.Message}");
+                return null;
             }
-
-            return services;
         }
+
 
         // Schedule an appointment
         public void ScheduleAppointment(int serviceId, DateTime preferredDate)
@@ -124,7 +125,7 @@ namespace Assignment
 
             try
             {
-                InsertRecord("Appointments_Table", appointmentData);
+                InsertRecord("Appointments", appointmentData);
                 MessageBox.Show("Appointment scheduled successfully.");
             }
             catch (Exception ex)
@@ -136,7 +137,7 @@ namespace Assignment
         // Reschedule an appointment
         public void RescheduleAppointment(int appointmentId, DateTime newDate)
         {
-            const string updateQuery = "UPDATE Appointments_Table SET AppointmentDate = @newDate WHERE AppointmentId = @appointmentId";
+            const string updateQuery = "UPDATE Appointments SET AppointmentDate = @newDate WHERE AppointmentId = @appointmentId";
 
             try
             {
@@ -164,7 +165,7 @@ namespace Assignment
         {
             try
             {
-                DeleteRecord("Appointments_Table", "AppointmentId", appointmentId);
+                DeleteRecord("Appointments", "AppointmentId", appointmentId);
                 MessageBox.Show("Appointment cancelled successfully.");
             }
             catch (Exception ex)

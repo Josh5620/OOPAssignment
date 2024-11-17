@@ -42,6 +42,7 @@ namespace Assignment
             {
                 MessageBox.Show($"Error loading services: {ex.Message}");
             }
+
         }
 
         // Event handler for the "View" button click

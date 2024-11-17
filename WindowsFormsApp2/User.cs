@@ -63,7 +63,7 @@ namespace Assignment
 
         public User() { }
 
-        protected SQLiteConnection GetDatabaseConnection()
+        protected virtual SQLiteConnection GetDatabaseConnection()
         {
             try
             {
@@ -132,7 +132,7 @@ namespace Assignment
             return authenticatedUser;
         }
 
-        public DataTable LoadDataGrid(string tableName)
+        public virtual DataTable LoadDataGrid(string tableName)
         {
             var validTables = new Dictionary<string, string>
             {
