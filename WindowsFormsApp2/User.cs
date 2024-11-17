@@ -177,7 +177,7 @@ namespace Assignment
 
             using (SQLiteConnection connection = GetDatabaseConnection())
             {
-                string query = @"SELECT FullName, Username, Email, JobType 
+                string query = @"SELECT FullName, Username, Email, PhoneNumber, Address 
                          FROM Profile_Table 
                          WHERE Username = @Username";
 
@@ -192,7 +192,8 @@ namespace Assignment
                             profileInfo["FullName"] = reader["FullName"].ToString();
                             profileInfo["Username"] = reader["Username"].ToString();
                             profileInfo["Email"] = reader["Email"].ToString();
-                            profileInfo["JobType"] = reader["JobType"].ToString();
+                            profileInfo["PhoneNumber"] = reader["PhoneNumber"].ToString();
+                            profileInfo["Address"] = reader["Address"].ToString();
                         }
                     }
                 }
