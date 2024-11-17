@@ -71,6 +71,7 @@
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSendFeedback
             // 
@@ -173,7 +174,7 @@
             this.viewservices2.Size = new System.Drawing.Size(829, 503);
             this.viewservices2.TabIndex = 0;
             // 
-            // Form1
+            // CustomerPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,7 +182,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Buttonspanel);
-            this.Name = "Form1";
+            this.Name = "CustomerPage";
             this.Text = "Form1";
             this.Buttonspanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

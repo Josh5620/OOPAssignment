@@ -97,8 +97,6 @@ namespace Assignment.UserControls
                     txtAppointmentDate.Text = row.Cells["AppointmentDate"].Value.ToString();
                     txtAdditionalNotes.Text = row.Cells["AdditionalNotes"].Value.ToString();
                     txtStatus.Text = row.Cells["Status"].Value.ToString();
-                    txtAdditionalRepairs.Text = row.Cells["AdditionalRepairs"].Value.ToString();
-                    txtCollectionTime.Text = row.Cells["CollectionTime"].Value.ToString();
                 }
             }
 

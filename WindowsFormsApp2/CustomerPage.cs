@@ -81,5 +81,12 @@ namespace Assignment
             HideAllUserControls();
             userControl.Visible = true;
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
     }
 }
