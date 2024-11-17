@@ -139,5 +139,13 @@ namespace Assignment
             }
 
         }
+
+        private void Viewservices_Load(object sender, EventArgs e)
+        {
+            List<string> fieldsToDisplay2 = new List<string> { "ServiceId", "ServiceName", "Description", "Price", "EstimatedTime" };
+            dataGridViewServices.DataSource = customer.LoadAndFilterData("service", fieldsToDisplay2, null);
+
+        }
     }
+    
 }

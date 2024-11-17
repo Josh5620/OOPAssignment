@@ -23,7 +23,7 @@ namespace Assignment
         private void ManageAppointments_Load(object sender, EventArgs e)
         {
             LoadAllAppointments(); // Load appointments into DataGridView
-            LoadServices();     // Load services into ComboBox
+            LoadServicesIntoComboBox();     // Load services into ComboBox
         }
 
      
@@ -66,28 +66,7 @@ namespace Assignment
             }
         }
 
-        private void LoadAppointmentsFromDatabase()
-        {
-            try
-            {
-                customer.appointmentsData = customer.LoadDataGrid("appointment");
-                if (customer.appointmentsData != null)
-                {
-                    dataGridViewAppointments.DataSource = customer.appointmentsData;
-                }
-                else
-                {
-                    MessageBox.Show("No data found in Appointments.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading appointments: {ex.Message}");
-            }
-        }
-
-
-        private void LoadServices()
+        private void LoadServicesIntoComboBox()
         {
             try
             {
@@ -95,10 +74,10 @@ namespace Assignment
                 if (services != null && services.Count > 0)
                 {
                     comboBoxAppointments.DataSource = services;
-                    comboBoxAppointments.DisplayMember = "ServiceName"; 
-                    comboBoxAppointments.ValueMember = "ServiceId"; 
+                    comboBoxAppointments.DisplayMember = "ServiceName"; // Display the service name
+                    comboBoxAppointments.ValueMember = "ServiceId"; // Use ServiceId as the value
                 }
-                else 
+                else
                 {
                     MessageBox.Show("No services available for feedback.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -108,6 +87,7 @@ namespace Assignment
                 MessageBox.Show($"Error loading services: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         /// <summary>
@@ -250,6 +230,12 @@ namespace Assignment
                 customer.CancelAppointment(appointmentId);
                 LoadAllAppointments(); // Refresh DataGridView
             }
+        }
+
+        private void ManageAppointments_Load_1(object sender, EventArgs e)
+        {
+            List<string> fieldsToDisplay2 = new List<string> { "AppointmentId", "FullName", "CustomerId", "AppointmentDate", "ServiceId", "VehichleNumber", "AdditionalNotes", "Status" };
+            dataGridViewAppointments.DataSource = customer.LoadAndFilterData("appointment", fieldsToDisplay2, "Status <> 'Completed'");
         }
     }
 }

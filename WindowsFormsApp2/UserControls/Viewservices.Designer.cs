@@ -164,6 +164,7 @@
             this.Controls.Add(this.dataGridViewServices);
             this.Name = "Viewservices";
             this.Size = new System.Drawing.Size(750, 499);
+            this.Load += new System.EventHandler(this.Viewservices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewServices)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
