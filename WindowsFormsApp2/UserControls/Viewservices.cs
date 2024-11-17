@@ -4,7 +4,6 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-
 namespace Assignment
 {
     public partial class Viewservices : UserControl
@@ -12,137 +11,80 @@ namespace Assignment
         private List<Customer.Service> services;
         private Customer customer;
 
-
         public Viewservices()
         {
             InitializeComponent();
+            services = new List<Customer.Service>(); // Initialize the list
             customer = new Customer(); // Instantiate the Customer object
-            LoadServicesIntoComboBox();
+            InitializeEventHandlers();
         }
 
-        // Load available services into the ComboBox
-        private void LoadServicesIntoComboBox()
+        private void InitializeEventHandlers()
         {
-            try
-            {
-                services = customer.ViewAvailableServices(); // Retrieve services from the database
-
-                if (services != null && services.Any())
-                {
-                    comboBoxServices.DataSource = services;
-                    comboBoxServices.DisplayMember = "ServiceName";  // Display ServiceName
-                    comboBoxServices.ValueMember = "ServiceId";      // Use ServiceId as the value
-                }
-                else
-                {
-                    MessageBox.Show("No services available to display.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading services: {ex.Message}");
-            }
+            // Register event handlers
+            dataGridViewServices.CellClick += DataGridViewServices_CellClick;
         }
 
-        // Event handler for the "View" button click
-        private void btnViewServices_Click(object sender, EventArgs e)
+        // Load data into the DataGridView on form load
+        private void Viewservices_Load(object sender, EventArgs e)
         {
-            if (comboBoxServices.SelectedValue is int selectedServiceId)
+            // Load and bind data to DataGridView
+            List<string> fieldsToDisplay = new List<string> { "ServiceId", "ServiceName", "Description", "Price", "EstimatedTime" };
+            var serviceData = customer.LoadAndFilterData("Service_Table", fieldsToDisplay, null);
+
+            if (serviceData != null)
             {
-                // Debugging message
-                MessageBox.Show($"Selected Service ID: {selectedServiceId}");
-                DisplayServiceDetails(selectedServiceId);
+                dataGridViewServices.DataSource = serviceData;
+
+                // Optional: Customize column headers
+                dataGridViewServices.Columns["ServiceId"].HeaderText = "Service ID";
+                dataGridViewServices.Columns["ServiceName"].HeaderText = "Service Name";
+                dataGridViewServices.Columns["Description"].HeaderText = "Description";
+                dataGridViewServices.Columns["Price"].HeaderText = "Price";
+                dataGridViewServices.Columns["EstimatedTime"].HeaderText = "Estimated Time";
             }
             else
             {
-                MessageBox.Show("Please select a valid service.");
+                MessageBox.Show("Failed to load service data.");
             }
         }
 
-        // Display selected service details in the DataGridView
-        private void DisplayServiceDetails(int serviceId)
+        // Handle cell click in the DataGridView
+        private void DataGridViewServices_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if (e.RowIndex >= 0) // Ensure the clicked row is valid
             {
-                // Find the selected service
-                var selectedService = services.FirstOrDefault(s => s.ServiceId == serviceId);
+                DataGridViewRow row = dataGridViewServices.Rows[e.RowIndex];
 
-                if (selectedService == null)
-                {
-                    MessageBox.Show("Selected service could not be found.");
-                    return;
-                }
-
-                // Create DataTable
-                DataTable serviceTable = new DataTable();
-                serviceTable.Columns.Add("Service ID");
-                serviceTable.Columns.Add("Service Name");
-                serviceTable.Columns.Add("Description");
-                serviceTable.Columns.Add("Price");
-                serviceTable.Columns.Add("Estimated Time");
-
-                // Add service details to DataTable
-                serviceTable.Rows.Add(
-                    selectedService.ServiceId,
-                    selectedService.ServiceName,
-                    selectedService.Description,
-                    selectedService.Price,
-                    selectedService.EstimatedTime
-                );
-
-                // Bind DataTable to DataGridView
-                dataGridViewServices.DataSource = serviceTable;
-
-                // Debugging message
-                MessageBox.Show($"DataGridView now displays {serviceTable.Rows.Count} rows.");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error displaying service details: {ex.Message}");
+                // Populate TextBox controls with corresponding cell values
+              
+                textBoxService.Text = row.Cells["ServiceId"].Value?.ToString();
             }
         }
 
-
-        // Remove unused event handlers for cleaner code
-        private void comboBoxServices_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Optional: Add logic to handle ComboBox selection changes, if needed
-        }
-
-        private void btnViewServices_Click_1(object sender, EventArgs e)
-        {
-            // Redundant handler; can be removed if not used
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-            // Handle the cell click event here, if needed
-            MessageBox.Show($"Cell clicked at Row {e.RowIndex}, Column {e.ColumnIndex}");
-        }
-
+        // Handle scheduling an appointment
         private void btnSchedule_Click(object sender, EventArgs e)
         {
             string customerName = textBoxName.Text; // Assuming a TextBox for customer name
-            if (comboBoxServices.SelectedValue is int selectedServiceId && !string.IsNullOrWhiteSpace(customerName))
+            if (!string.IsNullOrWhiteSpace(customerName))
             {
-                DateTime preferredDate = dateTimePickerAppointment.Value; // Assuming DateTimePicker for selecting date
-                customer.ScheduleAppointment(selectedServiceId, preferredDate);
+                if (dataGridViewServices.SelectedRows.Count > 0)
+                {
+                    int selectedServiceId = Convert.ToInt32(dataGridViewServices.SelectedRows[0].Cells["ServiceId"].Value);
+                    DateTime preferredDate = dateTimePickerAppointment.Value; // Assuming a DateTimePicker for selecting date
+
+                    customer.ScheduleAppointment(selectedServiceId, preferredDate);
+                    MessageBox.Show("Appointment scheduled successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Please select a service from the table.");
+                }
             }
             else
             {
-                MessageBox.Show("Please enter a valid name and select a service.");
+                MessageBox.Show("Please enter a valid name.");
             }
-
-        }
-
-        private void Viewservices_Load(object sender, EventArgs e)
-        {
-            List<string> fieldsToDisplay2 = new List<string> { "ServiceId", "ServiceName", "Description", "Price", "EstimatedTime" };
-            dataGridViewServices.DataSource = customer.LoadAndFilterData("Service_Table", fieldsToDisplay2, null);
-
         }
     }
-    
 }

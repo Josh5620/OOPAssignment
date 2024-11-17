@@ -169,7 +169,7 @@ namespace Assignment
         {
             var appointmentData = new Dictionary<string, object>
             {
-                { "CustomerId", this.Username },
+                { "FullName", this.Username },
                 { "ServiceId", serviceId },
                 { "AppointmentDate", preferredDate }
 
@@ -227,12 +227,11 @@ namespace Assignment
         }
 
         // Provide feedback for a service
-        public void ProvideFeedback(int serviceId, string feedbackText, int rating)
+        public void ProvideFeedback(int serviceName, string feedbackText, int rating)
         {
             var feedbackData = new Dictionary<string, object>
             {
-                { "ServiceId", serviceId },
-                { "CustomerId", this.Username },
+                { "ServiceName", serviceName },
                 { "FeedbackText", feedbackText },
                 { "Rating", rating }
             };

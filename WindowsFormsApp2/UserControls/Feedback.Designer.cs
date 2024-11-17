@@ -56,7 +56,6 @@
             this.comboBoxSerFeedback.Name = "comboBoxSerFeedback";
             this.comboBoxSerFeedback.Size = new System.Drawing.Size(165, 24);
             this.comboBoxSerFeedback.TabIndex = 1;
-            this.comboBoxSerFeedback.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -67,7 +66,6 @@
             this.label1.Size = new System.Drawing.Size(159, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Select Service:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -118,6 +116,7 @@
             this.Controls.Add(this.btnSubmit);
             this.Name = "Feedback";
             this.Size = new System.Drawing.Size(815, 493);
+            this.Load += new System.EventHandler(this.Feedback_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
