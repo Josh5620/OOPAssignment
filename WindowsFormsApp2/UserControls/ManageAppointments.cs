@@ -43,7 +43,7 @@ namespace Assignment
                     query += " AND ServiceName = @ServiceName";
                 }
 
-                using (var connection = customer.GetConnection())
+                using (var connection = customer.GetDatabaseConnection())
                 using (var cmd = new SQLiteCommand(query, connection))
                 {
                     cmd.Parameters.AddWithValue("@CustomerName", customerName);
@@ -139,7 +139,7 @@ namespace Assignment
                     string newName = textBoxName.Text;
                     string updateQuery = "UPDATE Appointments SET CustomerName = @CustomerName WHERE AppointmentId = @AppointmentId";
 
-                    using (var connection = customer.GetConnection())
+                    using (var connection = customer.GetDatabaseConnection())
                     using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
                         cmd.Parameters.AddWithValue("@CustomerName", newName);
@@ -179,7 +179,7 @@ namespace Assignment
                     DateTime newDate = dateTimePicker1.Value;
                     string updateQuery = "UPDATE Appointments SET PreferredDate = @PreferredDate WHERE AppointmentId = @AppointmentId";
 
-                    using (var connection = customer.GetConnection())
+                    using (var connection = customer.GetDatabaseConnection())
                     using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
                         cmd.Parameters.AddWithValue("@PreferredDate", newDate);

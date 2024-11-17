@@ -65,24 +65,7 @@ namespace Assignment
             }
         }
 
-        public DataTable LoadAndFilterData(string tableName, List<string> fieldsToDisplay, string filter)
-        {
-            DataTable fullDataTable = LoadDataGrid(tableName);
-            DataView dataView = new DataView(fullDataTable);
-            dataView.RowFilter = filter;
 
-            DataTable filteredTable = dataView.ToTable();
-
-            foreach (DataColumn column in filteredTable.Columns)
-            {
-                if (!fieldsToDisplay.Contains(column.ColumnName))
-                {
-                    column.ColumnMapping = MappingType.Hidden;
-                }
-            }
-
-            return filteredTable;
-        }
 
         public static void LoadServicesIntoComboBox(ComboBox comboBox, Func<List<Service>> getData)
         {
