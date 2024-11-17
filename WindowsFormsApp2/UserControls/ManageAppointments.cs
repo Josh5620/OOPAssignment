@@ -29,32 +29,40 @@ namespace Assignment
      
         private void LoadAllAppointments()
         {
+            string customerName = textBoxName.Text;  // Assuming TextBox for customer name
+            string selectedService = comboBoxAppointments.SelectedValue?.ToString(); // Assuming ComboBox for services
+
+            customer.appointmentsData = new DataTable();
+
             try
             {
-                customer.appointmentsData = new DataTable();
-                string query = "SELECT * FROM Appointments";
+                string query = $"SELECT * FROM Appointments WHERE CustomerName = @CustomerName";
 
-                using (var connection = customer.GetConnection())
-                using (var adapter = new SQLiteDataAdapter(query, connection))
+                if (!string.IsNullOrEmpty(selectedService))
                 {
-                    adapter.Fill(customer.appointmentsData);
+                    query += " AND ServiceName = @ServiceName";
                 }
 
-                // Bind data to DataGridView
+                using (var connection = customer.GetConnection())
+                using (var cmd = new SQLiteCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@CustomerName", customerName);
+                    if (!string.IsNullOrEmpty(selectedService))
+                    {
+                        cmd.Parameters.AddWithValue("@ServiceName", selectedService);
+                    }
+
+                    using (var adapter = new SQLiteDataAdapter(cmd))
+                    {
+                        adapter.Fill(customer.appointmentsData);
+                    }
+                }
+
                 dataGridViewAppointments.DataSource = customer.appointmentsData;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading appointments: {ex.Message}");
-            }
-
-            using (var connection = customer.GetConnection())
-            {
-                if (connection.State != ConnectionState.Open)
-                {
-                    MessageBox.Show("Database connection failed.");
-                    return;
-                }
             }
         }
 
@@ -87,12 +95,12 @@ namespace Assignment
                 if (services != null && services.Count > 0)
                 {
                     comboBoxAppointments.DataSource = services;
-                    comboBoxAppointments.DisplayMember = "ServiceName"; // Display the service name
+                    comboBoxAppointments.DisplayMember = "ServiceName"; // Display service name
                     comboBoxAppointments.ValueMember = "ServiceId"; // Use ServiceId as the value
                 }
                 else
                 {
-                    MessageBox.Show("No services available for feedback.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No services available.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
@@ -217,6 +225,31 @@ namespace Assignment
             textBoxName.Clear();
             comboBoxAppointments.SelectedIndex = -1;
             dateTimePicker1.Value = DateTime.Now;
+        }
+
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCancelAppointment_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewAppointments.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Please select an appointment to cancel.");
+                return;
+            }
+
+            var selectedAppointment = dataGridViewAppointments.SelectedRows[0];
+            int appointmentId = Convert.ToInt32(selectedAppointment.Cells["AppointmentId"].Value); // Assuming column name is AppointmentId
+
+            // Confirm cancellation
+            var confirmResult = MessageBox.Show("Are you sure you want to cancel this appointment?", "Confirm Cancel", MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                customer.CancelAppointment(appointmentId);
+                LoadAllAppointments(); // Refresh DataGridView
+            }
         }
     }
 }

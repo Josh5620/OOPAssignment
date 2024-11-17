@@ -125,6 +125,7 @@ namespace Assignment
                 { "CustomerId", this.Username },
                 { "ServiceId", serviceId },
                 { "AppointmentDate", preferredDate }
+
             };
 
             try
