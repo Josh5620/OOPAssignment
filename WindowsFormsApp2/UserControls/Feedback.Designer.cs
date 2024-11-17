@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxRating = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxReview = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSubmit
@@ -47,6 +47,7 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // comboBoxSerFeedback
             // 
@@ -85,6 +86,7 @@
             this.comboBoxRating.Name = "comboBoxRating";
             this.comboBoxRating.Size = new System.Drawing.Size(165, 24);
             this.comboBoxRating.TabIndex = 4;
+            this.comboBoxRating.SelectedIndexChanged += new System.EventHandler(this.comboBoxRating_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -96,19 +98,20 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Write a review:";
             // 
-            // textBox1
+            // textBoxReview
             // 
-            this.textBox1.Location = new System.Drawing.Point(195, 203);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(358, 83);
-            this.textBox1.TabIndex = 7;
+            this.textBoxReview.Location = new System.Drawing.Point(195, 203);
+            this.textBoxReview.Multiline = true;
+            this.textBoxReview.Name = "textBoxReview";
+            this.textBoxReview.Size = new System.Drawing.Size(358, 83);
+            this.textBoxReview.TabIndex = 7;
+            this.textBoxReview.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Feedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxReview);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBoxRating);
             this.Controls.Add(this.label2);
@@ -130,6 +133,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxRating;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxReview;
     }
 }

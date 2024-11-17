@@ -42,6 +42,7 @@ namespace Assignment
             {
                 MessageBox.Show($"Error loading services: {ex.Message}");
             }
+
         }
 
         // Event handler for the "View" button click
@@ -101,6 +102,8 @@ namespace Assignment
                 MessageBox.Show($"Error displaying service details: {ex.Message}");
             }
         }
+
+
 
 
         // Remove unused event handlers for cleaner code
