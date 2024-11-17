@@ -40,10 +40,10 @@ namespace Assignment.UserControls
             Dictionary<string,string> profileInfo =  Recep.GetProfileInfo(Username1);
 
             label2.Text = $"Fullname: {profileInfo["FullName"]}";
-            label3.Text = $"Password: {Password}";
-            label4.Text = $"Email: {Email}";
-            label5.Text = $"P/N: {PhoneNumber}";
-            label6.Text = $"Address: {Address}";
+            label3.Text = $"Password: {profileInfo["Password"]}";
+            label4.Text = $"Email: {profileInfo["Email"]}";
+            label5.Text = $"P/N: {profileInfo["PhoneNumber"]}";
+            label6.Text = $"Address: {profileInfo["Address"]}";
         }
         private void label1_Click(object sender, EventArgs e)
         {
