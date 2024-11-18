@@ -21,7 +21,7 @@ namespace Assignment
         }
         public DataTable appointmentsData { get; set; }
 
-        public SQLiteConnection GetDatabaseConnection()
+        public SQLiteConnection GetDatabaseCustomerConnection()
         {
             SQLiteConnection connection = new SQLiteConnection(connectionString);
             connection.Open();
@@ -90,7 +90,7 @@ namespace Assignment
             }
         }
         // Fetch list of available services
-        public DataTable LoadDataGrid(string tableName)
+        public DataTable LoadCustomerDataGrid(string tableName)
         {
             var validTables = new Dictionary<string, string>()
     {
@@ -168,12 +168,11 @@ namespace Assignment
         public void ScheduleAppointment(int serviceId, DateTime preferredDate)
         {
             var appointmentData = new Dictionary<string, object>
-            {
-                { "FullName", this.Username },
-                { "ServiceId", serviceId },
-                { "AppointmentDate", preferredDate }
-
-            };
+    {
+        { "FullName", this.Username },
+        { "ServiceId", serviceId },
+        { "AppointmentDate", preferredDate }
+    };
 
             try
             {
@@ -251,9 +250,9 @@ namespace Assignment
         public void UpdateProfile(string newName, string newEmail, string newPhoneNumber, string newAddress)
         {
             const string updateQuery = @"
-                UPDATE Profile_Table 
-                SET FullName = @name, Email = @Email, PhoneNumber = @phone, Address = @address 
-                WHERE Username = @Username";
+    UPDATE Profile_Table 
+    SET FullName = @name, Email = @Email, PhoneNumber = @phone, Address = @address 
+    WHERE Username = @Username";
 
             try
             {
@@ -267,10 +266,14 @@ namespace Assignment
                     cmd.Parameters.AddWithValue("@Username", this.Username);
 
                     int rowsAffected = cmd.ExecuteNonQuery();
-
-                    MessageBox.Show(rowsAffected > 0
-                        ? "Profile updated successfully."
-                        : "Error updating profile.");
+                    if (rowsAffected == 0)
+                    {
+                        MessageBox.Show("Profile not updated. Ensure the username exists.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Profile updated successfully.");
+                    }
                 }
             }
             catch (Exception ex)
@@ -293,14 +296,18 @@ namespace Assignment
                 {
                     foreach (var column in columns)
                     {
-                        cmd.Parameters.AddWithValue($"@{column.Key}", column.Value);
+                        cmd.Parameters.AddWithValue($"@{column.Key}", column.Value ?? DBNull.Value);
                     }
-                    cmd.ExecuteNonQuery();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected == 0)
+                    {
+                        throw new Exception("No rows were inserted. Possible constraint violation.");
+                    }
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error adding record to {tableName}: {ex.Message}");
+                throw new Exception($"Error adding record to {tableName}: {ex.Message}\nQuery: {insertQuery}");
             }
         }
 

@@ -23,41 +23,35 @@ namespace Assignment
         private void ManageAppointments_Load(object sender, EventArgs e)
         {
             LoadAllAppointments(); // Load appointments into DataGridView
-            LoadServicesIntoComboBox();     // Load services into ComboBox
+   
         }
 
      
         private void LoadAllAppointments()
         {
             string customerName = textBoxName.Text;  // Assuming TextBox for customer name
-            string selectedService = comboBoxAppointments.SelectedValue?.ToString(); // Assuming ComboBox for services
 
             customer.appointmentsData = new DataTable();
 
             try
             {
-                string query = $"SELECT * FROM Appointments WHERE CustomerName = @CustomerName";
+                // Simplified query to only filter by FullName
+                string query = "SELECT * FROM Appointments WHERE FullName = @FullName";
 
-                if (!string.IsNullOrEmpty(selectedService))
-                {
-                    query += " AND ServiceName = @ServiceName";
-                }
-
-                using (var connection = customer.GetDatabaseConnection())
+                using (var connection = customer.GetDatabaseCustomerConnection())
                 using (var cmd = new SQLiteCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("@CustomerName", customerName);
-                    if (!string.IsNullOrEmpty(selectedService))
-                    {
-                        cmd.Parameters.AddWithValue("@ServiceName", selectedService);
-                    }
+                    // Add the FullName parameter
+                    cmd.Parameters.AddWithValue("@FullName", customerName);
 
+                    // Use a data adapter to fill the DataTable
                     using (var adapter = new SQLiteDataAdapter(cmd))
                     {
                         adapter.Fill(customer.appointmentsData);
                     }
                 }
 
+                // Bind the DataTable to the DataGridView
                 dataGridViewAppointments.DataSource = customer.appointmentsData;
             }
             catch (Exception ex)
@@ -66,27 +60,7 @@ namespace Assignment
             }
         }
 
-        private void LoadServicesIntoComboBox()
-        {
-            try
-            {
-                services = customer.ViewAvailableServices(); // Fetch services
-                if (services != null && services.Count > 0)
-                {
-                    comboBoxAppointments.DataSource = services;
-                    comboBoxAppointments.DisplayMember = "ServiceName"; // Display the service name
-                    comboBoxAppointments.ValueMember = "ServiceId"; // Use ServiceId as the value
-                }
-                else
-                {
-                    MessageBox.Show("No services available for feedback.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading services: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+       
 
 
 
@@ -105,9 +79,7 @@ namespace Assignment
                     if (rows.Length > 0)
                     {
                         DataRow row = rows[0];
-                        textBoxName.Text = row["CustomerName"].ToString();
-                        comboBoxAppointments.SelectedValue = row["ServiceId"]; // Match ServiceId in ComboBox
-                        dateTimePicker1.Value = Convert.ToDateTime(row["PreferredDate"]);
+                        textBoxName.Text = row["FullName"].ToString();
                     }
                     else
                     {
@@ -137,12 +109,12 @@ namespace Assignment
                 if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
                 {
                     string newName = textBoxName.Text;
-                    string updateQuery = "UPDATE Appointments SET CustomerName = @CustomerName WHERE AppointmentId = @AppointmentId";
+                    string updateQuery = "UPDATE Appointments SET FullName = @FullName WHERE AppointmentId = @AppointmentId";
 
-                    using (var connection = customer.GetDatabaseConnection())
+                    using (var connection = customer.GetDatabaseCustomerConnection())
                     using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
                     {
-                        cmd.Parameters.AddWithValue("@CustomerName", newName);
+                        cmd.Parameters.AddWithValue("@FullName", newName);
                         cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
                         cmd.ExecuteNonQuery();
                     }
@@ -170,32 +142,6 @@ namespace Assignment
         /// Handle changes to the preferred date.
         /// Updates the database when the date is changed.
         /// </summary>
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (int.TryParse(textBoxAppointmentId.Text, out int appointmentId))
-                {
-                    DateTime newDate = dateTimePicker1.Value;
-                    string updateQuery = "UPDATE Appointments SET PreferredDate = @PreferredDate WHERE AppointmentId = @AppointmentId";
-
-                    using (var connection = customer.GetDatabaseConnection())
-                    using (SQLiteCommand cmd = new SQLiteCommand(updateQuery, connection))
-                    {
-                        cmd.Parameters.AddWithValue("@PreferredDate", newDate);
-                        cmd.Parameters.AddWithValue("@AppointmentId", appointmentId);
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show("Appointment date updated successfully.");
-                    LoadAllAppointments(); // Refresh DataGridView
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error updating appointment date: {ex.Message}");
-            }
-        }
 
         /// <summary>
         /// Clear all input fields on the form.
@@ -203,8 +149,6 @@ namespace Assignment
         private void ClearFields()
         {
             textBoxName.Clear();
-            comboBoxAppointments.SelectedIndex = -1;
-            dateTimePicker1.Value = DateTime.Now;
         }
 
         private void btnSchedule_Click(object sender, EventArgs e)
@@ -234,7 +178,7 @@ namespace Assignment
 
         private void ManageAppointments_Load_1(object sender, EventArgs e)
         {
-            List<string> fieldsToDisplay2 = new List<string> { "AppointmentId", "FullName", "CustomerId", "AppointmentDate", "ServiceId", "VehicleNumber", "AdditionalNotes", "Status" };
+            List<string> fieldsToDisplay2 = new List<string> { "AppointmentId", "FullName", "CustomerId", "AppointmentDate", "ServiceId" };
             dataGridViewAppointments.DataSource = customer.LoadAndFilterData("appointments", fieldsToDisplay2, "Status <> 'Completed'");
         }
     }

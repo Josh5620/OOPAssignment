@@ -33,14 +33,10 @@
             this.btnViewAppointment = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxAppointmentId = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.comboBoxAppointments = new System.Windows.Forms.ComboBox();
             this.buttonCancelAppointment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
             this.SuspendLayout();
@@ -86,26 +82,6 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Enter name:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 367);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 20);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Select Date and Time:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 301);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Select A Service:";
-            // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(212, 269);
@@ -113,18 +89,11 @@
             this.textBoxName.Size = new System.Drawing.Size(100, 22);
             this.textBoxName.TabIndex = 10;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(212, 367);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(19, 332);
+            this.label7.Location = new System.Drawing.Point(19, 308);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(170, 20);
             this.label7.TabIndex = 13;
@@ -132,7 +101,7 @@
             // 
             // textBoxAppointmentId
             // 
-            this.textBoxAppointmentId.Location = new System.Drawing.Point(212, 330);
+            this.textBoxAppointmentId.Location = new System.Drawing.Point(212, 306);
             this.textBoxAppointmentId.Name = "textBoxAppointmentId";
             this.textBoxAppointmentId.Size = new System.Drawing.Size(100, 22);
             this.textBoxAppointmentId.TabIndex = 14;
@@ -142,15 +111,6 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // comboBoxAppointments
-            // 
-            this.comboBoxAppointments.FormattingEnabled = true;
-            this.comboBoxAppointments.Location = new System.Drawing.Point(212, 301);
-            this.comboBoxAppointments.Name = "comboBoxAppointments";
-            this.comboBoxAppointments.Size = new System.Drawing.Size(100, 24);
-            this.comboBoxAppointments.TabIndex = 15;
-            this.comboBoxAppointments.SelectedIndexChanged += new System.EventHandler(this.comboBoxAppointments_SelectedIndexChanged);
             // 
             // buttonCancelAppointment
             // 
@@ -169,13 +129,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.buttonCancelAppointment);
-            this.Controls.Add(this.comboBoxAppointments);
             this.Controls.Add(this.textBoxAppointmentId);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnViewAppointment);
@@ -195,14 +151,10 @@
         private System.Windows.Forms.Button btnViewAppointment;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxAppointmentId;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ComboBox comboBoxAppointments;
         private System.Windows.Forms.Button buttonCancelAppointment;
     }
 }
