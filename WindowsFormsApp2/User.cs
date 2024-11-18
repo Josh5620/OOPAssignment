@@ -123,7 +123,8 @@ namespace Assignment
         { "feedback", "Feedback" },
         { "appointment", "Appointments" },
         { "profile", "Profile_Table" },
-        { "order", "Order_Table" }
+        { "order", "Order_Table" },
+        { "inventory", "Inventory_Table" }
     };
 
             if (!validTables.ContainsKey(tableName.ToLower()))
