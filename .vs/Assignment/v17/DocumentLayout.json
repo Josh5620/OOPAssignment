@@ -1,37 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\",
+  "WorkspaceRootPath": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\mechanic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\mechanic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\genemor\\git\\oop assignment\\oopassignment\\windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\mechprof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\mechprof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\mechprof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\mechprof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\mechprof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\prof_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\prof_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\prof_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\prof_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\receptionist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\receptionist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\mechanicpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\assignedservcies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\manageinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\mechprof.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\mechprof.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|c:\\users\\dylan\\onedrive - asia pacific university\\desktop\\oopassignment\\windowsformsapp2\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\windowsformsapp2\\usercontrols\\cmdel_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\viewservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\windowsformsapp2\\usercontrols\\cmdel_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C8E482CF-D6FA-4BB7-8A5C-50722AE62FB6}|WindowsFormsApp2\\RecepForm.csproj|solutionrelative:windowsformsapp2\\usercontrols\\cmdel_control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -42,43 +74,189 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 21,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:991310713:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f37f5141-198e-4181-9582-7b026ee8f915}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1417506728:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MechProf.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\MechProf.Designer.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\MechProf.Designer.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\MechProf.Designer.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\MechProf.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MechProf.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\MechProf.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\MechProf.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\MechProf.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\MechProf.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T12:53:38.908Z"
+              "WhenOpened": "2024-11-18T14:51:24.954Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MechProf.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\MechProf.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\MechProf.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\MechProf.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\MechProf.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAiwC0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T12:32:39.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Receptionist.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Receptionist.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\Receptionist.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Receptionist.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\Receptionist.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAUwAABAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:46:25.819Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MechProf.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\MechProf.cs",
-              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\MechProf.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\MechProf.cs",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\MechProf.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "Title": "PROF_Control.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\PROF_Control.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\PROF_Control.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\PROF_Control.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\PROF_Control.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T12:32:39.562Z"
+              "WhenOpened": "2024-11-18T14:41:40.88Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "PROF_Control.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\PROF_Control.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\PROF_Control.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\PROF_Control.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\PROF_Control.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:41:38.864Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\LoginPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:28:57.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\LoginPage.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\LoginPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:28:56.097Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AssignedServcies.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:28:26.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AssignedServcies.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\AssignedServcies.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\AssignedServcies.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:28:24.47Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Mechanic.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Mechanic.cs",
+              "RelativeDocumentMoniker": "WindowsFormsApp2\\Mechanic.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Mechanic.cs",
+              "RelativeToolTip": "WindowsFormsApp2\\Mechanic.cs",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAgwAwBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T14:27:03.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "MechanicPage.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\MechanicPage.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs [Design]",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\MechanicPage.cs [Design]",
               "RelativeToolTip": "WindowsFormsApp2\\MechanicPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T14:14:14.002Z",
@@ -86,20 +264,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "ManageInventory.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\ManageInventory.cs",
-              "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
+              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\ManageInventory.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T10:47:31.225Z"
+              "WhenOpened": "2024-11-18T10:47:31.225Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "CMDEL_Control.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CMDEL_Control.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CMDEL_Control.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\CMDEL_Control.cs",
               "ToolTip": "C:\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CMDEL_Control.cs [Design]",
               "RelativeToolTip": "..\\..\\..\\..\\..\\Mac\\Home\\Documents\\New folder\\OOPAssignment\\WindowsFormsApp2\\UserControls\\CMDEL_Control.cs [Design]",
@@ -108,41 +287,49 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "Viewservices.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Viewservices.cs",
               "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs [Design]",
-              "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Viewservices.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T09:47:28.123Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-18T09:47:28.123Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
               "Title": "Viewservices.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\UserControls\\Viewservices.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\UserControls\\Viewservices.cs",
               "RelativeToolTip": "WindowsFormsApp2\\UserControls\\Viewservices.cs",
               "ViewState": "AgIAAD0AAAAAAAAAAAAlwEMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T09:47:32.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T09:47:32.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Customer.cs",
               "RelativeDocumentMoniker": "WindowsFormsApp2\\Customer.cs",
-              "ToolTip": "C:\\Users\\Genemor\\GIT\\oop assignment\\OOPAssignment\\WindowsFormsApp2\\Customer.cs",
+              "ToolTip": "C:\\Users\\Dylan\\OneDrive - Asia Pacific University\\Desktop\\OOPAssignment\\WindowsFormsApp2\\Customer.cs",
               "RelativeToolTip": "WindowsFormsApp2\\Customer.cs",
-              "ViewState": "AgIAABgBAAAAAAAAAAAkwCQBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAkwCQBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T09:49:48.879Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

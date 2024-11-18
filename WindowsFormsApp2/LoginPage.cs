@@ -74,7 +74,7 @@ namespace Assignment
                         break;
 
                     case "Mechanic":
-                        MechanicPage mechanicPage = new MechanicPage();
+                        MechanicPage mechanicPage = new MechanicPage(username);
                         mechanicPage.Show();
                         this.Hide();
                         break;
@@ -83,7 +83,7 @@ namespace Assignment
                         CustomerPage customerPage = new CustomerPage();
                         customerPage.Show();
                         this.Hide();
-                        break; 
+                        break;
 
                     default:
                         MessageBox.Show("JobType Not Found.");
@@ -112,7 +112,7 @@ namespace Assignment
         private void Mechanic_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var CForm = new MechanicPage();
+            var CForm = new MechanicPage("Dan12");
             CForm.Closed += (s, args) => this.Close();
             CForm.Show();
 

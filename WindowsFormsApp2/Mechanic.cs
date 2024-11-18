@@ -237,6 +237,137 @@ namespace Assignment
                 }
             }
         }
+        public DataTable LoadAndFilterData(string tableName, List<string> fields, string filterCondition, params SQLiteParameter[] parameters)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                // Build the SELECT query dynamically based on the fields
+                string query = $"SELECT {string.Join(", ", fields)} FROM {tableName} WHERE {filterCondition}";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    // Add parameters to the query if provided
+                    foreach (var param in parameters)
+                    {
+                        command.Parameters.Add(param);
+                    }
+
+                    using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return dataTable;
+        }
+
+        public void UpdateProfile(
+    string username,
+    string fullName,
+    string password,
+    string email,
+    string phoneNumber,
+    string address)
+        {
+            // Dictionary for updating Profile_Table fields
+            var profileUpdates = new Dictionary<string, string>
+    {
+        { "Email", email?.Trim() },
+        { "PhoneNumber", phoneNumber?.Trim() },
+        { "Address", address?.Trim() }
+    };
+
+            // Dictionary for updating Staff_Table fields
+            var staffUpdates = new Dictionary<string, string>
+    {
+        { "FullName", fullName?.Trim() },
+        { "Password", password?.Trim() }
+    };
+
+            // Update Profile_Table if any fields are provided
+            UpdateTable("Profile_Table", profileUpdates, username);
+
+            // Update Staff_Table if any fields are provided
+            UpdateTable("Staff_Table", staffUpdates, username);
+
+            MessageBox.Show("Profile updated successfully.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        // Helper method to update a specific table
+        private void UpdateTable(string tableName, Dictionary<string, string> updates, string username)
+        {
+            // Only update fields that are not empty
+            var fieldsToUpdate = updates
+                .Where(field => !string.IsNullOrEmpty(field.Value))
+                .Select(field => $"{field.Key} = @{field.Key}");
+
+            if (fieldsToUpdate.Any())
+            {
+                string query = tableName == "Profile_Table"
+                    ? $"UPDATE {tableName} SET {string.Join(", ", fieldsToUpdate)} WHERE ProfileID = (SELECT StaffId FROM Staff_Table WHERE Username = @Username)"
+                    : $"UPDATE {tableName} SET {string.Join(", ", fieldsToUpdate)} WHERE Username = @Username";
+
+                using (var command = new SQLiteCommand(query, connection))
+                {
+                    // Add parameters for the fields to be updated
+                    foreach (var field in updates.Where(field => !string.IsNullOrEmpty(field.Value)))
+                    {
+                        command.Parameters.AddWithValue($"@{field.Key}", field.Value);
+                    }
+                    command.Parameters.AddWithValue("@Username", username);
+
+                    // Execute the query
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public Dictionary<string, string> GetProfileInfo(string username)
+        {
+            Dictionary<string, string> profileInfo = new Dictionary<string, string>();
+
+            string query = @"
+        SELECT 
+            p.ProfileID, 
+            p.Email, 
+            p.PhoneNumber, 
+            p.Address, 
+            s.FullName, 
+            s.Password, 
+            s.Username
+        FROM 
+            Profile_Table p
+            JOIN Staff_Table s ON p.ProfileID = s.StaffId
+        WHERE 
+            s.Username = @Username";
+
+            using (SQLiteCommand command = new SQLiteCommand(query, connection))
+            {
+                command.Parameters.AddWithValue("@Username", username);
+
+                using (SQLiteDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        profileInfo["FullName"] = reader["FullName"].ToString();
+                        profileInfo["Username"] = reader["Username"].ToString();
+                        profileInfo["Email"] = reader["Email"].ToString();
+                        profileInfo["PhoneNumber"] = reader["PhoneNumber"].ToString();
+                        profileInfo["Address"] = reader["Address"].ToString();
+                        profileInfo["Password"] = reader["Password"].ToString();
+                    }
+                }
+            }
+
+            return profileInfo;
+        }
+
 
 
     }
