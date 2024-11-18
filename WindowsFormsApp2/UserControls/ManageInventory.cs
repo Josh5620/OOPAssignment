@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
@@ -14,14 +15,17 @@ namespace Assignment.UserControls
     public partial class ManageInventory : UserControl
     {
         private string _username;
-        private Mechanic mech = new Mechanic();
+
         public ManageInventory()
-        
+
         {
             InitializeComponent();
-           // _username = username;
+            LoadInventoryData();    
+            // _username = username;
         }
-     
+
+        private Mechanic mech = new Mechanic();
+
         private void ManageInventory_Load(object sender, EventArgs e)
         {
             DataGridView123.DataSource = mech.LoadDataGrid("inventory");
@@ -30,50 +34,46 @@ namespace Assignment.UserControls
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Get the logged-in mechanic's StaffID
-            string query = "SELECT StaffId FROM Staff_Table WHERE Username = @Username";
-            int staffId = 0;
 
-            //using (SQLiteCommand command = new SQLiteCommand(query, mech.Connection))
             {
-                //command.Parameters.AddWithValue("@Username", _username);
-               // using (SQLiteDataReader reader = command.ExecuteReader())
-                {
-                   // if (reader.Read())
-                    {
-                    //    staffId = reader.GetInt32(0);
-                    }
-                }
+                // Get the quantities from the NumericUpDown controls
+                int enginePartsQty = (int)numericUpDownEngineParts.Value;
+                int spareWheelsQty = (int)numericUpDownSpareWheels.Value;
+                int oilQty = (int)numericUpDownOil.Value;
+                int exhaustPipeQty = (int)numericUpDownExhaustPipe.Value;
+                int headlightsQty = (int)numericUpDownHeadlights.Value;
+
+                // Get the next OrderID
+                int nextOrderId = mech.GetNextOrderId();
+
+                // Update the Order_Table
+                mech.UpdateOrderTable(nextOrderId, enginePartsQty, spareWheelsQty, oilQty, exhaustPipeQty, headlightsQty);
             }
 
-            // Prepare the parts request data
-            var partsRequests = new List<(string PartName, int Quantity)>
-            {
-                ("EngineParts", (int)numericUpDownEngineParts.Value),
-                ("SpareWheels", (int)numericUpDownSpareWheels.Value),
-                ("Oil", (int)numericUpDownOil.Value),
-                ("Headlights", (int)numericUpDownHeadlights.Value),
-                ("ExhaustPipe", (int)numericUpDownExhaustPipe.Value)
-            };
 
-            // Insert the parts request into the Order_Table
-            foreach (var request in partsRequests)
-            {
-                if (request.Quantity > 0)
-                {
-                    string insertQuery = "INSERT INTO Order_Table (StaffId, PartName, Quantity) VALUES (@StaffId, @PartName, @Quantity)";
-                    //using (SQLiteCommand insertCommand = new SQLiteCommand(insertQuery, mech.Connection))
-                    {
-                       // insertCommand.Parameters.AddWithValue("@StaffId", staffId);
-                        //insertCommand.Parameters.AddWithValue("@PartName", request.PartName);
-                        //insertCommand.Parameters.AddWithValue("@Quantity", request.Quantity);
-                        //insertCommand.ExecuteNonQuery();
-                    }
-                }
-            }
 
-            MessageBox.Show("Parts requested successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            // Deduct inventory for each product
+            mech.DeductInventory(1, (int)numericUpDownEngineParts.Value);
+            mech.DeductInventory(2, (int)numericUpDownHeadlights.Value);
+            mech.DeductInventory(3, (int)numericUpDownOil.Value);
+            mech.DeductInventory(4, (int)numericUpDownSpareWheels.Value);
+            mech.DeductInventory(5, (int)numericUpDownExhaustPipe.Value);
+
+            MessageBox.Show("Inventory updated successfully!");
+        }
+        private void LoadInventoryData()
+        {
+            DataGridView123.DataSource = mech.LoadInventoryData();
+        }
+
     }
 }
+
+
+
    

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
@@ -19,6 +20,79 @@ namespace Assignment
         {
             connection = GetDatabaseConnection();
         }
+        public int GetNextOrderId()
+        {
+            int nextOrderId = 1;
+            string query = "SELECT MAX(OrderID) FROM Order_Table";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                connection.Open();
+                object result = cmd.ExecuteScalar();
+                connection.Close();
+                if (result != DBNull.Value)
+                {
+                    nextOrderId = Convert.ToInt32(result) + 1;
+                }
+            }
+
+            return nextOrderId;
+        }
+
+        public void DeductInventory(int productId, int quantity)
+        {
+            string query = "UPDATE Inventory_Table SET Quantity = Quantity - @Quantity WHERE ProductID = @ProductID";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                cmd.Parameters.AddWithValue("@ProductID", productId);
+                cmd.Parameters.AddWithValue("@Quantity", quantity);
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        public DataTable LoadInventoryData()
+        {
+            string query = "SELECT * FROM Inventory_Table";
+            DataTable dataTable = new DataTable();
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, connection);
+                adapter.Fill(dataTable);
+            }
+
+            return dataTable;
+        }
+
+
+
+        public void UpdateOrderTable(int orderId, int engineParts, int spareWheels, int oil, int exhaustPipe, int headlights)
+        {
+            string query = "INSERT INTO Order_Table (OrderID, EngineParts, SpareWheels, Oil, ExhaustPipe, Headlights) " +
+                           "VALUES (@OrderID, @EngineParts, @SpareWheels, @Oil, @ExhaustPipe, @Headlights)";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                SQLiteCommand cmd = new SQLiteCommand(query, connection);
+                cmd.Parameters.AddWithValue("@OrderID", orderId);
+                cmd.Parameters.AddWithValue("@EngineParts", engineParts);
+                cmd.Parameters.AddWithValue("@SpareWheels", spareWheels);
+                cmd.Parameters.AddWithValue("@Oil", oil);
+                cmd.Parameters.AddWithValue("@ExhaustPipe", exhaustPipe);
+                cmd.Parameters.AddWithValue("@Headlights", headlights);
+
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
 
         public DataTable LoadAndFilterData(string tableName, List<string> fieldsToDisplay, string filter)
         {
