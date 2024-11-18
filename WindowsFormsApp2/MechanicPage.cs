@@ -16,6 +16,8 @@ namespace Assignment
         UserControls.AssignedServcies udassignedServcies = new UserControls.AssignedServcies();
         UserControls.UpdateServices udUpdateServcies = new UserControls.UpdateServices();
         UserControls.ManageInventory udManageInventory = new UserControls.ManageInventory();
+        UserControls.MechProf udMechProf = new UserControls.MechProf();
+        
         public MechanicPage()
         {
             InitializeComponent();
@@ -58,6 +60,14 @@ namespace Assignment
             LoginPage loginPage = new LoginPage();
             loginPage.Show();
             this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.Controls.Add(udMechProf);
+            udMechProf.Dock = DockStyle.Fill;
+
         }
     }
 }

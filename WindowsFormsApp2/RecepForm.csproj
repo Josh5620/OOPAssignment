@@ -195,6 +195,12 @@
     <Compile Include="UserControls\ManageInventory.Designer.cs">
       <DependentUpon>ManageInventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\MechProf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MechProf.Designer.cs">
+      <DependentUpon>MechProf.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PROF_Control.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -306,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ManageInventory.resx">
       <DependentUpon>ManageInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MechProf.resx">
+      <DependentUpon>MechProf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PROF_Control.resx">
       <DependentUpon>PROF_Control.cs</DependentUpon>
