@@ -24,7 +24,7 @@ namespace Assignment.UserControls
      
         private void ManageInventory_Load(object sender, EventArgs e)
         {
-            DataGridView123.DataSource = mech.LoadDataGrid("order");
+            DataGridView123.DataSource = mech.LoadDataGrid("inventory");
 
         }
 

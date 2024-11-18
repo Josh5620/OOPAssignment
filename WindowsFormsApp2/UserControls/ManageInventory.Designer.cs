@@ -30,26 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.numericUpDownHeadlights = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownExhaustPipe = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownOil = new System.Windows.Forms.NumericUpDown();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ExhaustPipe = new System.Windows.Forms.Label();
+            this.Headlights = new System.Windows.Forms.Label();
+            this.SpareWheels = new System.Windows.Forms.Label();
             this.numericUpDownSpareWheels = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownEngineParts = new System.Windows.Forms.NumericUpDown();
             this.DataGridView123 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.EngineParts = new System.Windows.Forms.Label();
+            this.Oil = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeadlights)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownExhaustPipe)).BeginInit();
@@ -65,19 +60,14 @@
             this.panel1.Controls.Add(this.numericUpDownHeadlights);
             this.panel1.Controls.Add(this.numericUpDownExhaustPipe);
             this.panel1.Controls.Add(this.numericUpDownOil);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.ExhaustPipe);
+            this.panel1.Controls.Add(this.Headlights);
+            this.panel1.Controls.Add(this.SpareWheels);
             this.panel1.Controls.Add(this.numericUpDownSpareWheels);
             this.panel1.Controls.Add(this.numericUpDownEngineParts);
             this.panel1.Controls.Add(this.DataGridView123);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.EngineParts);
+            this.panel1.Controls.Add(this.Oil);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(-9, 115);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -85,16 +75,32 @@
             this.panel1.Size = new System.Drawing.Size(1293, 868);
             this.panel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(684, 764);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(206, 48);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // numericUpDownHeadlights
             // 
-            this.numericUpDownHeadlights.Location = new System.Drawing.Point(1104, 616);
+            this.numericUpDownHeadlights.Location = new System.Drawing.Point(840, 617);
             this.numericUpDownHeadlights.Name = "numericUpDownHeadlights";
             this.numericUpDownHeadlights.Size = new System.Drawing.Size(120, 31);
             this.numericUpDownHeadlights.TabIndex = 24;
             // 
             // numericUpDownExhaustPipe
             // 
-            this.numericUpDownExhaustPipe.Location = new System.Drawing.Point(1104, 554);
+            this.numericUpDownExhaustPipe.Location = new System.Drawing.Point(840, 554);
             this.numericUpDownExhaustPipe.Name = "numericUpDownExhaustPipe";
             this.numericUpDownExhaustPipe.Size = new System.Drawing.Size(120, 31);
             this.numericUpDownExhaustPipe.TabIndex = 23;
@@ -106,56 +112,35 @@
             this.numericUpDownOil.Size = new System.Drawing.Size(120, 31);
             this.numericUpDownOil.TabIndex = 22;
             // 
-            // textBox5
+            // ExhaustPipe
             // 
-            this.textBox5.Location = new System.Drawing.Point(256, 677);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(223, 31);
-            this.textBox5.TabIndex = 21;
+            this.ExhaustPipe.AutoSize = true;
+            this.ExhaustPipe.Location = new System.Drawing.Point(694, 554);
+            this.ExhaustPipe.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ExhaustPipe.Name = "ExhaustPipe";
+            this.ExhaustPipe.Size = new System.Drawing.Size(139, 25);
+            this.ExhaustPipe.TabIndex = 18;
+            this.ExhaustPipe.Text = "ExhaustPipe:";
             // 
-            // textBox2
+            // Headlights
             // 
-            this.textBox2.Location = new System.Drawing.Point(855, 615);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(223, 31);
-            this.textBox2.TabIndex = 20;
+            this.Headlights.AutoSize = true;
+            this.Headlights.Location = new System.Drawing.Point(713, 616);
+            this.Headlights.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Headlights.Name = "Headlights";
+            this.Headlights.Size = new System.Drawing.Size(120, 25);
+            this.Headlights.TabIndex = 17;
+            this.Headlights.Text = "Headlights:";
             // 
-            // textBox1
+            // SpareWheels
             // 
-            this.textBox1.Location = new System.Drawing.Point(855, 554);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 31);
-            this.textBox1.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(694, 554);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 25);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "ExhaustPipe:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(713, 616);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Headlights:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 614);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "SpareWheels:";
+            this.SpareWheels.AutoSize = true;
+            this.SpareWheels.Location = new System.Drawing.Point(359, 617);
+            this.SpareWheels.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SpareWheels.Name = "SpareWheels";
+            this.SpareWheels.Size = new System.Drawing.Size(147, 25);
+            this.SpareWheels.TabIndex = 16;
+            this.SpareWheels.Text = "SpareWheels:";
             // 
             // numericUpDownSpareWheels
             // 
@@ -174,49 +159,33 @@
             // DataGridView123
             // 
             this.DataGridView123.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridView123.Location = new System.Drawing.Point(13, 0);
+            this.DataGridView123.Location = new System.Drawing.Point(256, 30);
             this.DataGridView123.Margin = new System.Windows.Forms.Padding(4);
             this.DataGridView123.Name = "DataGridView123";
             this.DataGridView123.RowHeadersWidth = 82;
             this.DataGridView123.RowTemplate.Height = 33;
-            this.DataGridView123.Size = new System.Drawing.Size(1280, 480);
+            this.DataGridView123.Size = new System.Drawing.Size(768, 426);
             this.DataGridView123.TabIndex = 0;
             // 
-            // label6
+            // EngineParts
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(102, 548);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(135, 25);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "EngineParts:";
+            this.EngineParts.AutoSize = true;
+            this.EngineParts.Location = new System.Drawing.Point(371, 549);
+            this.EngineParts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.EngineParts.Name = "EngineParts";
+            this.EngineParts.Size = new System.Drawing.Size(135, 25);
+            this.EngineParts.TabIndex = 9;
+            this.EngineParts.Text = "EngineParts:";
             // 
-            // label5
+            // Oil
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(180, 680);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 25);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Oil:";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(256, 548);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(223, 31);
-            this.textBox4.TabIndex = 12;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(256, 614);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(223, 31);
-            this.textBox3.TabIndex = 13;
+            this.Oil.AutoSize = true;
+            this.Oil.Location = new System.Drawing.Point(462, 680);
+            this.Oil.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Oil.Name = "Oil";
+            this.Oil.Size = new System.Drawing.Size(44, 25);
+            this.Oil.TabIndex = 10;
+            this.Oil.Text = "Oil:";
             // 
             // button2
             // 
@@ -245,28 +214,12 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(513, 56);
+            this.label7.Location = new System.Drawing.Point(543, 62);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(218, 29);
             this.label7.TabIndex = 8;
             this.label7.Text = "Manage Inventory";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(684, 764);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 48);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // ManageInventory
             // 
@@ -296,23 +249,18 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView DataGridView123;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Oil;
+        private System.Windows.Forms.Label EngineParts;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDownSpareWheels;
         private System.Windows.Forms.NumericUpDown numericUpDownEngineParts;
         private System.Windows.Forms.NumericUpDown numericUpDownHeadlights;
         private System.Windows.Forms.NumericUpDown numericUpDownExhaustPipe;
         private System.Windows.Forms.NumericUpDown numericUpDownOil;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ExhaustPipe;
+        private System.Windows.Forms.Label SpareWheels;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Headlights;
     }
 }
