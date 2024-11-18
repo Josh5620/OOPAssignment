@@ -364,3 +364,4 @@ C:\Mac\Home\Documents\New folder\OOPAssignment\WindowsFormsApp2\obj\Debug\Assign
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ViewFeedback.resources
 C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.ViewReports.resources
 C:\Mac\Home\Documents\New folder\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.MechProf.resources
+C:\Users\Genemor\GIT\oop assignment\OOPAssignment\WindowsFormsApp2\obj\Debug\Assignment.UserControls.MechProf.resources

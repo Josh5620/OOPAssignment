@@ -289,25 +289,41 @@ namespace Assignment
             string parameters = string.Join(", ", columns.Keys.Select(key => $"@{key}"));
             string insertQuery = $"INSERT INTO {tableName} ({columnNames}) VALUES ({parameters})";
 
+            MessageBox.Show("Starting InsertRecord method.");
+
             try
             {
                 using (var connection = GetDatabaseConnection())
-                using (var cmd = new SQLiteCommand(insertQuery, connection))
                 {
-                    foreach (var column in columns)
+                    MessageBox.Show("Obtained database connection.");
+                    connection.Open();
+                    MessageBox.Show("Database connection opened.");
+
+                    using (var cmd = new SQLiteCommand(insertQuery, connection))
                     {
-                        cmd.Parameters.AddWithValue($"@{column.Key}", column.Value ?? DBNull.Value);
-                    }
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    if (rowsAffected == 0)
-                    {
-                        throw new Exception("No rows were inserted. Possible constraint violation.");
+                        foreach (var column in columns)
+                        {
+                            cmd.Parameters.AddWithValue($"@{column.Key}", column.Value ?? DBNull.Value);
+                            MessageBox.Show($"Added parameter @{column.Key} with value {column.Value}");
+                        }
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        MessageBox.Show($"Rows affected: {rowsAffected}");
+
+                        if (rowsAffected == 0)
+                        {
+                            throw new Exception("No rows were inserted. Possible constraint violation.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Record inserted successfully.");
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error adding record to {tableName}: {ex.Message}\nQuery: {insertQuery}");
+                MessageBox.Show($"Error adding record to {tableName}: {ex.Message}\nQuery: {insertQuery}", "Insertion Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
