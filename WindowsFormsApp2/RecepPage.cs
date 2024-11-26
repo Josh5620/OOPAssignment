@@ -138,7 +138,9 @@ namespace Assignment
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
-            Close();
+            LoginPage login1 = new LoginPage();
+            login1.Show();
+            this.Hide();
         }
     }
 }

@@ -196,14 +196,12 @@ namespace Assignment
                     {
                         if (reader.HasRows)
                         {
-                            // Create a DataTable to hold filtered reports
                             DataTable filteredReports = new DataTable();
-                            filteredReports.Load(reader);  // Load data from reader into DataTable
+                            filteredReports.Load(reader);  
 
-                            // Assign the filtered reports to the ReportData property
                             ReportData = filteredReports;
 
-                            // Optionally, bind the DataTable to a DataGridView for displaying the reports
+
                             MessageBox.Show($"Reports successfully filtered by {month}!");
                         }
                         else
@@ -222,7 +220,7 @@ namespace Assignment
         {
             // Form the SQL query to filter feedback by the FeedbackDate month
             string filterquery = @"
-        SELECT FeedbackId, CustomerId, ServiceId, FeedbackText, Rating, FeedbackDate
+        SELECT FeedbackId, CustomerId, ServiceName, FeedbackText, Rating, FeedbackDate
         FROM Feedback
         WHERE strftime('%m', FeedbackDate) = @Month";  // Use strftime to get the month part of FeedbackDate
 
